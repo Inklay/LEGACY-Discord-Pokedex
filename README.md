@@ -11,6 +11,7 @@ A Discord french Pokedex bot powered by Node.js
 - Clone the repository
 - Locate the clonned repository and launch a terminal
 - Run ```npm install```
+- Enter your bot toekn in bot.js
 - Run ```bot.bat```
 
 ### Linux and MacOS
@@ -18,6 +19,7 @@ A Discord french Pokedex bot powered by Node.js
 - Clone the repository
 - Locate the clonned repository and launch a terminal
 - Run ```npm install```
+- Enter your bot toekn in bot.js
 - Run ```bot.sh```
 
 
@@ -37,6 +39,7 @@ Un bot Discord pokedex utilisant Node.js
 - Cloner le repository
 - Naviguez jusqu'au repository clonné et lancez un invite de commande 
 - Executez ```npm install```
+- Entrez le token de votre bot dans bot.js
 - Executer ```bot.bat```
 
 ### Linux et MacOS
@@ -44,6 +47,7 @@ Un bot Discord pokedex utilisant Node.js
 - Cloner le repository
 - Naviguez jusqu'au repository clonné et lancez un terminal
 - Executez ```npm install```
+- Entrez le token de votre bot dans bot.js
 - Executer ```bot.sh```
 
 
