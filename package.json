@@ -1,0 +1,29 @@
+{
+  "name": "discord-pokedex",
+  "version": "1.0.0",
+  "description": "A discord french Pokedex bot powered by node.js",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inklay/Discord-Pokedex.git"
+  },
+  "keywords": [
+    "discord",
+    "pokedex",
+    "discord bot"
+  ],
+  "author": "Inklay",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Inklay/Discord-Pokedex/issues"
+  },
+  "homepage": "https://github.com/Inklay/Discord-Pokedex#readme",
+  "dependencies": {
+    "discordie": "^0.11.0",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0"
+  }
+}
