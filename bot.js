@@ -5,7 +5,7 @@ const client = new Discordie();
 const request = require('request');
 const $ = require('cheerio');
 
-client.connect({ token: "NTE4ODg3NjA2OTg1OTQ5MTg2.XOQDww.MgbNnaPAmMuClXEUo_rDYoR1o5w" });
+client.connect({ token: "[Enter token here]" });
 
 client.Dispatcher.on("GATEWAY_READY", e => {
     client.User.setGame("pokedex + nom du pokemon");
