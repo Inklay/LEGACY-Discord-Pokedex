@@ -1,11 +1,11 @@
-var Discordie = require("discordie");
-var Events = Discordie.Events;
-
+const Discordie = require('discordie');
+const Events = Discordie.Events;
 const client = new Discordie();
 const request = require('request');
 const $ = require('cheerio');
+const connect = require('./connect.js')
 
-client.connect({ token: "[Enter token here]" });
+connect.connect(client);
 
 client.Dispatcher.on("GATEWAY_READY", e => {
     client.User.setGame("pokedex + nom du pokemon");
@@ -40,10 +40,18 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
     var spa = 0;
     var spd = 0;
     var spe = 0;
+    var typed;
+    var searched_name;
 
     if(content.startsWith("pokedex ") || content.startsWith("pokédex ")) {
         found = 0;
-        search = url.concat(content.substring(8));
+        typed = content.substring(8);
+        if (typed.search(" shiny")) {
+            searched_name = typed.substring(0, typed.search(" "));
+            gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
+            search = url.concat(searched_name);
+        } else
+            search = url.concat(typed);
         request(search, { json: true }, (err, res, body) => {
             if (err)
                 channel.sendMessage("Impossible de communiquer avec le serveur, merci de réessayer dans 5 minutes.\nInformations sur l'erreur: " + err);
@@ -107,6 +115,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
                     if ($(this)[0].attribs.href == "/Statistique#Vitesse" && !spe)
                         spe = $(this).parent().next()[0].children[0].data;
                 });
+                
                 description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
                 if (type2 == "NULL")
                     description += "Type: " + type1 + "\n";
