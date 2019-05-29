@@ -28,6 +28,7 @@ function french_mega(content, channel)
     var spd = 0;
     var spe = 0;
     var search = "Méga-";
+    var mega_type = "";
 
     if (typed.startsWith("mega ") || typed.startsWith("méga "))
         typed = typed.substring(5);
@@ -37,6 +38,13 @@ function french_mega(content, channel)
         search = search.concat(typed.substring(0));
     else
         search = search.concat(typed.substring(0, typed.search(" ")));
+    if (typed.search(" x") != -1) {
+        search = search.concat("_X");
+        mega_type = " X ";
+    } else if (typed.search(" y") != -1) {
+        search = search.concat("_Y");
+        mega_type = " Y ";
+    }
     if (typed.search(" shiny") != -1)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
     request(search, { json: true }, (err, res, body) => {
@@ -49,7 +57,8 @@ function french_mega(content, channel)
                 found = 1;
         });
         if (!found) {
-            channel.sendMessage("Impossible de trouver \"Méga " + typed.substring(0, typed.search(" ")) + "\" merci de vérifier l'orthographe.");
+            console.log(search);
+            channel.sendMessage("Impossible de trouver \"Méga " + typed.substring(0, typed.search(" ")) + mega_type + "\" merci de vérifier l'orthographe.");
             return;
         }
         title = $('.firstHeading', body).text();
@@ -111,9 +120,17 @@ function french_mega(content, channel)
                 description += "Talents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
         }
         description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
-        sprite = gif_url.concat(name.slice(5, name.length - 1));
-        sprite = sprite.concat("-mega.gif");
-        sprite = sprite.toLocaleLowerCase();
+        if (mega_type == "") {
+            sprite = gif_url.concat(name.slice(5, name.length - 1));
+            sprite = sprite.concat("-mega.gif");
+        } else if (mega_type == " X ") {
+            sprite = gif_url.concat(name.slice(5, name.length - 3));
+            sprite = sprite.concat("-megax.gif");
+        } else if (mega_type == " Y ") {
+            sprite = gif_url.concat(name.slice(5, name.length - 3));
+            sprite = sprite.concat("-megay.gif");
+        }
+        sprite = sprite.toLowerCase();
         channel.sendMessage("", false, {
             color: color,
             title: title,
@@ -188,7 +205,7 @@ module.exports = {
                 if (alola)
                     channel.sendMessage("Impossible de trouver \"" + typed.substring(0, typed.search(" ")) + " d\'Alola\" merci de vérifier l'orthographe.");
                 else
-                    channel.sendMessage("Impossible de trouver \"" + content.substring(8) + "\" merci de vérifier l'orthographe.");
+                    channel.sendMessage("Impossible de trouver \"" + content.substring(8).charAt(0).toUpperCase() + content.substring(8).slice(1) + "\" merci de vérifier l'orthographe.");
                 return;
             }
             title = $('.firstHeading', body).text();
