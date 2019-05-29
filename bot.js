@@ -15,6 +15,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
     var channel = e.message.channel;
 
     if(content.startsWith("pokedex ") || content.startsWith("pokédex ")) {
+        e.message.delete();
         pokemon.french(content, channel);
     }
 });
