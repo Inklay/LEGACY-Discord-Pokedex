@@ -526,6 +526,99 @@ function french_special_cases(channel, typed, shiny)
             spd = 75;
             spe = 127;
             break;
+        case "darumacho":
+            other_forms = "Autres formes: darumacho transe"
+            title = "Darumacho";
+            url = "https://pokepedia.fr/Darumacho";
+            color = 0xF75231;
+            sprite = gif_url.concat("darmanitan.gif");
+            name = "Darmanitan";
+            number = 555;
+            type1 = "Feu";
+            family = "Pokémon Enflammé";
+            ability1 = "Sans Limite";
+            ability2 = "Mode Transe"
+            egg1 = "Terrestre";
+            rate = 60;
+            height = "1,3 m, soit 4,3 pieds";
+            weight = "92,9 kg, soit 204,8 livres";
+            hp = 105;
+            atk = 140;
+            def = 55;
+            spa = 30;
+            spd = 55;
+            spe = 95;
+            break;
+        case "darumacho transe":
+            other_forms = "Autres formes: darumacho"
+            title = "Darumacho Mode Transe";
+            url = "https://pokepedia.fr/Darumacho";
+            color = 0xF75231;
+            sprite = gif_url.concat("darmanitan-zen.gif");
+            name = "Darmanitan";
+            number = 555;
+            type1 = "Feu";
+            type2 = "Psy";
+            family = "Pokémon Enflammé";
+            ability1 = "Sans Limite";
+            ability2 = "Mode Transe"
+            egg1 = "Terrestre";
+            rate = 60;
+            height = "1,3 m, soit 4,3 pieds";
+            weight = "92,9 kg, soit 204,8 livres";
+            hp = 105;
+            atk = 30;
+            def = 105;
+            spa = 140;
+            spd = 105;
+            spe = 55;
+            break;
+        case "boréas":
+            other_forms = "Autres formes: boréas totémique"
+            title = "Boréas";
+            url = "https://pokepedia.fr/Boréas";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("tornadus.gif");
+            name = "Tornadus";
+            number = 641;
+            type1 = "Vol";
+            family = "Pokémon Tornade";
+            ability1 = "Farceur";
+            ability2 = "Acharné"
+            egg1 = "Iconnu";
+            rate = 3;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "63,0 kg, soit 138,9 livres";
+            hp = 79;
+            atk = 115;
+            def = 70;
+            spa = 125;
+            spd = 80;
+            spe = 111;
+            break;
+        case "boréas totémique":
+            other_forms = "Autres formes: boréas"
+            title = "Boréas Totémique";
+            url = "https://pokepedia.fr/Boréas";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("tornadus-therian.gif");
+            name = "Tornadus";
+            number = 641;
+            type1 = "Vol";
+            family = "Pokémon Tornade";
+            ability1 = "Régé-Force";
+            ability2 = "Acharné"
+            egg1 = "Iconnu";
+            rate = 3;
+            height = "1,4 m, soit 4,6 pieds";
+            weight = "63,0 kg, soit 138,9 livres";
+            hp = 79;
+            atk = 100;
+            def = 80;
+            spa = 110;
+            spd = 90;
+            spe = 121;
+            break;
         default:
             return 0;
     }
