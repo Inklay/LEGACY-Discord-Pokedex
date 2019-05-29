@@ -32,7 +32,6 @@ function french_special_cases(channel, typed, shiny)
 
     if (shiny)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
-    console.log(typed);
     switch (typed) {
         case "morpheo":
         case "morphéo":
