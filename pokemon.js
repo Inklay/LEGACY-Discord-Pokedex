@@ -29,10 +29,14 @@ function french_mega(content, channel)
     var spe = 0;
     var search = "Méga-";
 
+    if (typed.startsWith("mega ") || typed.startsWith("méga "))
+        typed = typed.substring(5);
     typed = typed.charAt(0).toUpperCase() + typed.slice(1);
     search = url.concat(search);
-    search = search.concat(typed.substring(0, typed.search(" ")));
-
+    if (typed.search(" ") == -1)
+        search = search.concat(typed.substring(0));
+    else
+        search = search.concat(typed.substring(0, typed.search(" ")));
     if (typed.search(" shiny") != -1)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
     request(search, { json: true }, (err, res, body) => {
@@ -167,7 +171,7 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        if (typed.search(" méga") != -1 || typed.search(" mega") != -1) {
+        if (typed.search(" méga") != -1 || typed.search(" mega") != -1 || typed.startsWith("mega ") || typed.startsWith("méga ")) {
             french_mega(content, channel);
             return;
         }
