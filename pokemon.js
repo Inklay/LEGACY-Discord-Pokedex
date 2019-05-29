@@ -1,10 +1,9 @@
 const request = require('request');
 const $ = require('cheerio');
 
-function french_special_cases(channel, content)
+function french_special_cases(channel, typed, shiny)
 {
     var color;
-    var typed = content.substring(8);
     var description;
     var url;
     var title;
@@ -31,8 +30,9 @@ function french_special_cases(channel, content)
     var spe = 0;
     var other_forms;
 
-    if (typed.search(" shiny") != -1)
+    if (shiny)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
+    console.log(typed);
     switch (typed) {
         case "morpheo":
         case "morphéo":
@@ -222,6 +222,217 @@ function french_special_cases(channel, content)
             spd = 90;
             spe = 180;
             break;
+        case "cheniselle plante":
+        case "cheniselle":
+            other_forms = "Autres formes: cheniselle sable, cheniselle déchet"
+            title = "Cheniselle";
+            url = "https://pokepedia.fr/Cheniselle";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam.gif");
+            name = "Wormadam";
+            number = 413;
+            type1 = "Insecte";
+            type2 = "plante";
+            family = "Pokémon Ver Caché";
+            ability1 = "Anticipation";
+            ability2 = "Envelocape"
+            egg1 = "Insectoïde";
+            rate = 45;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "6,5 kg, soit 14,3 livres";
+            hp = 60;
+            atk = 59;
+            def = 85;
+            spa = 79;
+            spd = 105;
+            spe = 36;
+            break;
+        case "cheniselle sable":
+            other_forms = "Autres formes: cheniselle, cheniselle déchet"
+            title = "Cheniselle Cape Sable";
+            url = "https://pokepedia.fr/Cheniselle";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam-sandy.gif");
+            name = "Wormadam";
+            number = 413;
+            type1 = "Insecte";
+            type2 = "Sol";
+            family = "Pokémon Ver Caché";
+            ability1 = "Anticipation";
+            ability2 = "Envelocape"
+            egg1 = "Insectoïde";
+            rate = 45;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "6,5 kg, soit 14,3 livres";
+            hp = 60;
+            atk = 79;
+            def = 105;
+            spa = 59;
+            spd = 85;
+            spe = 36;
+            break;
+        case "cheniselle déchet":
+            other_forms = "Autres formes: cheniselle, cheniselle sable"
+            title = "Cheniselle Cape Déchet";
+            url = "https://pokepedia.fr/Cheniselle";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam-trash.gif");
+            name = "Wormadam";
+            number = 413;
+            type1 = "Insecte";
+            type2 = "Acier";
+            family = "Pokémon Ver Caché";
+            ability1 = "Anticipation";
+            ability2 = "Envelocape"
+            egg1 = "Insectoïde";
+            rate = 45;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "6,5 kg, soit 14,3 livres";
+            hp = 60;
+            atk = 69;
+            def = 95;
+            spa = 69;
+            spd = 95;
+            spe = 36;
+            break;
+        case "motisma":
+            other_forms = "Autres formes: motisma chaleur, motisma hélice, motisma froid, motisma lavage, motisma tonte"
+            title = "Motisma";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Spectre";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 50;
+            def = 77;
+            spa = 95;
+            spd = 77;
+            spe = 91;
+            break;
+        case "motisma chaleur":
+            other_forms = "Autres formes: motisma, motisma hélice, motisma froid, motisma lavage, motisma tonte"
+            title = "Motisma Forme Chaleur";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-heat.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Feu";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "motisma hélice":
+            other_forms = "Autres formes: motisma, motisma chaleur, motisma froid, motisma lavage, motisma tonte"
+            title = "Motisma Forme Hélice";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-fan.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Vol";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "motisma froid":
+            other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma lavage, motisma tonte"
+            title = "Motisma Forme Hélice";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-frost.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Glace";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "motisma lavage":
+            other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma tonte"
+            title = "Motisma Forme Hélice";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-wash.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Eau";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "motisma tonte":
+            other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma lavage"
+            title = "Motisma Forme Hélice";
+            url = "https://pokepedia.fr/Motisma";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-mow.gif");
+            name = "Rotom";
+            number = 479;
+            type1 = "Électrik";
+            type2 = "Plante";
+            family = "Pokémon Plasma";
+            ability1 = "Lévitation";
+            egg1 = "Amorphe";
+            rate = 45;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
         default:
             return 0;
     }
@@ -294,9 +505,12 @@ module.exports = {
         var is_mega = 0;
         var mega = "Méga-";
         var mega_type = "";
+        var shiny = 0;
 
-        if (typed.search(" shiny") != -1)
+        if (typed.search(" shiny") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
+            shiny = 1;
+        }
         if (typed.search(" méga") != -1 || typed.search(" mega") != -1 || typed.startsWith("mega ") || typed.startsWith("méga ")) {
             is_mega = 1;
             if (typed.startsWith("mega ") || typed.startsWith("méga "))
@@ -322,8 +536,9 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        
-        if (french_special_cases(channel, content))
+        if (french_special_cases(channel, content.substring(8), shiny))
+            return;
+        else if (french_special_cases(channel, content.substring(8, 8 + content.substring(8).search(" ")), shiny))
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
