@@ -365,7 +365,7 @@ function french_special_cases(channel, typed, shiny)
             break;
         case "motisma froid":
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma lavage, motisma tonte"
-            title = "Motisma Forme Hélice";
+            title = "Motisma Forme Froid";
             url = "https://pokepedia.fr/Motisma";
             color = 0xFFC631;
             sprite = gif_url.concat("rotom-frost.gif");
@@ -388,7 +388,7 @@ function french_special_cases(channel, typed, shiny)
             break;
         case "motisma lavage":
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma tonte"
-            title = "Motisma Forme Hélice";
+            title = "Motisma Forme Lavage";
             url = "https://pokepedia.fr/Motisma";
             color = 0xFFC631;
             sprite = gif_url.concat("rotom-wash.gif");
@@ -411,7 +411,7 @@ function french_special_cases(channel, typed, shiny)
             break;
         case "motisma tonte":
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma lavage"
-            title = "Motisma Forme Hélice";
+            title = "Motisma Forme Tonte";
             url = "https://pokepedia.fr/Motisma";
             color = 0xFFC631;
             sprite = gif_url.concat("rotom-mow.gif");
@@ -431,6 +431,100 @@ function french_special_cases(channel, typed, shiny)
             spa = 105;
             spd = 107;
             spe = 86;
+            break;
+        case "giratina alternative":
+        case "giratina":
+            other_forms = "Autres formes: giratina originelle"
+            title = "Giratina";
+            url = "https://pokepedia.fr/Giratina";
+            color = 0x6363B5;
+            sprite = gif_url.concat("giratina.gif");
+            name = "Giratina";
+            number = 487;
+            type1 = "Spectre";
+            type2 = "Dragon";
+            family = "Pokémon Renégat";
+            ability1 = "Pression";
+            ability2 = "Télépathe"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "4,5 m, soit 14,8 pieds";
+            weight = "750,0 kg, soit 1 653,5 livres";
+            hp = 150;
+            atk = 100;
+            def = 120;
+            spa = 100;
+            spd = 120;
+            spe = 90;
+            break;
+        case "giratina originelle":
+            other_forms = "Autres formes: giratina"
+            title = "Giratina Forme Originelle";
+            url = "https://pokepedia.fr/Giratina";
+            color = 0x6363B5;
+            sprite = gif_url.concat("giratina-origin.gif");
+            name = "Giratina";
+            number = 487;
+            type1 = "Spectre";
+            type2 = "Dragon";
+            family = "Pokémon Renégat";
+            ability1 = "Lévitation";
+            ability2 = "Télépathe"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "6,9 m, soit 22,6 pieds";
+            weight = "650,0 kg, soit 1 433 livres";
+            hp = 150;
+            atk = 120;
+            def = 100;
+            spa = 120;
+            spd = 100;
+            spe = 90;
+            break;
+        case "shaymin":
+            other_forms = "Autres formes: shaymin céleste"
+            title = "Shaymin";
+            url = "https://pokepedia.fr/Shaymin";
+            color = 0x7BCE52;
+            sprite = gif_url.concat("shaymin.gif");
+            name = "Shaymin";
+            number = 487;
+            type1 = "Plante";
+            family = "Pokémon Gratitude";
+            ability1 = "Médic Nature";
+            egg1 = "Inconnu";
+            rate = 45;
+            height = "0,2 m, soit 0,7 pied";
+            weight = "2,1 kg, soit 4,6 livres";
+            hp = 100;
+            atk = 100;
+            def = 100;
+            spa = 100;
+            spd = 100;
+            spe = 100;
+            break;
+        case "shaymin céleste":
+            other_forms = "Autres formes: shaymin"
+            title = "Shaymin Forme Céleste";
+            url = "https://pokepedia.fr/Shaymin";
+            color = 0x7BCE52;
+            sprite = gif_url.concat("shaymin-sky.gif");
+            name = "Shaymin";
+            number = 487;
+            type1 = "Plante";
+            type2 = "Vol"
+            family = "Pokémon Gratitude";
+            ability1 = "Sérénité";
+            egg1 = "Inconnu";
+            rate = 45;
+            height = "0,4 m, soit 1,3 pieds";
+            weight = "5,2 kg, soit 11,5 livres";
+            hp = 100;
+            atk = 103;
+            def = 75;
+            spa = 120;
+            spd = 75;
+            spe = 127;
             break;
         default:
             return 0;
@@ -610,9 +704,9 @@ module.exports = {
             });
             description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
             if (type2 == "NULL")
-                description += "Type: " + type1 + "\n";
+                description += "Type: " + type1.charAt(0).toUpperCase() + type1.slice(1) + "\n";
             else
-                description += "Types: " + type1 + ", " + type2 + "\n";
+                description += "Types: " + type1.charAt(0).toUpperCase() + type1.slice(1) + ", " + type2.charAt(0).toUpperCase() + type2.slice(1) + "\n";
             description += "Famille: " + family + "Taille: " + height + "Poids: " + weight;
             if (ability2 == "NULL")
                 description += "Talent: " + ability1 + "\n";
