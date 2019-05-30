@@ -876,7 +876,7 @@ function french_special_cases(channel, typed, shiny)
             atk = 50;
             def = 150;
             spa = 50;
-            spd = 150
+            spd = 150;
             spe = 60;
             break;
         case "exagide assault":
@@ -899,12 +899,12 @@ function french_special_cases(channel, typed, shiny)
             atk = 150;
             def = 50;
             spa = 150;
-            spd = 50
+            spd = 50;
             spe = 60;
             break;
         case "pitrouille normale":
         case "pitrouille":
-            other_forms = "Autres formes: pitrouille mini, pitrouille maxi, pitrouille ultra"
+            other_forms = "Autres formes: pitrouille mini, pitrouille maxi, pitrouille ultra";
             title = "Pitrouille";
             url = "https://pokepedia.fr/Pitrouille";
             color = 0x6363B5;
@@ -925,11 +925,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 66;
             def = 70;
             spa = 44;
-            spd = 55
+            spd = 55;
             spe = 56;
             break;
         case "pitrouille mini":
-            other_forms = "Autres formes: pitrouille, pitrouille maxi, pitrouille ultra"
+            other_forms = "Autres formes: pitrouille, pitrouille maxi, pitrouille ultra";
             title = "Pitrouille Mini";
             url = "https://pokepedia.fr/Pitrouille";
             color = 0x6363B5;
@@ -950,11 +950,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 66;
             def = 70;
             spa = 44;
-            spd = 55
+            spd = 55;
             spe = 51;
             break;
         case "pitrouille maxi":
-            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille ultra"
+            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille ultra";
             title = "Pitrouille Maxi";
             url = "https://pokepedia.fr/Pitrouille";
             color = 0x6363B5;
@@ -975,11 +975,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 66;
             def = 70;
             spa = 44;
-            spd = 55
+            spd = 55;
             spe = 46;
             break;
         case "pitrouille ultra":
-            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille maxi"
+            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille maxi";
             title = "Pitrouille Maxi";
             url = "https://pokepedia.fr/Pitrouille";
             color = 0x6363B5;
@@ -1000,12 +1000,12 @@ function french_special_cases(channel, typed, shiny)
             atk = 66;
             def = 70;
             spa = 44;
-            spd = 55
+            spd = 55;
             spe = 41;
             break;
         case "banshitrouye normale":
         case "banshitrouye":
-            other_forms = "Autres formes: banshitrouye mini, banshitrouye maxi, banshitrouye ultra"
+            other_forms = "Autres formes: banshitrouye mini, banshitrouye maxi, banshitrouye ultra";
             title = "Banshitrouye";
             url = "https://pokepedia.fr/Banshitrouye";
             color = 0x6363B5;
@@ -1026,11 +1026,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 90;
             def = 122;
             spa = 58;
-            spd = 75
+            spd = 75;
             spe = 84;
             break;
         case "banshitrouye mini":
-            other_forms = "Autres formes: banshitrouye, banshitrouye maxi, banshitrouye ultra"
+            other_forms = "Autres formes: banshitrouye, banshitrouye maxi, banshitrouye ultra";
             title = "Banshitrouye Mini";
             url = "https://pokepedia.fr/Banshitrouye";
             color = 0x6363B5;
@@ -1051,11 +1051,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 85;
             def = 122;
             spa = 58;
-            spd = 75
+            spd = 75;
             spe = 99;
             break;
         case "banshitrouye maxi":
-            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye ultra"
+            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye ultra";
             title = "Banshitrouye Maxi";
             url = "https://pokepedia.fr/Banshitrouye";
             color = 0x6363B5;
@@ -1076,11 +1076,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 95;
             def = 122;
             spa = 58;
-            spd = 75
+            spd = 75;
             spe = 69;
             break;
         case "banshitrouye ultra":
-            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye maxi"
+            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye maxi";
             title = "Banshitrouye Ultra";
             url = "https://pokepedia.fr/Banshitrouye";
             color = 0x6363B5;
@@ -1101,11 +1101,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 100;
             def = 122;
             spa = 58;
-            spd = 75
+            spd = 75;
             spe = 54;
             break;
         case "hoopa":
-            other_forms = "Autres formes: hoopa déchainée"
+            other_forms = "Autres formes: hoopa déchainée";
             title = "Hoopa";
             url = "https://pokepedia.fr/Hoopa";
             color = 0xFF73A5;
@@ -1124,11 +1124,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 110;
             def = 60;
             spa = 150;
-            spd = 130
+            spd = 130;
             spe = 70;
             break;
         case "hoopa déchainée":
-            other_forms = "Autres formes: hoopa"
+            other_forms = "Autres formes: hoopa";
             title = "Hoopa Forme Déchainée";
             url = "https://pokepedia.fr/Hoopa";
             color = 0xFF73A5;
@@ -1147,11 +1147,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 160;
             def = 60;
             spa = 170;
-            spd = 130
+            spd = 130;
             spe = 80;
             break;
         case "amphinobi":
-            other_forms = "Autres formes: amphinobi sacha"
+            other_forms = "Autres formes: amphinobi sacha";
             title = "Amphinobi";
             url = "https://pokepedia.fr/Amphinobi";
             color = 0x339CCF;
@@ -1172,11 +1172,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 95;
             def = 64;
             spa = 103;
-            spd = 71
+            spd = 71;
             spe = 122;
             break;
         case "amphinobi sacha":
-            other_forms = "Autres formes: amphinobi"
+            other_forms = "Autres formes: amphinobi";
             title = "Amphinobi Sacha";
             url = "https://pokepedia.fr/Amphinobi";
             color = 0x339CCF;
@@ -1197,12 +1197,12 @@ function french_special_cases(channel, typed, shiny)
             atk = 145;
             def = 64;
             spa = 153;
-            spd = 71
+            spd = 71;
             spe = 132;
             break;
         case "zygarde 50":
         case "zygarde":
-            other_forms = "Autres formes: zygarde 10, zygarde 100"
+            other_forms = "Autres formes: zygarde 10, zygarde 100";
             title = "Zygarde";
             url = "https://pokepedia.fr/Zygarde";
             color = 0x8858F6;
@@ -1222,11 +1222,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 100;
             def = 121;
             spa = 81;
-            spd = 95
+            spd = 95;
             spe = 95;
             break;
         case "zygarde 10":
-            other_forms = "Autres formes: zygarde, zygarde 100"
+            other_forms = "Autres formes: zygarde, zygarde 100";
             title = "Zygarde 10%";
             url = "https://pokepedia.fr/Zygarde";
             color = 0x8858F6;
@@ -1246,11 +1246,11 @@ function french_special_cases(channel, typed, shiny)
             atk = 100;
             def = 71;
             spa = 61;
-            spd = 85
+            spd = 85;
             spe = 115;
             break;
         case "zygarde 100":
-            other_forms = "Autres formes: zygarde, zygarde 10"
+            other_forms = "Autres formes: zygarde, zygarde 10";
             title = "Zygarde 100%";
             url = "https://pokepedia.fr/Zygarde";
             color = 0x8858F6;
@@ -1270,8 +1270,353 @@ function french_special_cases(channel, typed, shiny)
             atk = 100;
             def = 121;
             spa = 91;
-            spd = 95
+            spd = 95;
             spe = 85;
+            break;
+        case "plumeline":
+            other_forms = "Autres formes: plumeline buyo, plumeline pom-pom, plumeline hula";
+            title = "Plumine Forme Flamenco";
+            url = "https://pokepedia.fr/Plumeline";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("oricorio.gif");
+            name = "Oricorio";
+            number = 718;
+            type1 = "Feu"
+            type2 = "vol"
+            family = "Danse";
+            ability1 = "Danseuse";
+            egg1 = "Aérien";
+            rate = 45;
+            height = "0,6 m, soit 2 pieds";
+            weight = "3,4 kg, soit 7,5 livres";
+            hp = 75;
+            atk = 70;
+            def = 70;
+            spa = 98;
+            spd = 70;
+            spe = 93;
+            break;
+        case "plumeline buyo":
+            other_forms = "Autres formes: plumeline, plumeline pom-pom, plumeline hula";
+            title = "Plumine Forme Buyo";
+            url = "https://pokepedia.fr/Plumeline";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("oricorio-sensu.gif");
+            name = "Oricorio";
+            number = 718;
+            type1 = "Spectre"
+            type2 = "vol"
+            family = "Danse";
+            ability1 = "Danseuse";
+            egg1 = "Aérien";
+            rate = 45;
+            height = "0,6 m, soit 2 pieds";
+            weight = "3,4 kg, soit 7,5 livres";
+            hp = 75;
+            atk = 70;
+            def = 70;
+            spa = 98;
+            spd = 70;
+            spe = 93;
+            break;
+        case "plumeline pom-pom":
+            other_forms = "Autres formes: plumeline, plumeline buyo, plumeline hula";
+            title = "Plumine Forme Pom-Pom";
+            url = "https://pokepedia.fr/Plumeline";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("oricorio-pompom.gif");
+            name = "Oricorio";
+            number = 718;
+            type1 = "Électrik"
+            type2 = "vol"
+            family = "Danse";
+            ability1 = "Danseuse";
+            egg1 = "Aérien";
+            rate = 45;
+            height = "0,6 m, soit 2 pieds";
+            weight = "3,4 kg, soit 7,5 livres";
+            hp = 75;
+            atk = 70;
+            def = 70;
+            spa = 98;
+            spd = 70;
+            spe = 93;
+            break;
+        case "plumeline hula":
+            other_forms = "Autres formes: plumeline, plumeline buyo, plumeline pom-pom";
+            title = "Plumine Forme Hula";
+            url = "https://pokepedia.fr/Plumeline";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("oricorio-pau.gif");
+            name = "Oricorio";
+            number = 718;
+            type1 = "Psy"
+            type2 = "vol"
+            family = "Danse";
+            ability1 = "Danseuse";
+            egg1 = "Aérien";
+            rate = 45;
+            height = "0,6 m, soit 2 pieds";
+            weight = "3,4 kg, soit 7,5 livres";
+            hp = 75;
+            atk = 70;
+            def = 70;
+            spa = 98;
+            spd = 70;
+            spe = 93;
+            break;
+        case "lougaroc diurne":
+        case "lougaroc":
+            other_forms = "Autres formes: lougaroc nocturne, lougaroc crépusculaire";
+            title = "Plumine Diurne";
+            url = "https://pokepedia.fr/Lougaroc";
+            color = 0xDBA55A;
+            sprite = gif_url.concat("lycanroc.gif");
+            name = "Lycanroc";
+            number = 745;
+            type1 = "Roche"
+            family = "Loup";
+            ability1 = "Regard-Vif";
+            ability2 = "Baigne Sable";
+            ability3 = "Impassible"
+            egg1 = "Terrestre";
+            rate = 90;
+            height = "0,8 m, soit 2,6 pieds";
+            weight = "25,0 kg, soit 55,1 livres";
+            hp = 75;
+            atk = 115;
+            def = 65;
+            spa = 55;
+            spd = 75;
+            spe = 112;
+            break;
+        case "lougaroc nocturne":
+            other_forms = "Autres formes: lougaroc, lougaroc crépusculaire";
+            title = "Plumine Nocturne";
+            url = "https://pokepedia.fr/Lougaroc";
+            color = 0xDBA55A;
+            sprite = gif_url.concat("lycanroc-dusk.gif");
+            name = "Lycanroc";
+            number = 745;
+            type1 = "Roche"
+            family = "Loup";
+            ability1 = "Regard-Vif";
+            ability2 = "Esprit Vital";
+            ability3 = "Annule Garde"
+            egg1 = "Terrestre";
+            rate = 90;
+            height = "1,1 m, soit 3,6 pieds";
+            weight = "25,0 kg, soit 55,1 livres";
+            hp = 85;
+            atk = 115;
+            def = 75;
+            spa = 55;
+            spd = 75;
+            spe = 82;
+            break;
+        case "lougaroc crépusculaire":
+            other_forms = "Autres formes: lougaroc, lougaroc nocturne";
+            title = "Plumine Crépusculaire";
+            url = "https://pokepedia.fr/Lougaroc";
+            color = 0xDBA55A;
+            sprite = gif_url.concat("lycanroc-midnight.gif");
+            name = "Lycanroc";
+            number = 745;
+            type1 = "Roche"
+            family = "Loup";
+            ability1 = "Regard-Vif";
+            ability2 = "griffe Dure";
+            egg1 = "Terrestre";
+            rate = 90;
+            height = "1,1 m, soit 3,6 pieds";
+            weight = "25,0 kg, soit 55,1 livres";
+            hp = 75;
+            atk = 117;
+            def = 65;
+            spa = 55;
+            spd = 65;
+            spe = 100;
+            break;
+        case "froussardine":
+            other_forms = "Autres formes: froussardine banc";
+            title = "Froussardine";
+            url = "https://pokepedia.fr/Froussardine";
+            color = 0x399CCF;
+            sprite = gif_url.concat("wishiwashi.gif");
+            name = "Wishiwashi";
+            number = 746;
+            type1 = "Eau"
+            family = "Minipoisson";
+            ability1 = "Banc";
+            egg1 = "Aquatique 2";
+            rate = 60;
+            height = "0,2 m, soit 0,7 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 45;
+            atk = 20;
+            def = 20;
+            spa = 25;
+            spd = 25;
+            spe = 40;
+            break;
+        case "froussardine banc":
+            other_forms = "Autres formes: froussardine";
+            title = "Froussardine Forme Banc";
+            url = "https://pokepedia.fr/Froussardine";
+            color = 0x399CCF;
+            sprite = gif_url.concat("wishiwashi.gif");
+            name = "Wishiwashi";
+            number = 746;
+            type1 = "Eau"
+            family = "Minipoisson";
+            ability1 = "Banc";
+            egg1 = "Aquatique 2";
+            rate = 60;
+            height = "8,2 m, soit 26,9 pieds";
+            weight = "78,6 kg, soit 173,3 livres";
+            hp = 45;
+            atk = 140;
+            def = 130;
+            spa = 140;
+            spd = 135;
+            spe = 30;
+            break;
+        case "météno":
+            other_forms = "Autres formes: météno défense";
+            title = "Météno";
+            url = "https://pokepedia.fr/Météno";
+            color = 0xBDA55A;
+            sprite = gif_url.concat("minior.gif");
+            name = "Minior";
+            number = 774;
+            type1 = "Roche";
+            type1 = "Vol"
+            family = "Météore";
+            ability1 = "Bouclier-Carcan";
+            egg1 = "Minéral";
+            rate = 225;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 60;
+            atk = 100;
+            def = 60;
+            spa = 100;
+            spd = 60;
+            spe = 120;
+            break;
+        case "météno défense":
+            other_forms = "Autres formes: météno défense";
+            title = "Météno Forme Défensive";
+            url = "https://pokepedia.fr/Météno";
+            color = 0xBDA55A;
+            sprite = gif_url.concat("minior-meteor.gif");
+            name = "Minior";
+            number = 774;
+            type1 = "Roche";
+            type1 = "Vol"
+            family = "Météore";
+            ability1 = "Bouclier-Carcan";
+            egg1 = "Minéral";
+            rate = 30;
+            height = "40 kg, soit 88,2 livres";
+            weight = "0,3 kg, soit 0,7 livre";
+            hp = 60;
+            atk = 60;
+            def = 100;
+            spa = 60;
+            spd = 100;
+            spe = 60;
+            break;
+        case "necrozma":
+            other_forms = "Autres formes: necrozma ailes de l\'aurore, necrozma crinière du couchant, ultra necrozma";
+            title = "Necrozma";
+            url = "https://pokepedia.fr/Necrozma";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("necrozma.gif");
+            name = "Necrozma";
+            number = 800;
+            type1 = "Psy";
+            family = "Prisme";
+            ability1 = "Prisme-Armure";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "2,4 m, soit 7,9 pieds";
+            weight = "230,0 kg, soit 507,1 livres";
+            hp = 97;
+            atk = 107;
+            def = 101;
+            spa = 127;
+            spd = 89;
+            spe = 79;
+            break;
+        case "necrozma ailes de l\'aurore":
+            other_forms = "Autres formes: necrozma, necrozma crinière du couchant, ultra necrozma";
+            title = "Necrozma Ailes de l\'Aurore";
+            url = "https://pokepedia.fr/Necrozma_Ailes_de_l%27Aurore";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("necrozma-dawnwings.gif");
+            name = "Necrozma Dawn Wings";
+            number = 800;
+            type1 = "Psy";
+            type2 = "Spectre"
+            family = "Prisme";
+            ability1 = "Prisme-Armure";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "4,2 m, soit 13,8 pieds";
+            weight = "350 kg, soit 771,6 livres";
+            hp = 97;
+            atk = 113;
+            def = 109;
+            spa = 157;
+            spd = 127;
+            spe = 77;
+            break;
+        case "necrozma crinière du couchant":
+            other_forms = "Autres formes: necrozma, necrozma ailes de l\'aurore, ultra necrozma";
+            title = "Necrozma Crinière du Couchant";
+            url = "https://pokepedia.fr/Necrozma_Crinière_du_Couchant";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("necrozma-duskmane.gif");
+            name = "Necrozma Dusk Mane";
+            number = 800;
+            type1 = "Psy";
+            type2 = "Acier"
+            family = "Prisme";
+            ability1 = "Prisme-Armure";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "3,8 m, soit 12,5 pieds";
+            weight = "460 kg, soit 1 014,1 livres";
+            hp = 97;
+            atk = 157;
+            def = 127;
+            spa = 113;
+            spd = 109;
+            spe = 77;
+            break;
+        case "ultra necrozma":
+            other_forms = "Autres formes: necrozma, necrozma ailes de l\'aurore, necrozma crinière du couchant";
+            title = "Ultra Necrozma";
+            url = "https://pokepedia.fr/Ultra-Necrozma";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("necrozma-ultra.gif");
+            name = "Ultra Necrozma";
+            number = 800;
+            type1 = "Psy";
+            type2 = "Dragon"
+            family = "Prisme";
+            ability1 = "Cérébro-Force";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "7,5 m, soit 24,6 pieds";
+            weight = "230,0 kg, soit 507,1 livres";
+            hp = 97;
+            atk = 167;
+            def = 97;
+            spa = 163;
+            spd = 97;
+            spe = 129;
             break;
         default:
             return 0;
