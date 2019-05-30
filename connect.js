@@ -1,5 +1,6 @@
 module.exports = {
-    connect: function(client) {
+    connect: function(client)
+    {
         client.connect({ token: "[Enter token here]" });
     }
 };
