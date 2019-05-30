@@ -585,7 +585,7 @@ function french_special_cases(channel, typed, shiny)
             family = "Pokémon Tornade";
             ability1 = "Farceur";
             ability2 = "Acharné"
-            egg1 = "Iconnu";
+            egg1 = "Inconnu";
             rate = 3;
             height = "1,5 m, soit 4,9 pieds";
             weight = "63,0 kg, soit 138,9 livres";
@@ -608,7 +608,7 @@ function french_special_cases(channel, typed, shiny)
             family = "Pokémon Tornade";
             ability1 = "Régé-Force";
             ability2 = "Acharné"
-            egg1 = "Iconnu";
+            egg1 = "Inconnu";
             rate = 3;
             height = "1,4 m, soit 4,6 pieds";
             weight = "63,0 kg, soit 138,9 livres";
@@ -618,6 +618,220 @@ function french_special_cases(channel, typed, shiny)
             spa = 110;
             spd = 90;
             spe = 121;
+            break;
+        case "fulguris":
+            other_forms = "Autres formes: fulguris totémique"
+            title = "Fulguris";
+            url = "https://pokepedia.fr/Fulguris";
+            color = 0xFFC631;
+            sprite = gif_url.concat("thundurus.gif");
+            name = "Thundurus";
+            number = 642;
+            type1 = "Électrik";
+            type2 = "Vol"
+            family = "Pokémon Foudroyeur";
+            ability1 = "Farceur";
+            ability2 = "Acharné"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "61,0 kg, soit 134,5 livres";
+            hp = 79;
+            atk = 115;
+            def = 70;
+            spa = 125;
+            spd = 80;
+            spe = 111;
+            break;
+        case "fulguris totémique":
+            other_forms = "Autres formes: fulguris"
+            title = "Fulguris Totémique";
+            url = "https://pokepedia.fr/Fulguris";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("thundurus-therian.gif");
+            name = "Thundurus";
+            number = 642;
+            type1 = "Électrik"
+            type2 = "Vol";
+            family = "Pokémon Foudroyeur";
+            ability1 = "Absorb Volt";
+            ability2 = "Acharné"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "3,0 m, soit 9,8 pieds";
+            weight = "61,0 kg, soit 134,5 livres";
+            hp = 79;
+            atk = 105;
+            def = 70;
+            spa = 145;
+            spd = 80;
+            spe = 101;
+            break;
+        case "demeteros":
+        case "démétéros":
+            other_forms = "Autres formes: démétéros totémique"
+            title = "Démétéros";
+            url = "https://pokepedia.fr/Démétéros";
+            color = 0xD6B55A;
+            sprite = gif_url.concat("landorus.gif");
+            name = "Landorus";
+            number = 645;
+            type1 = "Sol";
+            type2 = "Vol"
+            family = "Pokémon Fertilité";
+            ability1 = "Force Sable";
+            ability2 = "Sans Limite"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "68,0 kg, soit 149,9 livres";
+            hp = 89;
+            atk = 125;
+            def = 90;
+            spa = 115;
+            spd = 80;
+            spe = 101;
+            break;
+        case "demeteros totémique":
+        case "démétéros totémique":
+            other_forms = "Autres formes: démétéros"
+            title = "Démétéros Totémique";
+            url = "https://pokepedia.fr/Démétéros";
+            color = 0xD6B55A;
+            sprite = gif_url.concat("landorus-therian.gif");
+            name = "Landorus";
+            number = 645;
+            type1 = "Sol"
+            type2 = "Vol";
+            family = "Pokémon Fertilité";
+            ability1 = "Intimidation";
+            ability2 = "Sans Limite"
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "1,3 m, soit 4,3 pieds";
+            weight = "61,0 kg, soit 134,5 livres";
+            hp = 89;
+            atk = 145;
+            def = 90;
+            spa = 105;
+            spd = 80;
+            spe = 91;
+            break;
+        default:
+        case "kyurem":
+            other_forms = "Autres formes: kyurem blanc, kyurem noir"
+            title = "Kyurem";
+            url = "https://pokepedia.fr/Kyurem";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem.gif");
+            name = "Kyurem";
+            number = 646;
+            type1 = "Dragon"
+            type2 = "Glace";
+            family = "Pokémon Frontière";
+            ability1 = "Pression";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "3,0 m, soit 9,8 pieds";
+            weight = "325 kg, soit 716,5 livres";
+            hp = 125;
+            atk = 130;
+            def = 90;
+            spa = 130;
+            spd = 90;
+            spe = 95;
+            break;
+        case "kyurem blanc":
+            other_forms = "Autres formes: kyurem, kyurem noir"
+            title = "Kyurem Blanc";
+            url = "https://pokepedia.fr/Kyurem_Blanc";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem-white.gif");
+            name = "Kyurem";
+            number = 646;
+            type1 = "Dragon"
+            type2 = "Glace";
+            family = "Pokémon Frontière";
+            ability1 = "TurboBrasier";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "3,6 m, soit 11,8 pieds";
+            weight = "325 kg, soit 716,5 livres";
+            hp = 125;
+            atk = 170;
+            def = 100;
+            spa = 120;
+            spd = 90;
+            spe = 95;
+            break;
+        case "kyurem noir":
+            other_forms = "Autres formes: kyurem, kyurem blanc"
+            title = "Kyurem Noir";
+            url = "https://pokepedia.fr/Kyurem_Noir";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem-white.gif");
+            name = "Kyurem";
+            number = 646;
+            type1 = "Dragon"
+            type2 = "Glace";
+            family = "Pokémon Frontière";
+            ability1 = "Téra-Voltage";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "3,3 m, soit 10,8 pieds";
+            weight = "325 kg, soit 716,5 livres";
+            hp = 125;
+            atk = 120;
+            def = 90;
+            spa = 170;
+            spd = 100;
+            spe = 95;
+            break;
+        case "meloetta":
+            other_forms = "Autres formes: meloetta danse"
+            title = "Meloetta";
+            url = "https://pokepedia.fr/Meloetta";
+            color = 0xADA594;
+            sprite = gif_url.concat("meloetta.gif");
+            name = "Meloetta";
+            number = 648;
+            type1 = "Normal"
+            type2 = "Psy";
+            family = "Pokémon Mélodie";
+            ability1 = "Sérénité";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "0,6 m, soit 2 pieds";
+            weight = "6,5 kg, soit 14,3 livres";
+            hp = 100;
+            atk = 77;
+            def = 77;
+            spa = 128;
+            spd = 128;
+            spe = 90;
+            break;
+        case "meloetta danse":
+            other_forms = "Autres formes: meloetta"
+            title = "Meloetta Danse";
+            url = "https://pokepedia.fr/Meloetta";
+            color = 0xADA594;
+            sprite = gif_url.concat("meloetta-pirouette.gif");
+            name = "Meloetta";
+            number = 648;
+            type1 = "Normal"
+            type2 = "Combat";
+            family = "Pokémon Mélodie";
+            ability1 = "Sérénité";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "0,6 m, soit 2 pieds";
+            weight = "6,5 kg, soit 14,3 livres";
+            hp = 100;
+            atk = 128;
+            def = 90;
+            spa = 77;
+            spd = 77;
+            spe = 128;
             break;
         default:
             return 0;
