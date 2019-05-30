@@ -717,7 +717,6 @@ function french_special_cases(channel, typed, shiny)
             spd = 80;
             spe = 91;
             break;
-        default:
         case "kyurem":
             other_forms = "Autres formes: kyurem blanc, kyurem noir"
             title = "Kyurem";
