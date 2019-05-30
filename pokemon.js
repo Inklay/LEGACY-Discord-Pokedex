@@ -29,6 +29,7 @@ function french_special_cases(channel, typed, shiny)
     var spd = 0;
     var spe = 0;
     var other_forms;
+    var primal = 0;
 
     if (shiny)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
@@ -1618,6 +1619,53 @@ function french_special_cases(channel, typed, shiny)
             spd = 97;
             spe = 129;
             break;
+        case "primo kyogre":
+            other_forms = "";
+            title = "Primo Kyogre";
+            url = "https://pokepedia.fr/Primo-Kyogre";
+            color = 0x399CCF;
+            sprite = gif_url.concat("kyogre-primal.gif");
+            name = "Primal Kyogre";
+            number = 382;
+            type1 = "Eau";
+            family = "Bassinmarin";
+            ability1 = "Mer Primaire";
+            egg1 = "";
+            rate = 3;
+            height = "9,8 m, soit 32,2 pieds";
+            weight = "430,0 kg, soit 948 livres";
+            hp = 100;
+            atk = 150;
+            def = 90;
+            spa = 180;
+            spd = 160;
+            spe = 90;
+            primal = 1;
+            break;
+        case "primo groudon":
+            other_forms = "";
+            title = "Primo Groudon";
+            url = "https://pokepedia.fr/Primo-Groudon";
+            color = 0xD6B55A;
+            sprite = gif_url.concat("groudon-primal.gif");
+            name = "Primal Groudon";
+            number = 383;
+            type1 = "Sol";
+            type2 = "Feu"
+            family = "Continent";
+            ability1 = "Terre Finale";
+            egg1 = "";
+            rate = 3;
+            height = "5,0 m, soit 16,4 pieds";
+            weight = "999,7 kg, soit 2 203,9 livres";
+            hp = 100;
+            atk = 180;
+            def = 160;
+            spa = 150;
+            spd = 90;
+            spe = 90;
+            primal = 1;
+            break;
         default:
             return 0;
     }
@@ -1635,10 +1683,12 @@ function french_special_cases(channel, typed, shiny)
         else
             description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
     }
-    if (egg2 == "NULL")
-        description += "Groupe œuf: " + egg1 + "\n";
-    else
-        description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
+    if (!primal) {
+        if (egg2 == "NULL")
+            description += "Groupe œuf: " + egg1 + "\n";
+        else
+            description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
+    }
     description += "Taux de capture: " + rate;
     description += "\nPv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
     channel.sendMessage(other_forms, false, {
