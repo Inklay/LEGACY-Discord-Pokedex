@@ -832,6 +832,447 @@ function french_special_cases(channel, typed, shiny)
             spd = 77;
             spe = 128;
             break;
+        case "flabébé":
+        case "flabebe":
+            other_forms = ""
+            title = "Flabébé";
+            url = "https://pokepedia.fr/Flabébé";
+            color = 0xE09AE3;
+            sprite = gif_url.concat("flabebe.gif");
+            name = "Flabébé";
+            number = 669;
+            type1 = "Fée"
+            family = "Uniflore";
+            ability1 = "Flora-Voile";
+            ability2 = "Symbiose"
+            egg1 = "Féerique";
+            rate = 255;
+            height = "0,1 m, soit 0,3 pied";
+            weight = "0,1 kg, soit 0,2 livre";
+            hp = 44;
+            atk = 38;
+            def = 39;
+            spa = 64;
+            spd = 76;
+            spe = 42;
+            break;
+        case "exagide":
+            other_forms = "Autres formes: exgaide assault"
+            title = "Exagide";
+            url = "https://pokepedia.fr/Exagide";
+            color = 0xADADC6;
+            sprite = gif_url.concat("aegislash.gif");
+            name = "Aegislash";
+            number = 681;
+            type1 = "Acier"
+            type2 = "Spectre"
+            family = "Noble Lame";
+            ability1 = "Déclic Tactique";
+            egg1 = "Minéral";
+            rate = 222;
+            height = "1,7 m, soit 5,6 pieds";
+            weight = "53,0 kg, soit 116,8 livres";
+            hp = 60;
+            atk = 50;
+            def = 150;
+            spa = 50;
+            spd = 150
+            spe = 60;
+            break;
+        case "exagide assault":
+            other_forms = "Autres formes: exgaide"
+            title = "Exagide";
+            url = "https://pokepedia.fr/Exagide";
+            color = 0xADADC6;
+            sprite = gif_url.concat("aegislash-blade.gif");
+            name = "Aegislash";
+            number = 681;
+            type1 = "Acier"
+            type2 = "Spectre"
+            family = "Noble Lame";
+            ability1 = "Déclic Tactique";
+            egg1 = "Minéral";
+            rate = 222;
+            height = "1,7 m, soit 5,6 pieds";
+            weight = "53,0 kg, soit 116,8 livres";
+            hp = 60;
+            atk = 150;
+            def = 50;
+            spa = 150;
+            spd = 50
+            spe = 60;
+            break;
+        case "pitrouille normale":
+        case "pitrouille":
+            other_forms = "Autres formes: pitrouille mini, pitrouille maxi, pitrouille ultra"
+            title = "Pitrouille";
+            url = "https://pokepedia.fr/Pitrouille";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo.gif");
+            name = "Pumpkaboo";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,4 m, soit 1,3 pieds";
+            weight = "5,0 kg, soit 11 livres";
+            hp = 44;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55
+            spe = 56;
+            break;
+        case "pitrouille mini":
+            other_forms = "Autres formes: pitrouille, pitrouille maxi, pitrouille ultra"
+            title = "Pitrouille Mini";
+            url = "https://pokepedia.fr/Pitrouille";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-small.gif");
+            name = "Pumpkaboo";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,3 m, soit 1 pied";
+            weight = "3,5 kg, soit 7,7 livres";
+            hp = 49;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55
+            spe = 51;
+            break;
+        case "pitrouille maxi":
+            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille ultra"
+            title = "Pitrouille Maxi";
+            url = "https://pokepedia.fr/Pitrouille";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-large.gif");
+            name = "Pumpkaboo";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "7,5 kg, soit 16,5 livres";
+            hp = 54;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55
+            spe = 46;
+            break;
+        case "pitrouille ultra":
+            other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille maxi"
+            title = "Pitrouille Maxi";
+            url = "https://pokepedia.fr/Pitrouille";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-super.gif");
+            name = "Pumpkaboo";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,8 m, soit 2,6 pieds";
+            weight = "15,0 kg, soit 33,1 livres";
+            hp = 59;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55
+            spe = 41;
+            break;
+        case "banshitrouye normale":
+        case "banshitrouye":
+            other_forms = "Autres formes: banshitrouye mini, banshitrouye maxi, banshitrouye ultra"
+            title = "Banshitrouye";
+            url = "https://pokepedia.fr/Banshitrouye";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist.gif");
+            name = "Gourgeist";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,9 m, soit 3 pieds";
+            weight = "12,5 kg, soit 27,6 livres";
+            hp = 65;
+            atk = 90;
+            def = 122;
+            spa = 58;
+            spd = 75
+            spe = 84;
+            break;
+        case "banshitrouye mini":
+            other_forms = "Autres formes: banshitrouye, banshitrouye maxi, banshitrouye ultra"
+            title = "Banshitrouye Mini";
+            url = "https://pokepedia.fr/Banshitrouye";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-small.gif");
+            name = "Gourgeist";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "0,7 m, soit 2,3 pieds";
+            weight = "9,5 kg, soit 20,9 livres";
+            hp = 55;
+            atk = 85;
+            def = 122;
+            spa = 58;
+            spd = 75
+            spe = 99;
+            break;
+        case "banshitrouye maxi":
+            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye ultra"
+            title = "Banshitrouye Maxi";
+            url = "https://pokepedia.fr/Banshitrouye";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-large.gif");
+            name = "Gourgeist";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "1,1 m, soit 3,6 pieds";
+            weight = "14,0 kg, soit 30,9 livres";
+            hp = 75;
+            atk = 95;
+            def = 122;
+            spa = 58;
+            spd = 75
+            spe = 69;
+            break;
+        case "banshitrouye ultra":
+            other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye maxi"
+            title = "Banshitrouye Ultra";
+            url = "https://pokepedia.fr/Banshitrouye";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-super.gif");
+            name = "Gourgeist";
+            number = 710;
+            type1 = "Spectre"
+            type2 = "Plante"
+            family = "Citrouille";
+            ability1 = "Ramassage";
+            ability2 = "Fouille";
+            ability3 = "Insomnia";
+            egg1 = "Amorphe";
+            rate = 190;
+            height = "1,7 m, soit 5,6 pieds";
+            weight = "39,0 kg, soit 86 livres";
+            hp = 85;
+            atk = 100;
+            def = 122;
+            spa = 58;
+            spd = 75
+            spe = 54;
+            break;
+        case "hoopa":
+            other_forms = "Autres formes: hoopa déchainée"
+            title = "Hoopa";
+            url = "https://pokepedia.fr/Hoopa";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("hoopa.gif");
+            name = "Hoopa";
+            number = 720;
+            type1 = "Psy"
+            type2 = "Spectre"
+            family = "Chenapan";
+            ability1 = "Magicien";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "9,0 kg, soit 19,8 livres";
+            hp = 80;
+            atk = 110;
+            def = 60;
+            spa = 150;
+            spd = 130
+            spe = 70;
+            break;
+        case "hoopa déchainée":
+            other_forms = "Autres formes: hoopa"
+            title = "Hoopa Forme Déchainée";
+            url = "https://pokepedia.fr/Hoopa";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("hoopa-unbound.gif");
+            name = "Hoopa";
+            number = 720;
+            type1 = "Psy"
+            type2 = "Ténèbres"
+            family = "Djinn";
+            ability1 = "Magicien";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "6,5 m, soit 21,3 pieds";
+            weight = "490,0 kg, soit 1 080,3 livres";
+            hp = 80;
+            atk = 160;
+            def = 60;
+            spa = 170;
+            spd = 130
+            spe = 80;
+            break;
+        case "amphinobi":
+            other_forms = "Autres formes: amphinobi sacha"
+            title = "Amphinobi";
+            url = "https://pokepedia.fr/Amphinobi";
+            color = 0x339CCF;
+            sprite = gif_url.concat("greninja.gif");
+            name = "Greninja";
+            number = 659;
+            type1 = "Eau"
+            type2 = "Ténèbres"
+            family = "Ninja";
+            ability1 = "Torrent";
+            ability2 = "Protéen";
+            ability3 = "Synergie"
+            egg1 = "Aquatique 1";
+            rate = 45;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "40,0 kg, soit 88,2 livres";
+            hp = 72;
+            atk = 95;
+            def = 64;
+            spa = 103;
+            spd = 71
+            spe = 122;
+            break;
+        case "amphinobi sacha":
+            other_forms = "Autres formes: amphinobi"
+            title = "Amphinobi Sacha";
+            url = "https://pokepedia.fr/Amphinobi";
+            color = 0x339CCF;
+            sprite = gif_url.concat("greninja-ash.gif");
+            name = "Greninja";
+            number = 659;
+            type1 = "Eau"
+            type2 = "Ténèbres"
+            family = "Ninja";
+            ability1 = "Torrent";
+            ability2 = "Protéen";
+            ability3 = "Synergie"
+            egg1 = "Aquatique 1";
+            rate = 45;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "40,0 kg, soit 88,2 livres";
+            hp = 72;
+            atk = 145;
+            def = 64;
+            spa = 153;
+            spd = 71
+            spe = 132;
+            break;
+        case "zygarde 50":
+        case "zygarde":
+            other_forms = "Autres formes: zygarde 10, zygarde 100"
+            title = "Zygarde";
+            url = "https://pokepedia.fr/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde.gif");
+            name = "Zygarde";
+            number = 718;
+            type1 = "Dragon"
+            type2 = "Sol"
+            family = "Équilibre";
+            ability1 = "Aura Inversée";
+            ability2 = "Rassemblement";
+            egg1 = "Inconnnu";
+            rate = 3;
+            height = "5,0 m, soit 16,4 pieds";
+            weight = "305,0 kg, soit 672,4 livres";
+            hp = 108;
+            atk = 100;
+            def = 121;
+            spa = 81;
+            spd = 95
+            spe = 95;
+            break;
+        case "zygarde 10":
+            other_forms = "Autres formes: zygarde, zygarde 100"
+            title = "Zygarde 10%";
+            url = "https://pokepedia.fr/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde-10.gif");
+            name = "Zygarde";
+            number = 718;
+            type1 = "Dragon"
+            type2 = "Sol"
+            family = "Équilibre";
+            ability1 = "Aura Inversée";
+            ability2 = "Rassemblement";
+            egg1 = "Inconnnu";
+            rate = 3;
+            height = "1,2 m, soit 3,9 pieds";
+            weight = "33,5 kg, soit 73,9 livres";
+            hp = 54;
+            atk = 100;
+            def = 71;
+            spa = 61;
+            spd = 85
+            spe = 115;
+            break;
+        case "zygarde 100":
+            other_forms = "Autres formes: zygarde, zygarde 10"
+            title = "Zygarde 100%";
+            url = "https://pokepedia.fr/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde-complete.gif");
+            name = "Zygarde";
+            number = 718;
+            type1 = "Dragon"
+            type2 = "Sol"
+            family = "Équilibre";
+            ability1 = "Aura Inversée";
+            ability2 = "Rassemblement";
+            egg1 = "Inconnnu";
+            rate = 3;
+            height = "4,5 m, soit 14,8 pieds";
+            weight = "610,0 kg, soit 1 344,8 livres";
+            hp = 216;
+            atk = 100;
+            def = 121;
+            spa = 91;
+            spd = 95
+            spe = 85;
+            break;
         default:
             return 0;
     }
@@ -935,9 +1376,9 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        if (french_special_cases(channel, content.substring(8), shiny))
+        if (french_special_cases(channel, content.substring(8), shiny) && !is_mega)
             return;
-        else if (french_special_cases(channel, content.substring(8, 8 + content.substring(8).search(" ")), shiny))
+        else if (french_special_cases(channel, content.substring(8, 8 + content.substring(8).search(" ")), shiny) && !is_mega)
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
