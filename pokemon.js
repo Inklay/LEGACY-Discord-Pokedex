@@ -29,7 +29,6 @@ function french_special_cases(channel, typed, shiny)
     var spd = 0;
     var spe = 0;
     var other_forms;
-    var primal = 0;
 
     if (shiny)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
@@ -1630,7 +1629,7 @@ function french_special_cases(channel, typed, shiny)
             type1 = "Eau";
             family = "Bassinmarin";
             ability1 = "Mer Primaire";
-            egg1 = "";
+            egg1 = "NULL";
             rate = 3;
             height = "9,8 m, soit 32,2 pieds";
             weight = "430,0 kg, soit 948 livres";
@@ -1640,7 +1639,6 @@ function french_special_cases(channel, typed, shiny)
             spa = 180;
             spd = 160;
             spe = 90;
-            primal = 1;
             break;
         case "primo groudon":
             other_forms = "";
@@ -1654,7 +1652,7 @@ function french_special_cases(channel, typed, shiny)
             type2 = "Feu"
             family = "Continent";
             ability1 = "Terre Finale";
-            egg1 = "";
+            egg1 = "NULL";
             rate = 3;
             height = "5,0 m, soit 16,4 pieds";
             weight = "999,7 kg, soit 2 203,9 livres";
@@ -1664,7 +1662,50 @@ function french_special_cases(channel, typed, shiny)
             spa = 150;
             spd = 90;
             spe = 90;
-            primal = 1;
+            break;
+        case "meltan":
+            other_forms = "";
+            title = "Meltan";
+            url = "https://pokepedia.fr/Meltan";
+            color = 0xADADC6;
+            sprite = gif_url.concat("meltan.gif");
+            name = "Meltan";
+            number = 808;
+            type1 = "Acier";
+            family = "Écrou";
+            ability1 = "NULL";
+            egg1 = "Inconnu";
+            rate = -1;
+            height = "0,2 m, soit 0,7 pied";
+            weight = "8,0 kg, soit 17,6 livres";
+            hp = 46;
+            atk = 65;
+            def = 65;
+            spa = 55;
+            spd = 35;
+            spe = 34;
+            break;
+        case "melmetal":
+            other_forms = "";
+            title = "Melmetal";
+            url = "https://pokepedia.fr/Melmetal";
+            color = 0xADADC6;
+            sprite = gif_url.concat("melmetal.gif");
+            name = "Melmetal";
+            number = 809;
+            type1 = "Acier";
+            family = "Écrou";
+            ability1 = "NULL";
+            egg1 = "Inconnu";
+            rate = 3;
+            height = "2,5 m, soit 8,2 pieds";
+            weight = "800,0 kg, soit 1 763,7 livres";
+            hp = 135;
+            atk = 143;
+            def = 143;
+            spa = 80;
+            spd = 65;
+            spe = 34;
             break;
         default:
             return 0;
@@ -1675,22 +1716,26 @@ function french_special_cases(channel, typed, shiny)
     else
         description += "Types: " + type1 + ", " + type2 + "\n";
     description += "Famille: " + family + "\nTaille: " + height + "\nPoids: " + weight;
-    if (ability2 == "NULL")
-        description += "\nTalent: " + ability1 + "\n";
-    else {
-        if (ability3 == "NULL")
-            description += "\nTalents: " + ability1 + "/" + ability2 + "\n";
-        else
-            description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
-    }
-    if (!primal) {
+    if (ability1 != "NULL") {
+        if (ability2 == "NULL")
+            description += "\nTalent: " + ability1 + "\n";
+        else {
+            if (ability3 == "NULL")
+                description += "\nTalents: " + ability1 + "/" + ability2 + "\n";
+            else
+                description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+        }
+    } else
+        description += "\n";
+    if (egg1 != "NULL") {
         if (egg2 == "NULL")
             description += "Groupe œuf: " + egg1 + "\n";
         else
             description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
     }
-    description += "Taux de capture: " + rate;
-    description += "\nPv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
+    if (rate != -1)
+        description += "Taux de capture: " + rate + "\n";
+    description += "Pv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
     channel.sendMessage(other_forms, false, {
         color: color,
         title: title,
