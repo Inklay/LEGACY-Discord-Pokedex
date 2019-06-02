@@ -1,7 +1,7 @@
 const Discordie = require('discordie');
 const connect = require('./connect.js');
 const pokemon = require('./pokemon.js');
-const language = require('./language');
+const language = require('./language.js');
 const Events = Discordie.Events;
 const client = new Discordie();
 
@@ -23,6 +23,10 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
         channel.sendMessage("pokedex [pokemon name] <mega> <shiny>");
     } else if((content.startsWith("pokedex ") || content.startsWith("pokédex ")) && content != "pokedex [pokemon name] <mega> <shiny>") {
         guild_language = language.get(e.message.channel.guild.id);
-        pokemon.pokemon(guild_language, content, channel);
+        if (guild_language != null)
+            pokemon.pokemon(guild_language, content, channel);
+        else
+            channel.sendMessage("English: no language set for this guild, use \'pokedex language\' to set a language for ths guild.\n" + 
+            "Français: aucune langue n'a été définie pour ce serveur, tapez \'pokedex language\' pour définir une langue sur ce serveur.");
     }
 });

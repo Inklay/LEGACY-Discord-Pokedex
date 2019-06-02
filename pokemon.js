@@ -12,6 +12,8 @@ module.exports = {
             case "english":
                 english.pokemon(content, channel);
                 break;
+            default:
+                return;
         }
     }
 };

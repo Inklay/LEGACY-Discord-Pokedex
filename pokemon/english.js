@@ -14,7 +14,7 @@ module.exports = {
         var title;
         var number;
         var type1;
-        var type2 = "NULL";
+        var type2;
         var family
         var height;
         var weight;
@@ -95,13 +95,12 @@ module.exports = {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("(type)") != -1) {
                     if (type1 == null) {
                         type1 = $(this)[0].attribs.href.substring(6, ($(this)[0].attribs.href.length - 7));
-                        if ($(this).parent().next()[0] != null)
-                            type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
+                        type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
                     }
                 }
             });
             description = "Pokédex number: " + number + "\n";
-            if (type2 == "NULL")
+            if (type2 == "Unknown")
                 description += "Type: " + type1.charAt(0).toUpperCase() + type1.slice(1) + "\n";
             else
                 description += "Types: " + type1.charAt(0).toUpperCase() + type1.slice(1) + ", " + type2.charAt(0).toUpperCase() + type2.slice(1) + "\n";

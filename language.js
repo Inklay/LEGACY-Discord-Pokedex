@@ -37,8 +37,7 @@ module.exports = {
             if (data.servers[i].id == id)
                 return data.servers[i].language;
         }
-        set_language(id, "french");
-        return "french";
+        return null;
     },
     list: function(channel)
     {
