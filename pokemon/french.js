@@ -1668,7 +1668,7 @@ function french_special_cases(channel, typed, shiny)
             title = "Meltan";
             url = "https://pokepedia.fr/Meltan";
             color = 0xADADC6;
-            sprite = gif_url.concat("meltan.gif");
+            sprite = "https://www.pokepedia.fr/images/thumb/5/57/Meltan-LGPE.png/57px-Meltan-LGPE.png";
             name = "Meltan";
             number = 808;
             type1 = "Acier";
@@ -1690,7 +1690,7 @@ function french_special_cases(channel, typed, shiny)
             title = "Melmetal";
             url = "https://pokepedia.fr/Melmetal";
             color = 0xADADC6;
-            sprite = gif_url.concat("melmetal.gif");
+            sprite = "https://www.pokepedia.fr/images/thumb/d/d6/Melmetal-LGPE.png/131px-Melmetal-LGPE.png";
             name = "Melmetal";
             number = 809;
             type1 = "Acier";
