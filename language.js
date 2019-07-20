@@ -28,6 +28,16 @@ module.exports = {
             data.servers.push({"id": id, "language": language});
         json = JSON.stringify(data);
         fs.writeFileSync('language.json', json);
+
+        switch (language) {
+            case "francais":
+            case "français":
+                channel.sendMessage("La langue a bien été définie.");
+                break;
+            case "english":
+                channel.sendMessage("Language successfully set.");
+                break;
+        }
     },
     get: function(id)
     {
