@@ -1707,6 +1707,58 @@ function french_special_cases(channel, typed, shiny)
             spd = 65;
             spe = 34;
             break;
+        case "ouistempo":
+            other_forms = "";
+            title = "Ouistempo";
+            url = "https://pokepedia.fr/Ouistempo";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/e1/Ouistempo-EB.png/182px-Ouistempo-EB.png";
+            name = "Grookey";
+            number = 810;
+            type1 = "Plante";
+            family = "Chimpanzé";
+            ability1 = "Engrais";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "5,0 kg, soit 11 livres";
+            hp = 0;
+            break;
+        case "flambino":
+            other_forms = "";
+            title = "Flambino";
+            url = "https://pokepedia.fr/Flambino";
+            color = 0xf75231;
+            sprite = "https://www.pokepedia.fr/images/thumb/c/c6/Flambino-EB.png/118px-Flambino-EB.png";
+            name = "Scorbunny";
+            number = 813;
+            type1 = "Feu";
+            family = "Lapin";
+            ability1 = "Braiser";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "4,5 kg, soit 9,9 livres";
+            hp = 0;
+            break;
+        case "larméléon":
+        case "larmeleon":
+            other_forms = "";
+            title = "Larméléon";
+            url = "https://pokepedia.fr/Larméléon";
+            color = 0x399cff;
+            sprite = "https://www.pokepedia.fr/images/thumb/2/2c/Larm%C3%A9l%C3%A9on-EB.png/160px-Larm%C3%A9l%C3%A9on-EB.png";
+            name = "Sobble";
+            number = 816;
+            type1 = "Eau";
+            family = "Lézard'Eau";
+            ability1 = "Torrent";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "4,0 kg, soit 8,8 livres";
+            hp = 0;
+            break;
         default:
             return 0;
     }
@@ -1733,9 +1785,16 @@ function french_special_cases(channel, typed, shiny)
         else
             description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
     }
-    if (rate != -1)
-        description += "Taux de capture: " + rate + "\n";
-    description += "Pv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
+    if (rate != -1) {
+        if (rate == 0)
+            description += "Taux de capture: ???\n";
+        else
+            description += "Taux de capture: " + rate + "\n";
+    }
+    if (hp != 0)
+        description += "Pv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
+    else
+        description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
     channel.sendMessage(other_forms, false, {
         color: color,
         title: title,
