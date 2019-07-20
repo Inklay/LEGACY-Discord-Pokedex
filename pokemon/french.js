@@ -3,7 +3,7 @@ const $ = require('cheerio');
 
 function french_special_cases(channel, typed, shiny)
 {
-    var color;
+    var color = 0xffffff;
     var description;
     var url;
     var title;
@@ -1759,10 +1759,192 @@ function french_special_cases(channel, typed, shiny)
             weight = "4,0 kg, soit 8,8 livres";
             hp = 0;
             break;
+         case "tournicoton":
+            other_forms = "";
+            title = "Tournicoton";
+            url = "https://pokepedia.fr/Tournicoton";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/2/20/Tournicoton-EB.png/253px-Tournicoton-EB.png";
+            name = "Gossifleur";
+            number = 0;
+            type1 = "Plante";
+            family = "Chef-Fleur";
+            ability1 = "Effilochage";
+            ability2 = "Régé-Force";
+            egg1 = "???";
+            rate = 0;
+            height = "0,4 m, soit 1,3 pieds";
+            weight = "2,2 kg, soit 4,9 livres";
+            hp = 0;
+            break;
+        case "blancoton":
+            other_forms = "";
+            title = "Blancoton";
+            url = "https://pokepedia.fr/Blancoton";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/f/f7/Blancoton-EB.png/204px-Blancoton-EB.png";
+            name = "Eldegoss";
+            number = 0;
+            type1 = "Plante";
+            family = "Chef-Coton";
+            ability1 = "Effilochage";
+            ability2 = "Régé-Force";
+            egg1 = "???";
+            rate = 0;
+            height = "0,5 m, soit 1,6 pieds";
+            weight = "2,5 kg, soit 5,5 livres";
+            hp = 0;
+            break;
+        case "moumouton":
+            other_forms = "";
+            title = "Moumouton";
+            url = "https://pokepedia.fr/Moumouton";
+            color = 0xada594;
+            sprite = "https://www.pokepedia.fr/images/thumb/7/75/Moumouton-EB.png/267px-Moumouton-EB.png";
+            name = "Wooloo";
+            number = 0;
+            type1 = "Normal";
+            family = "Mouton";
+            ability1 = "Boule de Poils";
+            ability2 = "Fuite";
+            egg1 = "???";
+            rate = 0;
+            height = "0,6 m, soit 2 pieds";
+            weight = "6,0 kg, soit 13,2 livres";
+            hp = 0;
+            break;
+        case "corvaillus":
+            other_forms = "";
+            title = "Corvaillus";
+            url = "https://pokepedia.fr/Corvaillus";
+            color = 0x9cadf7;
+            sprite = "https://www.pokepedia.fr/images/thumb/3/38/Corvaillus-EB.png/193px-Corvaillus-EB.png";
+            name = "Corviknight";
+            number = 0;
+            type1 = "Vol";
+            type2 = "Acier";
+            family = "Mouton";
+            ability1 = "Pression";
+            ability2 = "Tension";
+            egg1 = "???";
+            rate = 0;
+            height = "2,2 m, soit 7,2 pieds";
+            weight = "75 kg, soit 165,3 livres";
+            hp = 0;
+            break;
+        case "charmilly":
+            other_forms = "";
+            title = "Charmilly";
+            url = "https://pokepedia.fr/Charmilly";
+            color = 0xe09ae3;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/ef/Charmilly-EB.png/183px-Charmilly-EB.png";
+            name = "Alcremie";
+            number = 0;
+            type1 = "Fée";
+            family = "Crème";
+            ability1 = "Gluco-Voile";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "0,5 kg, soit 1,1 livres";
+            hp = 0;
+            break;
+        case "voltoutou":
+            other_forms = "";
+            title = "Voltoutou";
+            url = "https://pokepedia.fr/Voltoutou";
+            color = 0xffc631;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/eb/Voltoutou-EB.png/197px-Voltoutou-EB.png";
+            name = "Yamper";
+            number = 0;
+            type1 = "Électrik";
+            family = "Chiot";
+            ability1 = "Ramasse Ball";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "13,5 kg, soit 29,8 livres";
+            hp = 0;
+            break;
+        case "charbi":
+            other_forms = "";
+            title = "Charbi";
+            url = "https://pokepedia.fr/Charbi";
+            color = 0xbda55a;
+            sprite = "https://www.pokepedia.fr/images/thumb/8/8d/Charbi-EB.png/286px-Charbi-EB.png";
+            name = "Rolycoly";
+            number = 0;
+            type1 = "Roche";
+            family = "Charbon";
+            ability1 = "Turbine";
+            ability2 = "Ignifugé";
+            egg1 = "???";
+            rate = 0;
+            height = "0,3 m, soit 1 pied";
+            weight = "12,0 kg, soit 26,5 livres";
+            hp = 0;
+            break;
+        case "duralugon":
+            other_forms = "";
+            title = "Duralugon";
+            url = "https://pokepedia.fr/Duralugon";
+            color = 0xadadc6;
+            sprite = "https://www.pokepedia.fr/images/thumb/6/6c/Duralugon-EB.png/199px-Duralugon-EB.png";
+            name = "Duraludon";
+            number = 0;
+            type1 = "Acier";
+            type2 = "Dragon"
+            family = "Alliage";
+            ability1 = "Light Metal";
+            ability2 = "Heavy Metal";
+            egg1 = "???";
+            rate = 0;
+            height = "1,8 m, soit 5,9 pieds";
+            weight = "40,0 kg, soit 88,2 livres";
+            hp = 0;
+            break;
+        case "zacian":
+            other_forms = "";
+            title = "Zacian";
+            url = "https://pokepedia.fr/Zacian";
+            sprite = "https://www.pokepedia.fr/images/thumb/c/cc/Zacian-EB.png/249px-Zacian-EB.png";
+            name = "Zacian";
+            number = 0;
+            type1 = "???";
+            family = "???";
+            ability1 = "???";
+            ability2 = "???";
+            egg1 = "???";
+            rate = 0;
+            height = "???";
+            weight = "???";
+            hp = 0;
+            break;
+        case "zamazenta":
+            other_forms = "";
+            title = "Zamazenta";
+            url = "https://pokepedia.fr/Zamazenta";
+            sprite = "https://www.pokepedia.fr/images/thumb/d/d7/Zamazenta-EB.png/209px-Zamazenta-EB.png";
+            name = "Zamazenta";
+            number = 0;
+            type1 = "???";
+            family = "???";
+            ability1 = "???";
+            ability2 = "???";
+            egg1 = "???";
+            rate = 0;
+            height = "???";
+            weight = "???";
+            hp = 0;
+            break;
         default:
             return 0;
     }
-    description = "Nom anglais: " + name + "\nNuméro du pokédex: " + number + "\n";
+    description = "Nom anglais: " + name;
+    if (number != 0)
+        description += "\nNuméro du pokédex: " + number + "\n";
+    else
+        description += "\nNuméro du pokédex: ???\n";
     if (type2 == "NULL")
         description += "Type: " + type1 + "\n";
     else
