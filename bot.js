@@ -3,7 +3,7 @@ const connect = require('./connect.js');
 const pokemon = require('./pokemon.js');
 const language = require('./language.js');
 const Events = Discordie.Events;
-const client = new Discordie();
+const client = new Discordie({autoReconnect: true});
 
 connect.connect(client);
 
