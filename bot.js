@@ -26,7 +26,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
         if (guild_language != null)
             pokemon.pokemon(guild_language, content, channel);
         else
-            channel.sendMessage("English: no language set for this guild, use \'pokedex language\' to set a language for ths guild.\n" + 
-            "Français: aucune langue n'a été définie pour ce serveur, tapez \'pokedex language\' pour définir une langue sur ce serveur.");
+            channel.sendMessage("English: no language set for this guild, use \'pokedex language list\' to set a language for ths guild.\n" + 
+            "Français: aucune langue n'a été définie pour ce serveur, tapez \'pokedex language list\' pour définir une langue sur ce serveur.");
     }
 });
