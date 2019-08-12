@@ -34,7 +34,7 @@ Un bot Discord pokedex utilisant Node.js
 ### Héberger le bot vous-même
 
 - Installez Node.js
-- Cloner le repository
+- Clonez le repository
 - Naviguez jusqu'au repository clonné et lancez un invite de commande 
 - Executez ```npm install```
 - Entrez le token de votre bot dans connect.js
