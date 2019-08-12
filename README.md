@@ -38,8 +38,8 @@ Un bot Discord pokedex utilisant Node.js
 - Naviguez jusqu'au repository clonné et lancez un invite de commande 
 - Executez ```npm install```
 - Entrez le token de votre bot dans connect.js
-- (Microsoft Windows) Executer ```bot.bat```
-- (MacOS & Linux) Executer ```bot.sh```
+- (Microsoft Windows) Executez ```bot.bat```
+- (MacOS & Linux) Executez ```bot.sh```
 
 
 ### Utilisation
