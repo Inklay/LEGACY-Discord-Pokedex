@@ -1663,6 +1663,7 @@ function french_special_cases(channel, typed, shiny)
             spd = 90;
             spe = 90;
             break;
+        //8th Generation pokemon, will be removed when Sword and Sheild will be released.
         case "meltan":
             other_forms = "";
             title = "Meltan";
@@ -1937,6 +1938,123 @@ function french_special_cases(channel, typed, shiny)
             weight = "???";
             hp = 0;
             break;
+        case "smogogo galar":
+        case "galar smogogo":
+        case "smogogo de galar":
+                other_forms = "";
+                title = "Smogogo de Galar";
+                url = "https://www.pokepedia.fr/Smogogo_de_Galar";
+                sprite = "https://www.pokepedia.fr/images/thumb/1/15/Smogogo_de_Galar-EB.png/218px-Smogogo_de_Galar-EB.png";
+                name = "Galarian Weezing";
+                number = 110;
+                type1 = "Poison";
+                type2 = "Fée";
+                family = "Gaz Mortel";
+                ability1 = "Lévitation";
+                egg1 = "???";
+                rate = 0;
+                height = "3,0 m, soit 9,8 pieds";
+                weight = "16,0 kg, soit 35,3 livres";
+                hp = 0;
+                break;
+        case "zigzaton galar":
+        case "galar zigzaton":
+        case "zigzaton de galar":
+                other_forms = "";
+                title = "Zigzaton de Galar";
+                url = "https://www.pokepedia.fr/Zigzaton_de_Galar";
+                sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
+                name = "Galarian Zigzagoon";
+                number = 263;
+                type1 = "Ténèbres";
+                type2 = "Normal";
+                family = "Petit Raton";
+                ability1 = "Ramassage";
+                ability2 = "Gloutonnerie";
+                egg1 = "???";
+                rate = 0;
+                height = "0,4 m, soit 1,3 pieds";
+                weight = "17,5 kg, soit 38,6 livres";
+                hp = 0;
+                break;
+        case "lineon galar":
+        case "galar lineon":
+        case "lineon de galar":
+        case "linéon galar":
+        case "galar linéon":
+        case "linéon de galar":
+                other_forms = "";
+                title = "Linéon de Galar";
+                url = "https://www.pokepedia.fr/Lin%C3%A9on_de_Galar";
+                sprite = "https://www.pokepedia.fr/images/thumb/c/c5/Lin%C3%A9on_de_Galar-EB.png/320px-Lin%C3%A9on_de_Galar-EB.png";
+                name = "Galarian Linoone";
+                number = 264;
+                type1 = "Ténèbres";
+                type2 = "Normal";
+                family = "Fonceur";
+                ability1 = "Ramassage";
+                ability2 = "Gloutonnerie";
+                egg1 = "???";
+                rate = 0;
+                height = "0,5 m, soit 1,6 pieds";
+                weight = "32,5 kg, soit 71,6 livres";
+                hp = 0;
+                break;
+            case "ixon":
+                other_forms = "";
+                title = "Ixon";
+                url = "https://www.pokepedia.fr/Ixon";
+                sprite = "https://www.pokepedia.fr/images/thumb/8/82/Ixon-EB.png/171px-Ixon-EB.png";
+                name = "Obstagoon";
+                number = 0;
+                type1 = "Ténèbres";
+                type2 = "Normal";
+                family = "Fonceur";
+                ability1 = "Téméraire";
+                ability2 = "Cran";
+                egg1 = "???";
+                rate = 0;
+                height = "1,6 m, soit 5,2 pieds";
+                weight = "46,0 kg, soit 101,4 livres";
+                hp = 0;
+                break;
+            case "morpeko":
+            case "morpeko rassasié":
+            case "morpeko rassasié": 
+                other_forms = "Morpeko Affamé";
+                title = "Morpeko";
+                url = "https://www.pokepedia.fr/Morpeko";
+                sprite = "https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/179px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png";
+                name = "Morpeko";
+                number = 0;
+                type1 = "Électrik";
+                type2 = "Ténèbres";
+                family = "Volt Face";
+                ability1 = "Déclic Fringale";
+                egg1 = "???";
+                rate = 0;
+                height = "0,3 m, soit 1 pied";
+                weight = "3,0 kg, soit 6,6 livres";
+                hp = 0;
+                break;
+            case "morpeko affamé":
+            case "morpeko affamé": 
+                other_forms = "morpeko";
+                title = "Morpeko";
+                url = "https://www.pokepedia.fr/Morpeko";
+                sprite = "https://www.pokepedia.fr/images/thumb/2/2c/Morpeko_%28Mode_Affam%C3%A9%29-EB.png/151px-Morpeko_%28Mode_Affam%C3%A9%29-EB.png";
+                name = "Morpeko";
+                number = 0;
+                type1 = "Électrik";
+                type2 = "Ténèbres";
+                family = "Volt Face";
+                ability1 = "Déclic Fringale";
+                egg1 = "???";
+                rate = 0;
+                height = "0,3 m, soit 1 pied";
+                weight = "3,0 kg, soit 6,6 livres";
+                hp = 0;
+                break;
         default:
             return 0;
     }
