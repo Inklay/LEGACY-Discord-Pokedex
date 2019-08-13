@@ -6,7 +6,7 @@ A Discord french Pokedex bot powered by Node.js
 
 ### Add it to your server
 
-[By clicking this link](https://discordapp.com/oauth2/authorize?client_id=262715570841976843&scope=bot&permissions=101376)
+[By clicking this link](https://discordapp.com/oauth2/authorize?client_id=583812640305053718&scope=bot&permissions=115712)
 
 ### Host the bot yourself
 
@@ -29,7 +29,7 @@ Un bot Discord pokedex utilisant Node.js
 
 ### Ajoutez le à votre serveur
 
-[En cliquant sur ce lien](https://discordapp.com/oauth2/authorize?client_id=262715570841976843&scope=bot&permissions=101376)
+[En cliquant sur ce lien](https://discordapp.com/oauth2/authorize?client_id=583812640305053718&scope=bot&permissions=115712)
 
 ### Héberger le bot vous-même
 
