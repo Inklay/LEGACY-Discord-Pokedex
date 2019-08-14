@@ -1,56 +1,47 @@
 # Discord-Pokedex
 
-# English
+## English
 
 A Discord french Pokedex bot powered by Node.js
 
-## Installation
+### Add it to your server
 
-### Windows
+[By clicking this link](https://discordapp.com/oauth2/authorize?client_id=583812640305053718&scope=bot&permissions=115712)
+
+### Host the bot yourself
+
 - Instal Node.js
 - Clone the repository
 - Locate the clonned repository and launch a terminal
 - Run ```npm install```
 - Enter your bot token in connect.js
-- Run ```bot.bat```
+- (Microsoft Windows) Run ```bot.bat``` 
+- (MacOS & Linux) Run ```bot.sh```
 
-### Linux and MacOS
-- Instal Node.js
-- Clone the repository
-- Locate the clonned repository and launch a terminal
-- Run ```npm install```
-- Enter your bot token in connect.js
-- Run ```bot.sh```
+### Usage
+
+In Discord type ```pokedex [pokemon name] <mega> <shiny>```, where [pokemon name] is required, <mega> and <shiny> optionnals
 
 
-## Usage
-
-In Discord type ```pokedex [Pokemon name]```
-
-
-# Français
+## Français
 
 Un bot Discord pokedex utilisant Node.js
 
-## Installation
+### Ajoutez le à votre serveur
 
-### Windows
+[En cliquant sur ce lien](https://discordapp.com/oauth2/authorize?client_id=583812640305053718&scope=bot&permissions=115712)
+
+### Héberger le bot vous-même
+
 - Installez Node.js
-- Cloner le repository
+- Clonez le repository
 - Naviguez jusqu'au repository clonné et lancez un invite de commande 
 - Executez ```npm install```
 - Entrez le token de votre bot dans connect.js
-- Executer ```bot.bat```
-
-### Linux et MacOS
-- Installez Node.js
-- Cloner le repository
-- Naviguez jusqu'au repository clonné et lancez un terminal
-- Executez ```npm install```
-- Entrez le token de votre bot dans connect.js
-- Executer ```bot.sh```
+- (Microsoft Windows) Executez ```bot.bat```
+- (MacOS & Linux) Executez ```bot.sh```
 
 
-## Utilisation
+### Utilisation
 
-Ecrivez  ```pokedex [Nom du Pokémon]``` dans Discord
+Ecrivez  ```pokedex [nom du pokemon] <mega> <shiny>``` dans Discord, avec [nom du pokemon] requis, <mega> et <shiny> optionnels
