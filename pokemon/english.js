@@ -39,6 +39,7 @@ module.exports = {
         if (typed.search(" shiny") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;
+            typed = typed.substring(0, typed.length - 6);
         }
         if (typed.search(" mega") != -1 || typed.startsWith("mega ")) {
             is_mega = 1;
