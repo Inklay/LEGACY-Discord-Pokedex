@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 module.exports = {
-    set: function(content, channel, id)
+    set: function(content, channel, id, type)
     {
         language = content.substring(17);
         found = 0;
@@ -19,13 +19,13 @@ module.exports = {
                 return;
         }
         for (i in data.servers) {
-            if (data.servers[i].id == id) {
+            if (data.servers[i].id == id && data.servers[i].type == type) {
                 data.servers[i].language = language;
                 found = 1;
             }
         }
         if (!found)
-            data.servers.push({"id": id, "language": language});
+            data.servers.push({"id": id, "language": language, "type": type});
         json = JSON.stringify(data);
         fs.writeFileSync('language.json', json);
 
@@ -39,12 +39,12 @@ module.exports = {
                 break;
         }
     },
-    get: function(id)
+    get: function(id, type)
     {
         rawData = fs.readFileSync('language.json');
         data = JSON.parse(rawData);
         for (i in data.servers) {
-            if (data.servers[i].id == id)
+            if (data.servers[i].id == id && data.servers[i].type == type)
                 return data.servers[i].language;
         }
         return null;

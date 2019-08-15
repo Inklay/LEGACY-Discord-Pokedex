@@ -17,12 +17,18 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
     if (content == "pokedex language list")
         language.list(channel);
-    else if (content.startsWith("pokedex language"))
-        language.set(content, channel, e.message.channel.guild.id);
-    else if(content == "pokedex help") {
+    else if (content.startsWith("pokedex language")) {
+        if (e.message.guild)
+            language.set(content, channel, e.message.channel.guild.id, 'guild');
+        else
+            language.set(content, channel, e.message.author.id, 'user');
+    } else if(content == "pokedex help") {
         channel.sendMessage("pokedex [pokemon name] <mega> <shiny>");
     } else if((content.startsWith("pokedex ") || content.startsWith("pokédex ")) && content != "pokedex [pokemon name] <mega> <shiny>") {
-        guild_language = language.get(e.message.channel.guild.id);
+        if (e.message.guild)
+            guild_language = language.get(e.message.channel.guild.id, 'guild');
+        else
+            guild_language = language.get(e.message.author.id, 'user');
         if (guild_language != null)
             pokemon.pokemon(guild_language, content, channel);
         else
