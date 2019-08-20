@@ -1,7 +1,7 @@
 const request = require('request');
 const $ = require('cheerio');
 
-function french_special_cases(channel, typed, shiny)
+function french_special_cases(channel, content, shiny)
 {
     var color = 0xffffff;
     var description;
@@ -32,7 +32,7 @@ function french_special_cases(channel, typed, shiny)
 
     if (shiny)
         gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
-    switch (typed) {
+    switch (content) {
         case "morpheo":
         case "morphéo":
             other_forms = "Autres formes: morphéo soleil, morphéo pluie, morphéo neige"
@@ -2115,7 +2115,6 @@ module.exports = {
     {
         var found = 0;
         var description;
-        var typed = content.substring(8);
         var url = "https://pokepedia.fr/";
         var gif_url = "http://play.pokemonshowdown.com/sprites/xyani/";
         var sprite;
@@ -2146,33 +2145,33 @@ module.exports = {
         var mega_type = "";
         var shiny = 0;
 
-        if (typed.search(" shiny") != -1) {
+        if (content.search(" shiny") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;
-            typed = typed.substring(0, typed.length - 6);
+            content = content.substring(0, content.length - 6);
         }
-        if (typed.search(" méga") != -1 || typed.search(" mega") != -1 || typed.startsWith("mega ") || typed.startsWith("méga ")) {
+        if (content.search(" méga") != -1 || content.search(" mega") != -1 || content.startsWith("mega ") || content.startsWith("méga ")) {
             is_mega = 1;
-            if (typed.startsWith("mega ") || typed.startsWith("méga "))
-                typed = typed.substring(5);
-            typed = typed.charAt(0).toUpperCase() + typed.slice(1);
+            if (content.startsWith("mega ") || content.startsWith("méga "))
+                content = content.substring(5);
+            content = content.charAt(0).toUpperCase() + content.slice(1);
             search = url.concat(mega);
-            search = search.concat(typed);
-            if (typed.search(" x") != -1) {
+            search = search.concat(content);
+            if (content.search(" x") != -1) {
                 search = search.substring(0, search.search(" "));
                 search = search.concat("_X");
                 mega_type = " X ";
-            } else if (typed.search(" y") != -1) {
+            } else if (content.search(" y") != -1) {
                 search = search.substring(0, search.search(" "));
                 search = search.concat("_Y");
                 mega_type = " Y ";
             }
         }
-        if (typed.search(" ") != -1 && !is_mega)
-            search = url.concat(typed.substring(0, typed.search(" ")));
+        if (content.search(" ") != -1 && !is_mega)
+            search = url.concat(content.substring(0, content.search(" ")));
         else if (!is_mega)
-            search = url.concat(typed);
-        if (typed.search(" alola") != -1 || typed.search(" d'alola") != -1) {
+            search = url.concat(content);
+        if (content.search(" alola") != -1 || content.search(" d'alola") != -1) {
             alola = 1;
             search = search.concat("_d%27Alola");
         }

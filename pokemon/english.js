@@ -6,7 +6,6 @@ module.exports = {
     {
         var found = 0;
         var description;
-        var typed = content.substring(8);
         var url = "https://bulbapedia.bulbagarden.net/wiki/";
         var gif_url = "http://play.pokemonshowdown.com/sprites/xyani/";
         var sprite;
@@ -36,37 +35,37 @@ module.exports = {
         var mega_type = "";
         var shiny = 0;
 
-        if (typed.search(" shiny") != -1) {
+        if (content.search(" shiny") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;
-            typed = typed.substring(0, typed.length - 6);
+            content = content.substring(0, content.length - 6);
         }
-        if (typed.search(" mega") != -1 || typed.startsWith("mega ")) {
+        if (content.search(" mega") != -1 || content.startsWith("mega ")) {
             is_mega = 1;
-            if (typed.startsWith("mega "))
-                typed = typed.substring(5);
-            if (typed.search(" ") != -1)
-                search = url.concat(typed.substring(0, typed.search(" ")));
+            if (content.startsWith("mega "))
+                content = content.substring(5);
+            if (content.search(" ") != -1)
+                search = url.concat(content.substring(0, content.search(" ")));
             else
-                search = url.concat(typed);
-            if (typed.search(" x") != -1)
+                search = url.concat(content);
+            if (content.search(" x") != -1)
                 mega_type = " X ";
-            else if (typed.search(" y") != -1)
+            else if (content.search(" y") != -1)
                 mega_type = " Y ";
         }
-        if (typed.search(" ") != -1 && !is_mega)
-            search = url.concat(typed.substring(0, typed.search(" ")));
+        if (content.search(" ") != -1 && !is_mega)
+            search = url.concat(content.substring(0, content.search(" ")));
         else if (!is_mega)
-            search = url.concat(typed);
-        if (typed.search(" alolan") != -1 || typed.startsWith("alolan ")) {
-            if (typed.startsWith("alolan "))
-                typed = typed.substring(7);
+            search = url.concat(content);
+        if (content.search(" alolan") != -1 || content.startsWith("alolan ")) {
+            if (content.startsWith("alolan "))
+                content = content.substring(7);
             title = "Alolan ";
             alola = 1;
-            if (typed.search(" ") != -1)
-                search = url.concat(typed.substring(0, typed.search(" ")));
+            if (content.search(" ") != -1)
+                search = url.concat(content.substring(0, content.search(" ")));
             else
-                search = url.concat(typed);
+                search = url.concat(content);
         }
         request(search, { json: true }, (err, res, body) => {
             if (err) {

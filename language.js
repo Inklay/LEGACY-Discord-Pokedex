@@ -1,9 +1,8 @@
 const fs = require('fs');
 
 module.exports = {
-    set: function(content, channel, id, type)
+    set: function(language, channel, id, type)
     {
-        language = content.substring(17);
         found = 0;
         rawData = fs.readFileSync('language.json');
         data = JSON.parse(rawData);
