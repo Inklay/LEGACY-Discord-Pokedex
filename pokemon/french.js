@@ -2222,7 +2222,7 @@ module.exports = {
                 return;
             }
             $('.toctext', body).each(function(i) {
-                if ($(this).text() == "À propos du Pokémon" && !i && !is_mega)
+                if (($(this).text() == "À propos du Pokémon" || $(this).text() == "Origine de Mew") && !i && !is_mega)
                     found = 1;
                 else if ($(this).text() == "À propos du Méga-Pokémon" && !i && is_mega)
                     found = 1;
