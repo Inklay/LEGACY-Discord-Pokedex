@@ -4,6 +4,7 @@ const $ = require('cheerio');
 module.exports = {
     pokemon: function (content, channel)
     {
+        console.log("pokemon/english.js: gathering info about " + content);
         var found = 0;
         var description;
         var url = "https://bulbapedia.bulbagarden.net/wiki/";
@@ -211,6 +212,7 @@ module.exports = {
                     text: "Informations from Bulbapedia"
                 }
             });
+            console.log("pokemon/english.js: successfully gathered info about " + content);
         });
     }
 };

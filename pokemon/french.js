@@ -857,7 +857,7 @@ function french_special_cases(channel, content, shiny)
             spe = 42;
             break;
         case "exagide":
-            other_forms = "Autres formes: exgaide assault"
+            other_forms = "Autres formes: exagide assault"
             title = "Exagide";
             url = "https://pokepedia.fr/Exagide";
             color = 0xADADC6;
@@ -880,7 +880,7 @@ function french_special_cases(channel, content, shiny)
             spe = 60;
             break;
         case "exagide assault":
-            other_forms = "Autres formes: exgaide"
+            other_forms = "Autres formes: exagide"
             title = "Exagide";
             url = "https://pokepedia.fr/Exagide";
             color = 0xADADC6;
@@ -2056,7 +2056,7 @@ function french_special_cases(channel, content, shiny)
                 hp = 0;
                 break;
         default:
-            return 0;
+            return false;
     }
     description = "Nom anglais: " + name;
     if (number != 0)
@@ -2107,7 +2107,7 @@ function french_special_cases(channel, content, shiny)
             text: "Informations de Poképedia"
         }
     });
-    return 1;
+    return true;
 }
 
 module.exports = {
@@ -2176,9 +2176,9 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        if (french_special_cases(channel, content.substring(8), shiny) && !is_mega)
+        if (french_special_cases(channel, content, shiny) && !is_mega)
             return;
-        else if (french_special_cases(channel, content.substring(8, 8 + content.substring(8).search(" ")), shiny) && !is_mega)
+        else if (french_special_cases(channel, content.substring(content.search(" ")), shiny) && !is_mega)
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {

@@ -3,6 +3,11 @@ const fs = require('fs');
 module.exports = {
     set: function(language, channel, id, type)
     {
+        if (e.message.guild)
+            console.log("language.js: setting guild " + e.message.guild.id + " language to " + language);
+        else
+            console.log("language.js: setting user " + e.message.author.id + " language to " + language);
+
         found = 0;
         rawData = fs.readFileSync('language.json');
         data = JSON.parse(rawData);
@@ -27,6 +32,11 @@ module.exports = {
             data.servers.push({"id": id, "language": language, "type": type});
         json = JSON.stringify(data);
         fs.writeFileSync('language.json', json);
+
+        if (e.message.guild)
+            console.log("language.js: guild " + e.message.guild.id + " set it's language to " + language);
+        else
+            console.log("language.js: user " + e.message.author.id + " set it's language to " + language);
 
         switch (language) {
             case "francais":

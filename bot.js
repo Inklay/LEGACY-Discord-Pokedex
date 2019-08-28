@@ -10,6 +10,7 @@ const client = new Discordie({autoReconnect: true});
 connect.connect(client);
 
 client.Dispatcher.on("GATEWAY_READY", e => {
+    console.log("bot.js: connected as " + client.User.username);
     client.User.setGame({name: "pokedex help", type: 0});
 });
 
@@ -31,6 +32,10 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
     //Language handling
     if (content == "language list") {
+        if (e.message.guild)
+            console.log("bot.js: guild " + e.message.guild.id + " asked for available languages");
+        else
+            console.log("bot.js: user " + e.message.author.id + " asked for available languages");
         language.list(channel);
         return;
     } else if (content.startsWith("language ")) {
