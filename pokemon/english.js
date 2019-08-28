@@ -1,6 +1,180 @@
 const request = require('request');
 const $ = require('cheerio');
 
+function specialCase(channel, content, shiny)
+{
+    var color = 0xffffff;
+    var description;
+    var url;
+    var title;
+    var sprite;
+    var gif_url = "http://play.pokemonshowdown.com/sprites/xyani/";
+    var sprite;
+    var number;
+    var type1;
+    var type2 = "NULL";
+    var family
+    var height;
+    var weight;
+    var ability1;
+    var ability2 = "NULL";
+    var ability3 = "NULL";
+    var egg1;
+    var egg2 = "NULL";
+    var rate;
+    var hp = 0;
+    var atk = 0;
+    var def = 0;
+    var spa = 0;
+    var spd = 0;
+    var spe = 0;
+    var other_forms;
+
+    if (shiny)
+        gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
+    switch (content) {
+        case "castform":
+            other_forms = "Other forms: castform sunny, castform rainy, castform snowy"
+            title = "Castform";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
+            color = 0xADA594;
+            sprite = gif_url.concat("castform.gif");
+            number = 351;
+            type1 = "Normal";
+            family = "Weather Pokémon";
+            ability1 = "Forecast";
+            egg1 = "Fairy";
+            egg2 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "1.8 lbs./0.8 kg";
+            hp = 70;
+            atk = 70;
+            def = 70;
+            spa = 70;
+            spd = 70;
+            spe = 70;
+            break;
+        case "castform sunny":
+            other_forms = "Other forms: castform, castform rainy, castform snowy"
+            title = "Castform Sunny";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
+            color = 0xF75231;
+            sprite = gif_url.concat("castform-sunny.gif");
+            number = 351;
+            type1 = "Fire";
+            family = "Weather Pokémon";
+            ability1 = "Forecast";
+            egg1 = "Fairy";
+            egg2 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "1.8 lbs./0.8 kg";
+            hp = 70;
+            atk = 70;
+            def = 70;
+            spa = 70;
+            spd = 70;
+            spe = 70;
+            break;
+        case "castform rainy":
+            other_forms = "Other forms: castform, castform sunny, castform snowy"
+            title = "Castform rainy";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
+            color = 0x399CFF;
+            sprite = gif_url.concat("castform-rainy.gif");
+            number = 351;
+            type1 = "Water";
+            family = "Weather Pokémon";
+            ability1 = "Forecast";
+            egg1 = "Fairy";
+            egg2 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "1.8 lbs./0.8 kg";
+            hp = 70;
+            atk = 70;
+            def = 70;
+            spa = 70;
+            spd = 70;
+            spe = 70;
+            break;
+        case "castform snowy":
+            other_forms = "Other forms: morphéo, morphéo soleil, morphéo pluie"
+            title = "Morphéo Forme Neige";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
+            color = 0x5ACEE7;
+            sprite = gif_url.concat("castform-snowy.gif");
+            number = 351;
+            type1 = "Ice";
+            family = "Weather Pokémon";
+            ability1 = "Forecast";
+            egg1 = "Fairy";
+            egg2 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "1.8 lbs./0.8 kg";
+            hp = 70;
+            atk = 70;
+            def = 70;
+            spa = 70;
+            spd = 70;
+            spe = 70;
+            break;
+        default:
+            return false;
+    }
+    if (number != 0)
+        description = "\nPokédex Number: " + number + "\n";
+    else
+        description = "\nPokédex Number: ???\n";
+    if (type2 == "NULL")
+        description += "Type: " + type1 + "\n";
+    else
+        description += "Types: " + type1 + ", " + type2 + "\n";
+    description += "Category: " + family + "\nHeight: " + height + "\nWidth: " + weight;
+    if (ability1 != "NULL") {
+        if (ability2 == "NULL")
+            description += "\nAbility: " + ability1 + "\n";
+        else {
+            if (ability3 == "NULL")
+                description += "\nAbilities: " + ability1 + "/" + ability2 + "\n";
+            else
+                description += "\nAbilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+        }
+    } else
+        description += "\n";
+    if (egg1 != "NULL") {
+        if (egg2 == "NULL")
+            description += "Egg group: " + egg1 + "\n";
+        else
+            description += "Egg group: " + egg1 + ", " + egg2 + "\n";
+    }
+    if (rate != -1) {
+        if (rate == 0)
+            description += "Catch rate: ???\n";
+        else
+            description += "Catch rate: " + rate + "\n";
+    }
+    if (hp != 0)
+        description += "Hp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpeciale Attaque: " + spa + "\nSpeciale Defense: " + spd + "\nSpeed: " + spe;
+    else
+        description += "Hp: ???\nAttack: ???\nDefense: ???\nSpecial Attaque: ???\nSpecial Defense: ???\nSpeed: ???";
+    channel.sendMessage(other_forms, false, {
+        color: color,
+        title: title,
+        description: description,
+        image: {
+            url: sprite
+        },
+        url: url, 
+        footer : {
+            text: "Informations from Bulbapedia"
+        }
+    });
+    return true;
+}
+
 module.exports = {
     pokemon: function (content, channel)
     {
@@ -18,7 +192,7 @@ module.exports = {
         var family
         var height;
         var weight;
-        var ability1;
+        var ability1 = "NULL"
         var ability2 = "NULL";
         var ability3 = "NULL";
         var egg1;
@@ -36,10 +210,13 @@ module.exports = {
         var mega_type = "";
         var shiny = 0;
 
-        if (content.search(" shiny") != -1) {
+        if (content.search(" shiny") != -1 || content.search("shiny ") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;
-            content = content.substring(0, content.length - 6);
+            if (content.search(" shiny") != -1)
+                content = content.substring(0, content.length - 6);
+            else if (content.search("shiny ") != -1)
+                content = content.substring(6);
         }
         if (content.search(" mega") != -1 || content.startsWith("mega ")) {
             is_mega = 1;
@@ -54,8 +231,6 @@ module.exports = {
             else if (content.search(" y") != -1)
                 mega_type = " Y ";
         }
-        if (content.search(" ") != -1 && !is_mega)
-            search = url.concat(content.substring(0, content.search(" ")));
         else if (!is_mega)
             search = url.concat(content);
         if (content.search(" alolan") != -1 || content.startsWith("alolan ")) {
@@ -68,6 +243,11 @@ module.exports = {
             else
                 search = url.concat(content);
         }
+        if (specialCase(channel, content, shiny) && !is_mega)
+            return;
+        else if (specialCase(channel, content.substring(content.search(" ")), shiny) && !is_mega)
+            return;
+            console.log(search);
         request(search, { json: true }, (err, res, body) => {
             if (err) {
                 channel.sendMessage("Can not reach the sever, please try again in 5 minutes.\nInformations about the error: " + err);
@@ -108,6 +288,32 @@ module.exports = {
                     return;
                 } 
             }
+            $('a', body).each(function() {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none") {
+                    if (alola) {
+                        if (ability1 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
+                            ability1 = $(this)[0].children[0].children[0].data
+                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ($(this)[0].next.next.children[0].data && $($(this)[0].next.next && this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next &&  $(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
+                            ability2 = $(this)[0].children[0].children[0].data
+                        else if (ability3 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
+                            ability3 = $(this)[0].children[0].children[0].data
+                    } else if (is_mega) {
+                        if (ability1 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Mega"))))
+                            ability1 = $(this)[0].children[0].children[0].data
+                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ($(this)[0].next.next && $(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega") || ($(this)[0].next.next && $(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Mega"))))
+                            ability2 = $(this)[0].children[0].children[0].data
+                        else if (ability3 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ability2 != $(this)[0].children[0].children[0].data && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega")))
+                            ability3 = $(this)[0].children[0].children[0].data
+                    } else {
+                        if (ability1 == "NULL" && !($(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega")) || ($(this)[0].next.next.next.next && ($(this)[0].next.next.next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.next.next.children[0].data.startsWith("Mega")))))
+                            ability1 = $(this)[0].children[0].children[0].data
+                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && !($(this)[0].next.next && $(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega")) || ($(this)[0].next.next && $(this)[0].next.next.next.next && ($(this)[0].next.next.next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.next.next.children[0].data.startsWith("Mega")))))
+                            ability2 = $(this)[0].children[0].children[0].data
+                        else if (ability3 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ability2 != $(this)[0].children[0].children[0].data && !($(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega"))))
+                            ability3 = $(this)[0].children[0].children[0].data
+                    }
+                }
+            });
             $('tr > td > a', body).each(function() {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("(type)") != -1) {
                     if (alola && type1 == null) {
@@ -117,8 +323,8 @@ module.exports = {
                             type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
                         }
                     } else if (is_mega && type1 == null) {
-                        if ($(this).parent().parent().parent().parent().next()[0].type == "tag" && $(this).parent().parent().parent().parent().next()[0].name == "small"
-                        && $(this).parent().parent().parent().parent().next()[0].children[0].data.search("Mega") != -1) {
+                        if ($(this).parent().parent().parent().parent().next() || ($(this).parent().parent().parent().parent().next()[0].type == "tag" && $(this).parent().parent().parent().parent().next()[0].name == "small"
+                        && $(this).parent().parent().parent().parent().next()[0].children[0].data.search("Mega") != -1)) {
                             type1 = $(this)[0].attribs.href.substring(6, ($(this)[0].attribs.href.length - 7));
                             type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
                         }
@@ -165,7 +371,7 @@ module.exports = {
             else
                 description += "Types: " + type1.charAt(0).toUpperCase() + type1.slice(1) + ", " + type2.charAt(0).toUpperCase() + type2.slice(1) + "\n";
             description += "Category: " + family + "\nHeight: " + height + "Weight: " + weight;
-            /*if (ability2 == "NULL")
+            if (ability2 == "NULL")
                 description += "Ability: " + ability1 + "\n";
             else {
                 if (ability3 == "NULL")
@@ -173,14 +379,14 @@ module.exports = {
                 else
                     description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
             }
-            if (!is_mega) {
+            /*if (!is_mega) {
                 if (egg2 == "NULL")
                     description += "Egg group: " + egg1 + "\n";
                 else
                     description += "Egg groups: " + egg1 + ", " + egg2 + "\n";
                 description += "Catch rate: " + rate;
             }
-            description += "Hp: " + hp + "Attack: " + atk + "Defense: " + def + "Special Attack: " + spa + "Special Defense : " + spd + "Spee : " + spe;*/
+            description += "Hp: " + hp + "Attack: " + atk + "Defense: " + def + "Special Attack: " + spa + "Special Defense : " + spd + "Speed : " + spe;*/
             if (alola) {
                 sprite = gif_url.concat(title.slice(7));
                 sprite = sprite.concat("-alola.gif");

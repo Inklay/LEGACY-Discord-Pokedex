@@ -1,7 +1,7 @@
 const request = require('request');
 const $ = require('cheerio');
 
-function french_special_cases(channel, content, shiny)
+function specialCase(channel, content, shiny)
 {
     var color = 0xffffff;
     var description;
@@ -2212,9 +2212,9 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        if (french_special_cases(channel, content, shiny) && !is_mega)
+        if (specialCase(channel, content, shiny) && !is_mega)
             return;
-        else if (french_special_cases(channel, content.substring(content.search(" ")), shiny) && !is_mega)
+        else if (specialCase(channel, content.substring(content.search(" ")), shiny) && !is_mega)
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
