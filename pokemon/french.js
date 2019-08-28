@@ -2113,6 +2113,7 @@ function french_special_cases(channel, content, shiny)
 module.exports = {
     pokemon: function (content, channel)
     {
+        console.log("pokemon/french.js: gathering info about " + content);
         var found = 0;
         var description;
         var url = "https://pokepedia.fr/";
@@ -2301,6 +2302,7 @@ module.exports = {
                     text: "Informations de Poképedia"
                 }
             });
+            console.log("pokemon/french.js: successfully gathered info about " + content);
         });
     }
 };
