@@ -8,7 +8,7 @@ module.exports = {
         else
             console.log("language.js: setting user " + id + " language to " + language);
 
-        found = 0;
+        found = false;
         rawData = fs.readFileSync('language.json');
         data = JSON.parse(rawData);
 
@@ -25,7 +25,7 @@ module.exports = {
         for (i in data.servers) {
             if (data.servers[i].id == id && data.servers[i].type == type) {
                 data.servers[i].language = language;
-                found = 1;
+                found = true;
             }
         }
         if (!found)

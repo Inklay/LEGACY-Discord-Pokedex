@@ -2110,9 +2110,45 @@ function french_special_cases(channel, content, shiny)
     return true;
 }
 
+function getByNumber(content, channel) {
+    var shiny = false;
+
+    if (content.search(" shiny") != -1)
+        shiny = true;
+    if (parseInt(content) >= 10 && parseInt(content) < 100)
+        content = "0" + parseInt(content);
+    else if (parseInt(content) >= 1 && parseInt(content) < 10)
+        content = "00" + parseInt(content);
+
+        console.log(content)
+    request("https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National", { json: true }, (err, res, body) => {
+        var found = false;
+
+        if (err) {
+            channel.sendMessage("Impossible de communiquer avec le serveur, merci de réessayer dans 5 minutes.\nInformations sur l'erreur: " + err);
+            return;
+        }
+        $('tr > td', body).each(function(i) {
+            if ($(this).text().substring(0, 3) == content) {
+                if(shiny)
+                    module.exports.pokemon($(this).next().next().children()[0].children[0].data + " shiny", channel);
+                else
+                    module.exports.pokemon($(this).next().next().children()[0].children[0].data, channel);
+                found = true;
+            }
+        });
+        if (!found)
+            channel.sendMessage("Aucun Pokémon trouvé avec un numéro de pokedex de " + parseInt(content));
+    });
+}
+
 module.exports = {
     pokemon: function (content, channel)
     {
+        if (parseInt(content)) {
+            getByNumber(content, channel)
+            return;
+        }
         console.log("pokemon/french.js: gathering info about " + content);
         var found = 0;
         var description;
@@ -2193,9 +2229,9 @@ module.exports = {
             });
             if (!found) {
                 if (alola)
-                    channel.sendMessage("Impossible de trouver \"" + content.substring(8).charAt(0).toUpperCase() + content.substring(8).slice(1) + " d\'Alola\" merci de vérifier l'orthographe.");
+                    channel.sendMessage("Impossible de trouver \"" + content.charAt(0).toUpperCase() + content.slice(1) + " d\'Alola\" merci de vérifier l'orthographe.");
                 else
-                    channel.sendMessage("Impossible de trouver \"" + content.substring(8).charAt(0).toUpperCase() + content.substring(8).slice(1) + "\" merci de vérifier l'orthographe.");
+                    channel.sendMessage("Impossible de trouver \"" + content.charAt(0).toUpperCase() + content.slice(1) + "\" merci de vérifier l'orthographe.");
                 return;
             }
             title = $('.firstHeading', body).text();
