@@ -380,18 +380,62 @@ module.exports = {
                     rate = $(this).parent().next()[0].children[1].children[0].children[1].children[0].data;
             });
             $('tr > th > div > a', body).each(function() {
-                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
-                    hp = $(this).parent().next()[0].children[0].data;
-                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
-                    atk = $(this).parent().next()[0].children[0].data;
-                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
-                    def = $(this).parent().next()[0].children[0].data;
-                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
-                    spa = $(this).parent().next()[0].children[0].data;
-                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
-                    spd = $(this).parent().next()[0].children[0].data;
-                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
-                    spe = $(this).parent().next()[0].children[0].data;
+                
+                if ($(this).parent().parent().parent().parent().parent().prev()[0]) {
+                    if (alola && $(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")) {
+                        if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                            hp = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                            atk = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                            def = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                            spa = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                            spd = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                            spe = $(this).parent().next()[0].children[0].data;
+                    } else if (is_mega && $(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Mega")) {
+                        if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                            hp = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                            atk = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                            def = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                            spa = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                            spd = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                            spe = $(this).parent().next()[0].children[0].data;
+                    } if (!alola && !is_mega && !$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Mega") && !$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")) {
+                        if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                            hp = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                            atk = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                            def = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                            spa = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                            spd = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                            spe = $(this).parent().next()[0].children[0].data;
+                    }
+                } else {
+                    if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                            hp = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                            atk = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                            def = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                            spa = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                            spd = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                            spe = $(this).parent().next()[0].children[0].data;
+                }
             });
             description = "Pokédex number: " + number + "\n";
             if (type2 == "Unknown")
