@@ -121,6 +121,380 @@ function specialCase(channel, content, shiny)
             spd = 70;
             spe = 70;
             break;
+        case "deoxys":
+            other_forms = "Other forms: deoxys attack, deoxys defense, deoxys speed"
+            title = "Deoxys";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
+            color = 0xF85888;
+            sprite = gif_url.concat("deoxys.gif");
+            number = 386;
+            type1 = "Psychic";
+            family = "DNA Pokémon";
+            ability1 = "Pressure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "5'07\"/1.7 m";
+            weight = "134.0 lbs./60.8 kg";
+            hp = 50;
+            atk = 150;
+            def = 50;
+            spa = 150;
+            spd = 50;
+            spe = 150;
+            break;
+        case "deoxys attack":
+            other_forms = "Other forms: deoxys, deoxys defense, deoxys speed"
+            title = "Deoxys Attack";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
+            color = 0xF85888;
+            sprite = gif_url.concat("deoxys-attack.gif");
+            number = 386;
+            type1 = "Psychic";
+            family = "DNA Pokémon";
+            ability1 = "Pressure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "5'07\"/1.7 m";
+            weight = "134.0 lbs./60.8 kg";
+            hp = 50;
+            atk = 180;
+            def = 20;
+            spa = 180;
+            spd = 20;
+            spe = 150;
+            break;
+        case "deoxys defense":
+            other_forms = "Other forms: deoxys, deoxys attack, deoxys speed"
+            title = "Deoxys Defense";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
+            color = 0xF85888;
+            sprite = gif_url.concat("deoxys-defense.gif");
+            number = 386;
+            type1 = "Psychic";
+            family = "DNA Pokémon";
+            ability1 = "Pressure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "5'07\"/1.7 m";
+            weight = "134.0 lbs./60.8 kg";
+            hp = 50;
+            atk = 70;
+            def = 160;
+            spa = 70;
+            spd = 160;
+            spe = 90;
+            break;
+        case "deoxys speed":
+            other_forms = "Other forms: deoxys, deoxys attack, deoxys defense"
+            title = "Deoxys Speed";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
+            color = 0xF85888;
+            sprite = gif_url.concat("deoxys-speed.gif");
+            number = 386;
+            type1 = "Psychic";
+            family = "DNA Pokémon";
+            ability1 = "Pressure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "5'07\"/1.7 m";
+            weight = "134.0 lbs./60.8 kg";
+            hp = 50;
+            atk = 95;
+            def = 90;
+            spa = 950;
+            spd = 90;
+            spe = 180;
+            break;
+        case "wormadam plant":
+        case "wormadam":
+            other_forms = "Other forms: wormadam sandy, wormadam trash"
+            title = "Wormadam";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Wormadam";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam.gif");
+            number = 413;
+            type1 = "Bug";
+            type2 = "Grass";
+            family = "Vagworm Pokémon";
+            ability1 = "Anticipation";
+            ability2 = "Overcoat"
+            egg1 = "Bug";
+            rate = 45;
+            height = "1'08\"/0.5 m";
+            weight = "14.3 lbs./6.5 kg";
+            hp = 60;
+            atk = 59;
+            def = 85;
+            spa = 79;
+            spd = 105;
+            spe = 36;
+            break;
+        case "wormadam sandy":
+            other_forms = "Other forms: wormadam, wormadam trash"
+            title = "Wormadam Sandy";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Wormadam";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam-sandy.gif");
+            number = 413;
+            type1 = "Bug";
+            type2 = "Ground";
+            family = "Vagworm Pokémon";
+            ability1 = "Anticipation";
+            ability2 = "Overcoat"
+            egg1 = "Bug";
+            rate = 45;
+            height = "1'08\"/0.5 m";
+            weight = "14.3 lbs./6.5 kg";
+            hp = 60;
+            atk = 79;
+            def = 105;
+            spa = 59;
+            spd = 85;
+            spe = 36;
+            break;
+        case "wormadam sandy":
+            other_forms = "Other forms: wormadam, wormadam trash"
+            title = "Wormadam Sandy";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Wormadam";
+            color = 0xADBD21;
+            sprite = gif_url.concat("wormadam-trash.gif");
+            number = 413;
+            type1 = "Bug";
+            type2 = "Steel";
+            family = "Vagworm Pokémon";
+            ability1 = "Anticipation";
+            ability2 = "Overcoat"
+            egg1 = "Bug";
+            rate = 45;
+            height = "1'08\"/0.5 m";
+            weight = "14.3 lbs./6.5 kg";
+            hp = 60;
+            atk = 69;
+            def = 95;
+            spa = 69;
+            spd = 95;
+            spe = 36;
+            break;
+        case "rotom":
+            other_forms = "Other forms: rotom heat, rootm wash, rotom frost, rotom fan, rotom mow"
+            title = "Rotom";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Ghost";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 50;
+            def = 77;
+            spa = 95;
+            spd = 77;
+            spe = 91;
+            break;
+        case "rotom heat":
+            other_forms = "Other forms: rotom, rootm wash, rotom frost, rotom fan, rotom mow"
+            title = "Rotom Heat";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-heat.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Fire";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "rotom wash":
+            other_forms = "Other forms: rotom, rootm heat, rotom frost, rotom fan, rotom mow"
+            title = "Rotom Wash";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-wash.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Water";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "rotom frost":
+            other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom fan, rotom mow"
+            title = "Rotom Frost";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-frost.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Ice";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "rotom fan":
+            other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom frost, rotom mow"
+            title = "Rotom Fan";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-fan.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Flying";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "rotom mow":
+            other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom fan, rotom frost"
+            title = "Rotom Frost";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
+            color = 0xFFC631;
+            sprite = gif_url.concat("rotom-mow.gif");
+            number = 479;
+            type1 = "Electric";
+            type2 = "Grass";
+            family = "Plasma Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Amorphous";
+            rate = 45;
+            height = "1'00\"/0.3 m";
+            weight = "0.7 lbs./0.3 kg";
+            hp = 50;
+            atk = 65;
+            def = 107;
+            spa = 105;
+            spd = 107;
+            spe = 86;
+            break;
+        case "giratina":
+            other_forms = "Other forms: giratina origin"
+            title = "Giratina";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Giratina";
+            color = 0x6363B5;
+            sprite = gif_url.concat("giratina.gif");
+            number = 487;
+            type1 = "Ghost";
+            type2 = "Dragon";
+            family = "Renegade Pokémon";
+            ability1 = "Pressure";
+            ability2 = "Telepathy";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "14'09\"/4.5 m";
+            weight = "1653.5 lbs./750 kg";
+            hp = 150;
+            atk = 100;
+            def = 120;
+            spa = 100;
+            spd = 120;
+            spe = 90;
+            break;
+        case "giratina origin":
+            other_forms = "Other forms: giratina"
+            title = "Giratina Origin Forme";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Giratina";
+            color = 0x6363B5;
+            sprite = gif_url.concat("giratina-origin.gif");
+            number = 487;
+            type1 = "Ghost";
+            type2 = "Dragon";
+            family = "Renegade Pokémon";
+            ability1 = "Levitate";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "22'08\"/6.9 m";
+            weight = "1433.0 lbs./650 kg";
+            hp = 150;
+            atk = 120;
+            def = 100;
+            spa = 120;
+            spd = 100;
+            spe = 90;
+            break;
+        case "shaymin":
+            other_forms = "Other forms: shaymin sky"
+            title = "Shaymine";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Shaymin";
+            color = 0x7BCE52;
+            sprite = gif_url.concat("shaymin.gif");
+            number = 492;
+            type1 = "Grass";
+            family = "Gratitude Pokémon";
+            ability1 = "Natural Cure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "0'08\"/0.2 m";
+            weight = "4.6 lbs./2.1 kg";
+            hp = 100;
+            atk = 100;
+            def = 100;
+            spa = 100;
+            spd = 100;
+            spe = 100;
+            break;
+        case "shaymin sky":
+            other_forms = "Other forms: shaymin"
+            title = "Shaymin Sky Forme";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Shaymin";
+            color = 0x7BCE52;
+            sprite = gif_url.concat("shaymin-sky.gif");
+            number = 492;
+            type1 = "Grass";
+            type2 = "Flying"
+            family = "Gratitude Pokémon";
+            ability1 = "Serene Grace";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "1'04\"/0.4 m";
+            weight = "11.5 lbs./5.2 kg";
+            hp = 100;
+            atk = 103;
+            def = 75;
+            spa = 120;
+            spd = 75;
+            spe = 127;
+            break;
         default:
             return false;
     }
@@ -380,7 +754,6 @@ module.exports = {
                     rate = $(this).parent().next()[0].children[1].children[0].children[1].children[0].data;
             });
             $('tr > th > div > a', body).each(function() {
-                
                 if ($(this).parent().parent().parent().parent().parent().prev()[0]) {
                     if (alola && $(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")) {
                         if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
