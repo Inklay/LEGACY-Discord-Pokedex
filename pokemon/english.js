@@ -1538,6 +1538,358 @@ function specialCase(channel, content, shiny)
             spd = 97;
             spe = 129;
             break;
+        //8th Generation pokemon, will be removed when Sword and Sheild will be released.
+        case "meltan":
+            other_forms = "";
+            title = "Meltan";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Meltan";
+            color = 0xADADC6;
+            sprite = "https://www.pokepedia.fr/images/thumb/5/57/Meltan-LGPE.png/57px-Meltan-LGPE.png";
+            number = 808;
+            type1 = "Steel";
+            family = "Nex Nut Pokémon";
+            ability1 = "Magnet Pull";
+            egg1 = "Undiscovered";
+            rate = -1;
+            height = "0'08\"/0.2 m";
+            weight = "17.6lbs./8.0 kg";
+            hp = 46;
+            atk = 65;
+            def = 65;
+            spa = 55;
+            spd = 35;
+            spe = 34;
+            break;
+        case "melmetal":
+            other_forms = "";
+            title = "Melmetal";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Melmetal";
+            color = 0xADADC6;
+            sprite = "https://www.pokepedia.fr/images/thumb/d/d6/Melmetal-LGPE.png/131px-Melmetal-LGPE.png";
+            number = 809;
+            type1 = "Steel";
+            family = "Nex Nut Pokémon";
+            ability1 = "Iron Fist";
+            egg1 = "Undiscovered";
+            rate = -1;
+            height = "8'02\"/2.5 m";
+            weight = "1763.7lbs./800.0 kg";
+            hp = 135;
+            atk = 143;
+            def = 143;
+            spa = 80;
+            spd = 65;
+            spe = 34;
+            break;
+        case "grookey":
+            other_forms = "";
+            title = "Grookey";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Grookey";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/e1/Ouistempo-EB.png/182px-Ouistempo-EB.png";
+            number = 810;
+            type1 = "Grass";
+            family = "Chimp Pokémon";
+            ability1 = "Overgrow";
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "11.0lbs./5.0 kg";
+            hp = 0;
+            break;
+        case "scorbunny":
+            other_forms = "";
+            title = "Scorbunny";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Scorbunny";
+            color = 0xf75231;
+            sprite = "https://www.pokepedia.fr/images/thumb/c/c6/Flambino-EB.png/118px-Flambino-EB.png";
+            number = 813;
+            type1 = "Fire";
+            family = "Rabbit Pokémon";
+            ability1 = "Blaze";
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "9.9lbs./4.5 kg";
+            hp = 0;
+            break;
+        case "sobble":
+            other_forms = "";
+            title = "Sobble";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Sobble";
+            color = 0x399cff;
+            sprite = "https://www.pokepedia.fr/images/thumb/2/2c/Larm%C3%A9l%C3%A9on-EB.png/160px-Larm%C3%A9l%C3%A9on-EB.png";
+            number = 816;
+            type1 = "Water";
+            family = "Water Lizard Pokémon";
+            ability1 = "Torrent";
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "8.8lbs./4.0 kg";
+            hp = 0;
+            break;
+        case "gossifleur":
+            other_forms = "";
+            title = "Gossifleur";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Gossifleur";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/2/20/Tournicoton-EB.png/253px-Tournicoton-EB.png";
+            number = 0;
+            type1 = "Grass";
+            family = "Flowering Pokémon";
+            ability1 = "Cotton Down";
+            ability2 = "Regenerator";
+            egg1 = "???";
+            rate = 0;
+            height = "1'03\"/0.4 m";
+            weight = "4.9lbs./2.2 kg";
+            hp = 0;
+            break;
+        case "eldegoss":
+            other_forms = "";
+            title = "Eldegoss";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Eldegoss";
+            color = 0x7bce52;
+            sprite = "https://www.pokepedia.fr/images/thumb/f/f7/Blancoton-EB.png/204px-Blancoton-EB.png";
+            number = 0;
+            type1 = "Grass";
+            family = "Cotton Bloom Pokémon";
+            ability1 = "Cotton Down";
+            ability2 = "Regenerator";
+            egg1 = "???";
+            rate = 0;
+            height = "1'06\"/0.5 m";
+            weight = "5.5lbs./2.5 kg";
+            hp = 0;
+            break;
+        case "wooloo":
+            other_forms = "";
+            title = "Wooloo";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Wooloo";
+            color = 0xada594;
+            sprite = "https://www.pokepedia.fr/images/thumb/7/75/Moumouton-EB.png/267px-Moumouton-EB.png";
+            number = 0;
+            type1 = "Normal";
+            family = "Sheep Pokémon";
+            ability1 = "Fluffy";
+            ability2 = "Run Away";
+            egg1 = "???";
+            rate = 0;
+            height = "2'00\"/0.6 m";
+            weight = "13.2lbs./6.0 kg";
+            hp = 0;
+            break;
+         case "corviknight":
+            other_forms = "";
+            title = "Corviknight";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Corviknight";
+            color = 0x9cadf7;
+            sprite = "https://www.pokepedia.fr/images/thumb/3/38/Corvaillus-EB.png/193px-Corvaillus-EB.png";
+            number = 0;
+            type1 = "Flying";
+            type2 = "Steel"
+            family = "Raven Pokémon";
+            ability1 = "Pressure";
+            ability2 = "Unnerve";
+            ability3 = "Mirror Armor";
+            egg1 = "???";
+            rate = 0;
+            height = "7'02\"/2.2 m";
+            weight = "165.3lbs./75 kg";
+            hp = 0;
+            break;
+        case "alcremie":
+            other_forms = "";
+            title = "Alcremie";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Alcremie";
+            color = 0xe09ae3;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/ef/Charmilly-EB.png/183px-Charmilly-EB.png";
+            number = 0;
+            type1 = "Fairy";
+            family = "Cream Pokémon";
+            ability1 = "Sweet Veil";
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "1.1lbs./0.5 kg";
+            hp = 0;
+            break;
+        case "yamper":
+            other_forms = "";
+            title = "Yamper";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Yamper";
+            color = 0xffc631;
+            sprite = "https://www.pokepedia.fr/images/thumb/e/eb/Voltoutou-EB.png/197px-Voltoutou-EB.png";
+            number = 0;
+            type1 = "Electric";
+            family = "Puppy Pokémon";
+            ability1 = "Ball Fetch";
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "29.8lbs./13.5 kg";
+            hp = 0;
+            break;
+        case "rolycoly":
+            other_forms = "";
+            title = "Rolycoly";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Rolycoly";
+            color = 0xbda55a;
+            sprite = "https://www.pokepedia.fr/images/thumb/8/8d/Charbi-EB.png/286px-Charbi-EB.png";
+            number = 0;
+            type1 = "Rock";
+            family = "Coal Pokémon";
+            ability1 = "Steam Engine Fetch";
+            ability2 = "heatproof"
+            egg1 = "???";
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "26.5lbs./12.0 kg";
+            hp = 0;
+            break;
+        case "duraludon":
+            other_forms = "";
+            title = "Duraludon";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Duraludon";
+            color = 0xadadc6;
+            sprite = "https://www.pokepedia.fr/images/thumb/6/6c/Duralugon-EB.png/199px-Duralugon-EB.png";
+            number = 0;
+            type1 = "Steel";
+            type2 = "Dragon"
+            family = "Alloy Pokémon";
+            ability1 = "Light Metal";
+            ability2 = "heavy Metal"
+            egg1 = "???";
+            rate = 0;
+            height = "5'09\"/1.8 m";
+            weight = "88.2lbs./40.0 kg";
+            hp = 0;
+            break;
+        case "zacian":
+            other_forms = "";
+            title = "Zacian";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
+            sprite = "https://www.pokepedia.fr/images/thumb/c/cc/Zacian-EB.png/249px-Zacian-EB.png";
+            number = 0;
+            type1 = "???";
+            family = "???";
+            ability1 = "???";
+            egg1 = "???";
+            rate = 0;
+            height = "???";
+            weight = "???";
+            hp = 0;
+            break;
+        case "zamazenta":
+            other_forms = "";
+            title = "Zamazenta";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zamazenta";
+            sprite = "https://www.pokepedia.fr/images/thumb/d/d7/Zamazenta-EB.png/209px-Zamazenta-EB.png";
+            name = "Zamazenta";
+            number = 0;
+            type1 = "???";
+            family = "???";
+            ability1 = "???";
+            ability2 = "???";
+            egg1 = "???";
+            rate = 0;
+            height = "???";
+            weight = "???";
+            hp = 0;
+            break;
+        case "galar weezing":
+        case "galarian weezing":
+            other_forms = "";
+            title = "Galarian Weezing";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Weezing";
+            color = 0xE09AE3;
+            sprite = "https://www.pokepedia.fr/images/thumb/1/15/Smogogo_de_Galar-EB.png/218px-Smogogo_de_Galar-EB.png";
+            number = 110;
+            type1 = "Poison";
+            type2 = "Fairy"
+            family = "Poison Gas Pokémon";
+            ability1 = "Levitate";
+            ability2 = "Neutralizing Gas"
+            egg1 = "Amorphous"
+            rate = 60;
+            height = "9'08\"/3.0 m";
+            weight = "35.3lbs./16.0 kg";
+            hp = 0;
+            break;
+        case "galar zigzagoon":
+        case "galarian zigzagoon":
+            other_forms = "";
+            title = "Galarian Zigzagoon";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zigzagoon";
+            color = 0xADA594;
+            sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
+            number = 263;
+            type1 = "Dark";
+            type2 = "Normal"
+            family = "Tiny Raccoon Pokémon";
+            ability1 = "Pickup";
+            ability2 = "Gluttony"
+            egg1 = "Field"
+            rate = 255;
+            height = "1'04\"/0.4 m";
+            weight = "38.6lbs./17.5 kg";
+            hp = 0;
+            break;
+        case "galar linoone":
+        case "galarian linoone":
+            other_forms = "";
+            title = "Galarian Linoone";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Linoone";
+            color = 0xADA594;
+            sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
+            number = 264;
+            type1 = "Dark";
+            type2 = "Normal"
+            family = "Rushing Pokémon";
+            ability1 = "Pickup";
+            ability2 = "Gluttony"
+            egg1 = "Field"
+            rate = 90;
+            height = "1'08\"/0.5 m";
+            weight = "71.6lbs./32.5 kg";
+            hp = 0;
+            break;
+        case "obstagoon":
+            other_forms = "";
+            title = "Obstagoon";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Obstagoon";
+            color = 0xADA594;
+            sprite = "https://www.pokepedia.fr/images/thumb/8/82/Ixon-EB.png/171px-Ixon-EB.png";
+            number = 0;
+            type1 = "Dark";
+            type2 = "Normal"
+            family = "Blocking Pokémon";
+            ability1 = "Reckless";
+            ability2 = "Cuts"
+            egg1 = "Field"
+            rate = 0;
+            height = "5'03\"/1.6 m";
+            weight = "101.4lbs./46.0 kg";
+            hp = 0;
+            break;
+         case "morpeko":
+            other_forms = "";
+            title = "Morpeko";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Morpeko";
+            color = 0x735A4A;
+            sprite = "https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/179px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png";
+            number = 0;
+            type1 = "Electrik";
+            type2 = "Dark"
+            family = "Two-Sided Pokémon";
+            ability1 = "Hunger Switch";
+            egg1 = "???"
+            rate = 0;
+            height = "1'00\"/0.3 m";
+            weight = "6.6lbs./3.0 kg";
+            hp = 0;
+            break;
         default:
             return false;
     }
