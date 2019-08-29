@@ -2119,8 +2119,6 @@ function getByNumber(content, channel) {
         content = "0" + parseInt(content);
     else if (parseInt(content) >= 1 && parseInt(content) < 10)
         content = "00" + parseInt(content);
-
-        console.log(content)
     request("https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National", { json: true }, (err, res, body) => {
         var found = false;
 

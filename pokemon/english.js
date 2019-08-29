@@ -247,7 +247,6 @@ module.exports = {
             return;
         else if (specialCase(channel, content.substring(content.search(" ")), shiny) && !is_mega)
             return;
-            console.log(search);
         request(search, { json: true }, (err, res, body) => {
             if (err) {
                 channel.sendMessage("Can not reach the sever, please try again in 5 minutes.\nInformations about the error: " + err);
@@ -288,29 +287,38 @@ module.exports = {
                     return;
                 } 
             }
-            $('a', body).each(function() {
+            $('tr > td > a', body).each(function() {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none") {
-                    if (alola) {
-                        if (ability1 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
-                            ability1 = $(this)[0].children[0].children[0].data
-                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ($(this)[0].next.next.children[0].data && $($(this)[0].next.next && this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next &&  $(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
-                            ability2 = $(this)[0].children[0].children[0].data
-                        else if (ability3 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Alolan") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Alolan"))))
-                            ability3 = $(this)[0].children[0].children[0].data
-                    } else if (is_mega) {
-                        if (ability1 == "NULL" && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega") || ($(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Mega"))))
-                            ability1 = $(this)[0].children[0].children[0].data
-                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ($(this)[0].next.next && $(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega") || ($(this)[0].next.next && $(this)[0].next.next.next.next && $(this)[0].next.next.next.next.children[0].data.startsWith("Mega"))))
-                            ability2 = $(this)[0].children[0].children[0].data
-                        else if (ability3 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ability2 != $(this)[0].children[0].children[0].data && ($(this)[0].next.next.children[0].data && $(this)[0].next.next.children[0].data.startsWith("Mega")))
-                            ability3 = $(this)[0].children[0].children[0].data
+                    if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].type == "tag" && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].name == "small") {
+                        if (alola && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan")) {
+                            if (ability1 == "NULL")
+                                ability1 = $(this)[0].children[0].children[0].data;
+                            else if (ability2 == "NULL")
+                                ability2 = $(this)[0].children[0].children[0].data;
+                            else
+                                ability3 = $(this)[0].children[0].children[0].data;
+                        } else if (is_mega && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
+                            if (ability1 == "NULL")
+                                ability1 = $(this)[0].children[0].children[0].data;
+                            else if (ability2 == "NULL")
+                                ability2 = $(this)[0].children[0].children[0].data;
+                            else
+                                ability3 = $(this)[0].children[0].children[0].data;
+                        } else if (!alola && !is_mega && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan") && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
+                            if (ability1 == "NULL")
+                                ability1 = $(this)[0].children[0].children[0].data;
+                            else if (ability2 == "NULL")
+                                ability2 = $(this)[0].children[0].children[0].data;
+                            else
+                                ability3 = $(this)[0].children[0].children[0].data;
+                        }
                     } else {
-                        if (ability1 == "NULL" && !($(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega")) || ($(this)[0].next.next.next.next && ($(this)[0].next.next.next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.next.next.children[0].data.startsWith("Mega")))))
-                            ability1 = $(this)[0].children[0].children[0].data
-                        else if (ability2 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && !($(this)[0].next.next && $(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega")) || ($(this)[0].next.next && $(this)[0].next.next.next.next && ($(this)[0].next.next.next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.next.next.children[0].data.startsWith("Mega")))))
-                            ability2 = $(this)[0].children[0].children[0].data
-                        else if (ability3 == "NULL" && $(this)[0].children[0].children && ability1 != $(this)[0].children[0].children[0].data && ability2 != $(this)[0].children[0].children[0].data && !($(this)[0].next.next.children[0].data && ($(this)[0].next.next.children[0].data.startsWith("Alolan") || $(this)[0].next.next.children[0].data.startsWith("Mega"))))
-                            ability3 = $(this)[0].children[0].children[0].data
+                        if (ability1 == "NULL")
+                            ability1 = $(this)[0].children[0].children[0].data;
+                        else if (ability2 == "NULL")
+                            ability2 = $(this)[0].children[0].children[0].data;
+                        else
+                            ability3 = $(this)[0].children[0].children[0].data;
                     }
                 }
             });
@@ -342,7 +350,7 @@ module.exports = {
                 }
             });
             $('tr > td > b > a', body).each(function() {
-                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/List_of_Pok%C3%A9mon_by_height"){
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/List_of_Pok%C3%A9mon_by_height") {
                     color = parseInt("0x" + $(this).parent().parent()[0].attribs.style.substring(12));
                     if (is_mega || alola) {
                         height = $(this).parent().next()[0].children[1].children[4].children[1].children[0].data;
