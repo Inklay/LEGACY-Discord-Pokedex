@@ -863,7 +863,7 @@ function specialCase(channel, content, shiny)
             url = "https://pokepedia.fr/Amphinobi";
             color = 0x399cff;
             sprite = gif_url.concat("greninja-ash.gif");
-            name = "Greninja";
+            name = "Ash Greninja";
             number = 658;
             type1 = "Eau"
             type2 = "Ténèbres";

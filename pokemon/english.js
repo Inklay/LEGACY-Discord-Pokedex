@@ -783,6 +783,427 @@ function specialCase(channel, content, shiny)
             spd = 77;
             spe = 128;
             break;
+        case "greninja":
+            other_forms = "Other forms: greninja ash"
+            title = "Greninja";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
+            color = 0x399cff;
+            sprite = gif_url.concat("greninja.gif");
+            number = 658;
+            type1 = "Water";
+            type2 = "Dark"
+            family = "Ninja Pokémon";
+            ability1 = "Torrent";
+            ability2 = "Battle Bond";
+            ability3 = "Protean";
+            egg1 = "Water 1";
+            rate = 45;
+            height = "4'11\"/1.5 m";
+            weight = "88.2 lbs./40.0 kg";
+            hp = 72;
+            atk = 95;
+            def = 67;
+            spa = 103;
+            spd = 71;
+            spe = 122;
+            break;
+        case "greninja ash":
+            other_forms = "Other forms: greninja"
+            title = "Ash Greninja";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
+            color = 0x399cff;
+            sprite = gif_url.concat("greninja-ash.gif");
+            number = 658;
+            type1 = "Water";
+            type2 = "Dark"
+            family = "Ninja Pokémon";
+            ability1 = "Torrent";
+            ability2 = "Battle Bond";
+            ability3 = "Protean";
+            egg1 = "Water 1";
+            rate = 45;
+            height = "4'11\"/1.5 m";
+            weight = "88.2 lbs./40.0 kg";
+            hp = 72;
+            atk = 145;
+            def = 67;
+            spa = 153;
+            spd = 71;
+            spe = 132;
+            break;
+        case "greninja ash":
+            other_forms = "Other forms: greninja"
+            title = "Ash Greninja";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
+            color = 0x399cff;
+            sprite = gif_url.concat("greninja-ash.gif");
+            number = 658;
+            type1 = "Water";
+            type2 = "Dark"
+            family = "Ninja Pokémon";
+            ability1 = "Torrent";
+            ability2 = "Battle Bond";
+            ability3 = "Protean";
+            egg1 = "Water 1";
+            rate = 45;
+            height = "4'11\"/1.5 m";
+            weight = "88.2 lbs./40.0 kg";
+            hp = 72;
+            atk = 145;
+            def = 67;
+            spa = 153;
+            spd = 71;
+            spe = 132;
+            break;
+        case "aegislash":
+            other_forms = "Other forms: aegislash blade"
+            title = "Aegislash";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Aegislash";
+            color = 0xADADC6;
+            sprite = gif_url.concat("aegislash.gif");
+            number = 681;
+            type1 = "Steel";
+            type2 = "Ghost"
+            family = "Royal Sword Pokémon";
+            ability1 = "Stance Change";
+            egg1 = "Mineral";
+            rate = 45;
+            height = "5'07\"/1.7 m";
+            weight = "116.8 lbs./53.0 kg";
+            hp = 60;
+            atk = 50;
+            def = 150;
+            spa = 50;
+            spd = 150;
+            spe = 60;
+            break;
+        case "aegislash blade":
+            other_forms = "Other forms: aegislash"
+            title = "Aegislash Blade";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Aegislash";
+            color = 0xADADC6;
+            sprite = gif_url.concat("aegislash-blade.gif");
+            number = 681;
+            type1 = "Steel";
+            type2 = "Ghost"
+            family = "Royal Sword Pokémon";
+            ability1 = "Stance Change";
+            egg1 = "Mineral";
+            rate = 45;
+            height = "5'07\"/1.7 m";
+            weight = "116.8 lbs./53.0 kg";
+            hp = 60;
+            atk = 150;
+            def = 50;
+            spa = 150;
+            spd = 50;
+            spe = 60;
+            break;
+        case "pumpkaboo":
+            other_forms = "Other forms: pumpkaboo small, pumpkaboo large, pumpkaboo super"
+            title = "Pumpkaboo";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo.gif");
+            number = 710;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "1'04\"/0.4 m";
+            weight = "11 lbs./5.0 kg";
+            hp = 49;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55;
+            spe = 51;
+            break;
+        case "pumpkaboo small":
+            other_forms = "Other forms: pumpkaboo, pumpkaboo large, pumpkaboo super"
+            title = "Pumpkaboo Small";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-small.gif");
+            number = 710;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "1'00\"/0.3 m";
+            weight = "7.7 lbs./3.5 kg";
+            hp = 44;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55;
+            spe = 56;
+            break;
+        case "pumpkaboo large":
+            other_forms = "Other forms: pumpkaboo, pumpkaboo small, pumpkaboo super"
+            title = "Pumpkaboo Large";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-large.gif");
+            number = 710;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "1'08\"/0.5 m";
+            weight = "16.5 lbs./7.5 kg";
+            hp = 54;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55;
+            spe = 46;
+            break;
+        case "pumpkaboo super":
+            other_forms = "Other forms: pumpkaboo, pumpkaboo small, pumpkaboo large"
+            title = "Pumpkaboo Super";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
+            color = 0x6363B5;
+            sprite = gif_url.concat("pumpkaboo-super.gif");
+            number = 710;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "2'07\"/0.8 m";
+            weight = "33.1 lbs./15.0 kg";
+            hp = 59;
+            atk = 66;
+            def = 70;
+            spa = 44;
+            spd = 55;
+            spe = 41;
+            break;
+        case "gourgeist":
+            other_forms = "Other forms: gourgeist small, gourgeist large, gourgeist super"
+            title = "Gourgeist";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist.gif");
+            number = 711;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "2'11\"/0.9 m";
+            weight = "27.6 lbs./12.5 kg";
+            hp = 65;
+            atk = 90;
+            def = 122;
+            spa = 58;
+            spd = 75;
+            spe = 84;
+            break;
+        case "gourgeist small":
+            other_forms = "Other forms: gourgeist, gourgeist large, gourgeist super"
+            title = "Gourgeist Small";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-small.gif");
+            number = 711;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "2'04\"/0.7 m";
+            weight = "20.9 lbs./9.5 kg";
+            hp = 55;
+            atk = 85;
+            def = 122;
+            spa = 58;
+            spd = 75;
+            spe = 99;
+            break;
+        case "gourgeist large":
+            other_forms = "Other forms: gourgeist, gourgeist small, gourgeist super"
+            title = "Gourgeist Large";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-large.gif");
+            number = 711;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "3'07\"/1.1 m";
+            weight = "30.9 lbs./14.0 kg";
+            hp = 75;
+            atk = 95;
+            def = 122;
+            spa = 58;
+            spd = 75;
+            spe = 69;
+            break;
+        case "gourgeist super":
+            other_forms = "Other forms: gourgeist, gourgeist small, gourgeist large"
+            title = "Gourgeist Super";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
+            color = 0x6363B5;
+            sprite = gif_url.concat("gourgeist-super.gif");
+            number = 711;
+            type1 = "Ghost";
+            type2 = "Grass"
+            family = "Pumpkin Pokémon";
+            ability1 = "Pick Up";
+            ability2 = "Frisk";
+            ability3 = "Insomnia";
+            egg1 = "Amorphous";
+            rate = 120;
+            height = "5'07\"/1.7 m";
+            weight = "86.0 lbs./39.0 kg";
+            hp = 85;
+            atk = 100;
+            def = 122;
+            spa = 58;
+            spd = 75;
+            spe = 54;
+            break;
+        case "zygarde":
+        case "zygarde 50":
+            other_forms = "Other forms: zygarde 10, zygarde 100"
+            title = "Zygarde 50%";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde.gif");
+            number = 718;
+            type1 = "Dragon";
+            type2 = "Ground"
+            family = "Order Pokémon";
+            ability1 = "Aura Break";
+            ability2 = "Power Construct";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "16'05\"/5.0 m";
+            weight = "672.4lbs./305.0 kg";
+            hp = 108;
+            atk = 100;
+            def = 121;
+            spa = 81;
+            spd = 95;
+            spe = 95;
+            break;
+        case "zygarde 10":
+            other_forms = "Other forms: zygarde, zygarde 100"
+            title = "Zygarde 10%";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde-10.gif");
+            number = 718;
+            type1 = "Dragon";
+            type2 = "Ground"
+            family = "Order Pokémon";
+            ability1 = "Aura Break";
+            ability2 = "Power Construct";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "3'11\"/1.2 m";
+            weight = "73.9lbs./33.5 kg";
+            hp = 54;
+            atk = 100;
+            def = 71;
+            spa = 61;
+            spd = 85;
+            spe = 115;
+            break;
+        case "zygarde 100":
+            other_forms = "Other forms: zygarde, zygarde 10"
+            title = "Zygarde 100%";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
+            color = 0x8858F6;
+            sprite = gif_url.concat("zygarde-complete.gif");
+            number = 718;
+            type1 = "Dragon";
+            type2 = "Ground"
+            family = "Order Pokémon";
+            ability1 = "Power Construct";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "14'09\"/4.5 m";
+            weight = "1344.8lbs./610.0 kg";
+            hp = 216;
+            atk = 100;
+            def = 121;
+            spa = 91;
+            spd = 95;
+            spe = 85;
+            break;
+        case "hoopa":
+            other_forms = "Other forms: hoopa unbound"
+            title = "Hoopa";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Hoopa";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("hoopa.gif");
+            number = 720;
+            type1 = "Psychic";
+            type2 = "Gost"
+            family = "Mischief Pokémon";
+            ability1 = "Magician";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "1'08\"/0.5 m";
+            weight = "19.8lbs./9.0 kg";
+            hp = 80;
+            atk = 110;
+            def = 60;
+            spa = 150;
+            spd = 130;
+            spe = 70;
+            break;
+        case "hoopa unbound":
+            other_forms = "Other forms: hoopa"
+            title = "Hoopa Unbound";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Hoopa";
+            color = 0xFF73A5;
+            sprite = gif_url.concat("hoopa-unbound.gif");
+            number = 720;
+            type1 = "Psychic";
+            type2 = "Dark"
+            family = "Mischief Pokémon";
+            ability1 = "Magician";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "21'04\"/6.5 m";
+            weight = "1080.3lbs./490.0 kg";
+            hp = 80;
+            atk = 160;
+            def = 60;
+            spa = 170;
+            spd = 130;
+            spe = 80;
+            break;
         default:
             return false;
     }
