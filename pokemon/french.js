@@ -2164,7 +2164,7 @@ function getByNumber(content, channel) {
         }
         $('tr > td', body).each(function(i) {
             if ($(this).text().substring(0, 3) == content) {
-                if(shiny)
+                if (shiny)
                     module.exports.pokemon($(this).next().next().children()[0].children[0].data + " shiny", channel);
                 else
                     module.exports.pokemon($(this).next().next().children()[0].children[0].data, channel);

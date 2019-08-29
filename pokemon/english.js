@@ -1944,9 +1944,45 @@ function specialCase(channel, content, shiny)
     return true;
 }
 
+function getByNumber(content, channel) {
+    var shiny = false;
+
+    if (content.search(" shiny") != -1)
+        shiny = true;
+    if (parseInt(content) >= 10 && parseInt(content) < 100)
+        content = "0" + parseInt(content);
+    else if (parseInt(content) >= 1 && parseInt(content) < 10)
+        content = "00" + parseInt(content);
+    request("https://bulbapedia.bulbagarden.net/wiki/List_of_Pokémon_by_National_Pokédex_number", { json: true }, (err, res, body) => {
+        var found = false;
+
+        if (err) {
+            channel.sendMessage("Can not reach the sever, please try again in 5 minutes.\nInformations about the error: " + err);
+            return;
+        }
+        $('tr > td', body).each(function(i) {
+            if ($(this).text().substring(2, 5) == content) {
+                if ($(this).next()[0].children.length > 1) {
+                    if (shiny)
+                        module.exports.pokemon($(this).next().next()[0].children[1].children[0].data + " shiny", channel);
+                    else
+                        module.exports.pokemon($(this).next().next()[0].children[1].children[0].data, channel);
+                    found = true;
+                }
+            }
+        });
+        if (!found)
+            channel.sendMessage("No Pkémon found with this pokedex nunmber: " + parseInt(content));
+    });
+}
+
 module.exports = {
     pokemon: function (content, channel)
     {
+        if (parseInt(content)) {
+            getByNumber(content, channel)
+            return;
+        }
         console.log("pokemon/english.js: gathering info about " + content);
         var found = 0;
         var description;
