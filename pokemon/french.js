@@ -832,6 +832,56 @@ function specialCase(channel, content, shiny)
             spd = 77;
             spe = 128;
             break;
+        case "amphinobi":
+            other_forms = "Autres formes: amphinobi sacha"
+            title = "Amphinobi";
+            url = "https://pokepedia.fr/Amphinobi";
+            color = 0x399cff;
+            sprite = gif_url.concat("greninja.gif");
+            name = "Greninja";
+            number = 658;
+            type1 = "Eau"
+            type2 = "Ténèbres";
+            family = "Pokémon Ninja";
+            ability1 = "Torrent";
+            ability2 = "Protéen";
+            ability3 = "Synergie";
+            egg1 = "Aquatique 1";
+            rate = 45;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "40,0 kg, soit 88,2 livres";
+            hp = 72;
+            atk = 95;
+            def = 67;
+            spa = 103;
+            spd = 71;
+            spe = 122;
+            break;
+        case "amphinobi sacha":
+            other_forms = "Autres formes: amphinobi"
+            title = "Amphinobi";
+            url = "https://pokepedia.fr/Amphinobi";
+            color = 0x399cff;
+            sprite = gif_url.concat("greninja-ash.gif");
+            name = "Greninja";
+            number = 658;
+            type1 = "Eau"
+            type2 = "Ténèbres";
+            family = "Pokémon Ninja";
+            ability1 = "Torrent";
+            ability2 = "Protéen";
+            ability3 = "Synergie";
+            egg1 = "Aquatique 1";
+            rate = 45;
+            height = "1,5 m, soit 4,9 pieds";
+            weight = "40,0 kg, soit 88,2 livres";
+            hp = 72;
+            atk = 145;
+            def = 67;
+            spa = 153;
+            spd = 71;
+            spe = 132;
+            break;
         case "flabébé":
         case "flabebe":
             other_forms = ""
