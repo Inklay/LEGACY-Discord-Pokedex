@@ -195,7 +195,7 @@ module.exports = {
         var ability1 = "NULL"
         var ability2 = "NULL";
         var ability3 = "NULL";
-        var egg1;
+        var egg1 = "NULL";
         var egg2 = "NULL";
         var rate;
         var hp = 0;
@@ -347,6 +347,11 @@ module.exports = {
                         family = $(this)[0].children[0].children[0].children[0].data;
                         family += " Pokémon";
                     }
+                } else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Egg_Group") != -1) {
+                    if (egg1 == "NULL")
+                        egg1 = $(this)[0].children[0].children[0].data;
+                    else
+                        egg2 = $(this)[0].children[0].children[0].data;
                 }
             });
             $('tr > td > b > a', body).each(function() {
@@ -371,7 +376,22 @@ module.exports = {
                         weight = weight.substring(0, weight.length - 1) + "/";
                         weight = weight.concat($(this).parent().next()[0].children[1].children[0].children[3].children[0].data.substring(1));
                     }
-                } 
+                } else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Catch_rate")
+                    rate = $(this).parent().next()[0].children[1].children[0].children[1].children[0].data;
+            });
+            $('tr > th > div > a', body).each(function() {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                    hp = $(this).parent().next()[0].children[0].data;
+                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                    atk = $(this).parent().next()[0].children[0].data;
+                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                    def = $(this).parent().next()[0].children[0].data;
+                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                    spa = $(this).parent().next()[0].children[0].data;
+                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                    spd = $(this).parent().next()[0].children[0].data;
+                else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                    spe = $(this).parent().next()[0].children[0].data;
             });
             description = "Pokédex number: " + number + "\n";
             if (type2 == "Unknown")
@@ -387,14 +407,14 @@ module.exports = {
                 else
                     description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
             }
-            /*if (!is_mega) {
+            if (!is_mega) {
                 if (egg2 == "NULL")
                     description += "Egg group: " + egg1 + "\n";
                 else
                     description += "Egg groups: " + egg1 + ", " + egg2 + "\n";
                 description += "Catch rate: " + rate;
             }
-            description += "Hp: " + hp + "Attack: " + atk + "Defense: " + def + "Special Attack: " + spa + "Special Defense : " + spd + "Speed : " + spe;*/
+            description += "\nHp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpecial Attack: " + spa + "\nSpecial Defense : " + spd + "\nSpeed : " + spe;
             if (alola) {
                 sprite = gif_url.concat(title.slice(7));
                 sprite = sprite.concat("-alola.gif");
