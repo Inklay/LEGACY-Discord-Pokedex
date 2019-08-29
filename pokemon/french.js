@@ -1514,7 +1514,7 @@ function specialCase(channel, content, shiny)
             title = "Froussardine Forme Banc";
             url = "https://pokepedia.fr/Froussardine";
             color = 0x399CCF;
-            sprite = gif_url.concat("wishiwashi.gif");
+            sprite = gif_url.concat("wishiwashi-school.gif");
             name = "Wishiwashi";
             number = 746;
             type1 = "Eau"
@@ -1589,7 +1589,7 @@ function specialCase(channel, content, shiny)
             family = "Prisme";
             ability1 = "Prisme-Armure";
             egg1 = "Inconnu";
-            rate = 3;
+            rate = "3(SL)/255(USUL)";
             height = "2,4 m, soit 7,9 pieds";
             weight = "230,0 kg, soit 507,1 livres";
             hp = 97;
