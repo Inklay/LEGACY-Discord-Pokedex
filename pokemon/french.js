@@ -1612,7 +1612,7 @@ function specialCase(channel, content, shiny)
             family = "Prisme";
             ability1 = "Prisme-Armure";
             egg1 = "Inconnu";
-            rate = 3;
+            rate = "3(SL)/255(USUL)";
             height = "4,2 m, soit 13,8 pieds";
             weight = "350 kg, soit 771,6 livres";
             hp = 97;
@@ -1635,7 +1635,7 @@ function specialCase(channel, content, shiny)
             family = "Prisme";
             ability1 = "Prisme-Armure";
             egg1 = "Inconnu";
-            rate = 3;
+            rate = "3(SL)/255(USUL)";
             height = "3,8 m, soit 12,5 pieds";
             weight = "460 kg, soit 1 014,1 livres";
             hp = 97;
@@ -1658,7 +1658,7 @@ function specialCase(channel, content, shiny)
             family = "Prisme";
             ability1 = "Cérébro-Force";
             egg1 = "Inconnu";
-            rate = 3;
+            rate = "3(SL)/255(USUL)";
             height = "7,5 m, soit 24,6 pieds";
             weight = "230,0 kg, soit 507,1 livres";
             hp = 97;
