@@ -495,6 +495,294 @@ function specialCase(channel, content, shiny)
             spd = 75;
             spe = 127;
             break;
+        case "darmanitan":
+            other_forms = "Other forms: darmanitan zen"
+            title = "Darmanitan";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
+            color = 0xF75231;
+            sprite = gif_url.concat("darmanitan.gif");
+            number = 555;
+            type1 = "Fire";
+            family = "Blazing Pokémon";
+            ability1 = "Sheer Force";
+            ability2 = "Zen Mode"
+            egg1 = "Field";
+            rate = 60;
+            height = "4'03\"/1.3 m";
+            weight = "204.8 lbs./92.9 kg";
+            hp = 150;
+            atk = 140;
+            def = 55;
+            spa = 30;
+            spd = 55;
+            spe = 95;
+            break;
+        case "darmanitan zen":
+            other_forms = "Other forms: darmanitan"
+            title = "Darmanitan Zen Mode";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
+            color = 0xF75231;
+            sprite = gif_url.concat("darmanitan-zen.gif");
+            number = 555;
+            type1 = "Fire";
+            type2 = "Psychic"
+            family = "Blazing Pokémon";
+            ability1 = "Sheer Force";
+            ability2 = "Zen Mode"
+            egg1 = "Field";
+            rate = 60;
+            height = "4'03\"/1.3 m";
+            weight = "204.8 lbs./92.9 kg";
+            hp = 105;
+            atk = 30;
+            def = 105;
+            spa = 140;
+            spd = 105;
+            spe = 55;
+            break;
+        case "tornadus":
+            other_forms = "Other forms: tornadus therian"
+            title = "Tornadus";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Tornadus";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("tornadus.gif");
+            number = 641;
+            type1 = "Flying";
+            family = "Cyclone Pokémon";
+            ability1 = "Prankster";
+            ability2 = "Defiant"
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "4'11\"/1.5 m";
+            weight = "138.9 lbs./63.0 kg";
+            hp = 79;
+            atk = 115;
+            def = 70;
+            spa = 125;
+            spd = 80;
+            spe = 111;
+            break;
+        case "tornadus therian":
+            other_forms = "Other forms: tornadus"
+            title = "Tornadus Therian";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Tornadus";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("tornadus-therian.gif");
+            number = 641;
+            type1 = "Flying";
+            family = "Cyclone Pokémon";
+            ability1 = "Regenerator";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "4'07\"/1.4 m";
+            weight = "138.9 lbs./63.0 kg";
+            hp = 79;
+            atk = 100;
+            def = 80;
+            spa = 110;
+            spd = 90;
+            spe = 121;
+            break;
+        case "thundurus":
+            other_forms = "Other forms: thundurus therian"
+            title = "Thundurus";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Thundurus";
+            color = 0x9CADF7;
+            sprite = gif_url.concat("thundurus.gif");
+            number = 642;
+            type1 = "Electric";
+            type2 = "Flying"
+            family = "Bolt Strike Pokémon";
+            ability1 = "Prankster";
+            ability2 = "Defiant";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "4'11\"/1.5 m";
+            weight = "134.5 lbs./61.0 kg";
+            hp = 79;
+            atk = 115;
+            def = 70;
+            spa = 125;
+            spd = 80;
+            spe = 111;
+            break;
+        case "thundurus therian":
+            other_forms = "Other forms: thundurus"
+            title = "Thundurus";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Thundurus";
+            color = 0xFFC631;
+            sprite = gif_url.concat("thundurus-therian.gif");
+            number = 642;
+            type1 = "Electric";
+            type2 = "Flying"
+            family = "Bolt Strike Pokémon";
+            ability1 = "Volt Absorb";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "9'10\"/3.0 m";
+            weight = "134.5 lbs./61.0 kg";
+            hp = 79;
+            atk = 105;
+            def = 70;
+            spa = 145;
+            spd = 80;
+            spe = 101;
+            break;
+        case "landorus":
+            other_forms = "Other forms: landorus therian"
+            title = "Landorus";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Landorus";
+            color = 0xD6B55A;
+            sprite = gif_url.concat("landorus.gif");
+            number = 645;
+            type1 = "Ground";
+            type2 = "Flying"
+            family = "Abundance Pokémon";
+            ability1 = "Sand Force";
+            ability2 = "Sheer Force";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "4'11\"/1.5 m";
+            weight = "149.9 lbs./68.0 kg";
+            hp = 89;
+            atk = 125;
+            def = 90;
+            spa = 115;
+            spd = 80;
+            spe = 101;
+            break;
+        case "landorus therian":
+            other_forms = "Other forms: landorus"
+            title = "Landorus Therian";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Landorus";
+            color = 0xD6B55A;
+            sprite = gif_url.concat("landorus-therian.gif");
+            number = 645;
+            type1 = "Ground";
+            type2 = "Flying"
+            family = "Abundance Pokémon";
+            ability1 = "Intimidate";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "4'03\"/1.3 m";
+            weight = "149.9 lbs./68.0 kg";
+            hp = 89;
+            atk = 145;
+            def = 90;
+            spa = 105;
+            spd = 80;
+            spe = 91;
+            break;
+        case "kyurem":
+            other_forms = "Other forms: kyurem white, kyurem black"
+            title = "Kyurem";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem.gif");
+            number = 646;
+            type1 = "Dragon";
+            type2 = "Ice"
+            family = "Boundary Pokémon";
+            ability1 = "Pressure";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "9'10\"/3.0 m";
+            weight = "716.5 lbs./325.0 kg";
+            hp = 125;
+            atk = 130;
+            def = 90;
+            spa = 130;
+            spd = 90;
+            spe = 95;
+            break;
+        case "kyurem white":
+            other_forms = "Other forms: kyurem, kyurem black"
+            title = "Kyurem White";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem-white.gif");
+            number = 646;
+            type1 = "Dragon";
+            type2 = "Ice"
+            family = "Boundary Pokémon";
+            ability1 = "Turboblaze";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "11'10\"/3.6 m";
+            weight = "716.5 lbs./325.0 kg";
+            hp = 125;
+            atk = 120;
+            def = 90;
+            spa = 170;
+            spd = 100;
+            spe = 95;
+            break;
+        case "kyurem black":
+            other_forms = "Other forms: kyurem, kyurem white"
+            title = "Kyurem Black";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
+            color = 0x8858F6;
+            sprite = gif_url.concat("kyurem-black.gif");
+            number = 646;
+            type1 = "Dragon";
+            type2 = "Ice"
+            family = "Boundary Pokémon";
+            ability1 = "Teravolt";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "10'10\"/3.3 m";
+            weight = "716.5 lbs./325.0 kg";
+            hp = 125;
+            atk = 170;
+            def = 100;
+            spa = 120;
+            spd = 90;
+            spe = 95;
+            break;
+        case "meloetta":
+            other_forms = "Other forms: meloetta pirouette"
+            title = "Meloetta";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Meloetta";
+            color = 0xADA594;
+            sprite = gif_url.concat("meloetta.gif");
+            number = 647;
+            type1 = "Normal";
+            type2 = "Psychic"
+            family = "Melody Pokémon";
+            ability1 = "Serene Grace";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "2'00\"/0.6 m";
+            weight = "14.3 lbs./6.5 kg";
+            hp = 100;
+            atk = 77;
+            def = 77;
+            spa = 128;
+            spd = 128;
+            spe = 90;
+            break;
+        case "meloetta pirouette":
+            other_forms = "Other forms: meloetta"
+            title = "Meloetta Pirouette";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Meloetta";
+            color = 0xADA594;
+            sprite = gif_url.concat("meloetta-pirouette.gif");
+            number = 647;
+            type1 = "Normal";
+            type2 = "Fighting"
+            family = "Melody Pokémon";
+            ability1 = "Serene Grace";
+            egg1 = "Undiscovered";
+            rate = 3;
+            height = "2'00\"/0.6 m";
+            weight = "14.3 lbs./6.5 kg";
+            hp = 100;
+            atk = 128;
+            def = 90;
+            spa = 77;
+            spd = 77;
+            spe = 128;
+            break;
         default:
             return false;
     }

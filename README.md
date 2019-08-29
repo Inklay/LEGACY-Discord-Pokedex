@@ -2,7 +2,7 @@
 
 ## English
 
-A Discord french Pokedex bot powered by Node.js
+A Discord Pokedex bot powered by Node.js
 
 ### Add it to your server
 
