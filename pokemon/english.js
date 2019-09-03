@@ -2098,7 +2098,12 @@ module.exports = {
         var mega = "Méga-";
         var mega_type = "";
         var shiny = 0;
+        var type = false;
 
+        if (content.startsWith("type ")) {
+            type = true;
+            content = content.substring(5);
+        }
         if (content.search(" shiny") != -1 || content.search("shiny ") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;

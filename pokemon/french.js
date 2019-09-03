@@ -1,5 +1,6 @@
 const request = require('request');
 const $ = require('cheerio');
+const types = require('../type/french.js');
 
 function specialCase(channel, content, shiny)
 {
@@ -2215,7 +2216,12 @@ module.exports = {
         var mega = "Méga-";
         var mega_type = "";
         var shiny = 0;
+        var type = false;
 
+        if (content.startsWith("type ")) {
+            type = true;
+            content = content.substring(5);
+        }
         if (content.search(" shiny") != -1) {
             gif_url = "http://play.pokemonshowdown.com/sprites/xyani-shiny/";
             shiny = 1;
@@ -2319,60 +2325,65 @@ module.exports = {
                 if ($(this)[0].attribs.href == "/Statistique#Vitesse" && !spe)
                     spe = $(this).parent().next()[0].children[0].data;
             });
-            description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
-            if (type2 == "NULL")
-                description += "Type: " + type1.charAt(0).toUpperCase() + type1.slice(1) + "\n";
-            else
-                description += "Types: " + type1.charAt(0).toUpperCase() + type1.slice(1) + ", " + type2.charAt(0).toUpperCase() + type2.slice(1) + "\n";
-            description += "Famille: " + family + "Taille: " + height + "Poids: " + weight;
-            if (ability2 == "NULL")
-                description += "Talent: " + ability1 + "\n";
-            else {
-                if (ability3 == "NULL")
-                    description += "Talents: " + ability1 + "/" + ability2 + "\n";
+            type1 =  type1.charAt(0).toUpperCase() + type1.slice(1);
+            type2 = type2.charAt(0).toUpperCase() + type2.slice(1);
+            if (!type) {
+                description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
+                if (type2 == "NULL")
+                    description += "Type: " + type1 + "\n";
                 else
-                    description += "Talents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
-            }
-            if (!is_mega) {
-                if (egg2 == "NULL")
-                    description += "Groupe œuf: " + egg1 + "\n";
-                else
-                    description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
-                description += "Taux de capture: " + rate;
-            }
-            description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
-            if (alola) {
-                sprite = gif_url.concat(name.slice(7, name.length - 1));
-                sprite = sprite.concat("-alola.gif");
-            } else if (!is_mega) {
-                sprite = gif_url.concat(name.slice(0, name.length - 1));
-                sprite = sprite.concat(".gif");
-            } else if (is_mega) {
-                if (mega_type == "") {
-                    sprite = gif_url.concat(name.slice(5, name.length - 1));
-                    sprite = sprite.concat("-mega.gif");
-                } else if (mega_type == " X ") {
-                    sprite = gif_url.concat(name.slice(5, name.length - 3));
-                    sprite = sprite.concat("-megax.gif");
-                } else if (mega_type == " Y ") {
-                    sprite = gif_url.concat(name.slice(5, name.length - 3));
-                    sprite = sprite.concat("-megay.gif");
+                    description += "Types: " + type1 + ", " + type2 + "\n";
+                description += "Famille: " + family + "Taille: " + height + "Poids: " + weight;
+                if (ability2 == "NULL")
+                    description += "Talent: " + ability1 + "\n";
+                else {
+                    if (ability3 == "NULL")
+                        description += "Talents: " + ability1 + "/" + ability2 + "\n";
+                    else
+                        description += "Talents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
                 }
-            }
-            sprite = sprite.toLocaleLowerCase();
-            channel.sendMessage("", false, {
-                color: color,
-                title: title,
-                description: description,
-                image: {
-                    url: sprite
-                },
-                url: search, 
-                footer : {
-                    text: "Informations de Poképedia"
+                if (!is_mega) {
+                    if (egg2 == "NULL")
+                        description += "Groupe œuf: " + egg1 + "\n";
+                    else
+                        description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
+                    description += "Taux de capture: " + rate;
                 }
-            });
-            console.log("pokemon/french.js: successfully gathered info about " + content);
+                description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
+                if (alola) {
+                    sprite = gif_url.concat(name.slice(7, name.length - 1));
+                    sprite = sprite.concat("-alola.gif");
+                } else if (!is_mega) {
+                    sprite = gif_url.concat(name.slice(0, name.length - 1));
+                    sprite = sprite.concat(".gif");
+                } else if (is_mega) {
+                    if (mega_type == "") {
+                        sprite = gif_url.concat(name.slice(5, name.length - 1));
+                        sprite = sprite.concat("-mega.gif");
+                    } else if (mega_type == " X ") {
+                        sprite = gif_url.concat(name.slice(5, name.length - 3));
+                        sprite = sprite.concat("-megax.gif");
+                    } else if (mega_type == " Y ") {
+                        sprite = gif_url.concat(name.slice(5, name.length - 3));
+                        sprite = sprite.concat("-megay.gif");
+                    }
+                }
+                sprite = sprite.toLocaleLowerCase();
+                channel.sendMessage("", false, {
+                    color: color,
+                    title: title,
+                    description: description,
+                    image: {
+                        url: sprite
+                    },
+                    url: search, 
+                    footer : {
+                        text: "Informations de Poképedia"
+                    }
+                });
+                console.log("pokemon/french.js: successfully gathered info about " + content);
+            } else
+                types.show(type1, type2, channel);
         });
     }
 };
