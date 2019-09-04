@@ -1,7 +1,8 @@
 const request = require('request');
 const $ = require('cheerio');
+const types = require('../type/english.js');
 
-function specialCase(channel, content, shiny)
+function specialCase(channel, content, shiny, type)
 {
     var color = 0xffffff;
     var description;
@@ -1977,54 +1978,57 @@ function specialCase(channel, content, shiny)
         default:
             return false;
     }
-    if (number != 0)
-        description = "\nPokédex Number: " + number + "\n";
-    else
-        description = "\nPokédex Number: ???\n";
-    if (type2 == "NULL")
-        description += "Type: " + type1 + "\n";
-    else
-        description += "Types: " + type1 + ", " + type2 + "\n";
-    description += "Category: " + family + "\nHeight: " + height + "\nWidth: " + weight;
-    if (ability1 != "NULL") {
-        if (ability2 == "NULL")
-            description += "\nAbility: " + ability1 + "\n";
-        else {
-            if (ability3 == "NULL")
-                description += "\nAbilities: " + ability1 + "/" + ability2 + "\n";
+    if (!type) {
+        if (number != 0)
+            description = "\nPokédex Number: " + number + "\n";
+        else
+            description = "\nPokédex Number: ???\n";
+        if (type2 == "NULL")
+            description += "Type: " + type1 + "\n";
+        else
+            description += "Types: " + type1 + ", " + type2 + "\n";
+        description += "Category: " + family + "\nHeight: " + height + "\nWidth: " + weight;
+        if (ability1 != "NULL") {
+            if (ability2 == "NULL")
+                description += "\nAbility: " + ability1 + "\n";
+            else {
+                if (ability3 == "NULL")
+                    description += "\nAbilities: " + ability1 + "/" + ability2 + "\n";
+                else
+                    description += "\nAbilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+            }
+        } else
+            description += "\n";
+        if (egg1 != "NULL") {
+            if (egg2 == "NULL")
+                description += "Egg group: " + egg1 + "\n";
             else
-                description += "\nAbilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+                description += "Egg group: " + egg1 + ", " + egg2 + "\n";
         }
+        if (rate != -1) {
+            if (rate == 0)
+                description += "Catch rate: ???\n";
+            else
+                description += "Catch rate: " + rate + "\n";
+        }
+        if (hp != 0)
+            description += "Hp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpeciale Attaque: " + spa + "\nSpeciale Defense: " + spd + "\nSpeed: " + spe;
+        else
+            description += "Hp: ???\nAttack: ???\nDefense: ???\nSpecial Attaque: ???\nSpecial Defense: ???\nSpeed: ???";
+        channel.sendMessage(other_forms, false, {
+            color: color,
+            title: title,
+            description: description,
+            image: {
+                url: sprite
+            },
+            url: url, 
+            footer : {
+                text: "Informations from Bulbapedia"
+            }
+        });
     } else
-        description += "\n";
-    if (egg1 != "NULL") {
-        if (egg2 == "NULL")
-            description += "Egg group: " + egg1 + "\n";
-        else
-            description += "Egg group: " + egg1 + ", " + egg2 + "\n";
-    }
-    if (rate != -1) {
-        if (rate == 0)
-            description += "Catch rate: ???\n";
-        else
-            description += "Catch rate: " + rate + "\n";
-    }
-    if (hp != 0)
-        description += "Hp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpeciale Attaque: " + spa + "\nSpeciale Defense: " + spd + "\nSpeed: " + spe;
-    else
-        description += "Hp: ???\nAttack: ???\nDefense: ???\nSpecial Attaque: ???\nSpecial Defense: ???\nSpeed: ???";
-    channel.sendMessage(other_forms, false, {
-        color: color,
-        title: title,
-        description: description,
-        image: {
-            url: sprite
-        },
-        url: url, 
-        footer : {
-            text: "Informations from Bulbapedia"
-        }
-    });
+        types.show(type1, type2, channel);
     return true;
 }
 
@@ -2137,9 +2141,9 @@ module.exports = {
             else
                 search = url.concat(content);
         }
-        if (specialCase(channel, content, shiny) && !is_mega)
+        if (specialCase(channel, content, shiny, type) && !is_mega)
             return;
-        else if (specialCase(channel, content.substring(content.search(" ")), shiny) && !is_mega)
+        else if (specialCase(channel, content.substring(content.search(" ")), shiny, type) && !is_mega)
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
@@ -2301,7 +2305,7 @@ module.exports = {
                             spd = $(this).parent().next()[0].children[0].data;
                         else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
                             spe = $(this).parent().next()[0].children[0].data;
-                    } if (!alola && !is_mega && !$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Mega") && !$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")) {
+                    } if (!alola && !is_mega && (!$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data || (!$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Mega") && !$(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")))) {
                         if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
                             hp = $(this).parent().next()[0].children[0].data;
                         else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
@@ -2330,59 +2334,64 @@ module.exports = {
                             spe = $(this).parent().next()[0].children[0].data;
                 }
             });
-            description = "Pokédex number: " + number + "\n";
-            if (type2 == "Unknown")
-                description += "Type: " + type1.charAt(0).toUpperCase() + type1.slice(1) + "\n";
-            else
-                description += "Types: " + type1.charAt(0).toUpperCase() + type1.slice(1) + ", " + type2.charAt(0).toUpperCase() + type2.slice(1) + "\n";
-            description += "Category: " + family + "\nHeight: " + height + "Weight: " + weight;
-            if (ability2 == "NULL")
-                description += "Ability: " + ability1 + "\n";
-            else {
-                if (ability3 == "NULL")
-                    description += "Abilities: " + ability1 + "/" + ability2 + "\n";
+            type1 = type1.charAt(0).toUpperCase() + type1.slice(1);
+            type2 = type2.charAt(0).toUpperCase() + type2.slice(1);
+            if (!type) {
+                description = "Pokédex number: " + number + "\n";
+                if (type2 == "Unknown")
+                    description += "Type: " + type1 + "\n";
                 else
-                    description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
-            }
-            if (!is_mega) {
-                if (egg2 == "NULL")
-                    description += "Egg group: " + egg1 + "\n";
-                else
-                    description += "Egg groups: " + egg1 + ", " + egg2 + "\n";
-                description += "Catch rate: " + rate;
-            }
-            description += "\nHp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpecial Attack: " + spa + "\nSpecial Defense : " + spd + "\nSpeed : " + spe;
-            if (alola) {
-                sprite = gif_url.concat(title.slice(7));
-                sprite = sprite.concat("-alola.gif");
-            } else if (!is_mega) {
-                sprite = gif_url.concat(title);
-                sprite = sprite.concat(".gif");
-            } else if (is_mega) {
-                if (mega_type == "") {
-                    sprite = gif_url.concat(title);
-                    sprite = sprite.concat("-mega.gif");
-                } else if (mega_type == " X ") {
-                    sprite = gif_url.concat(title);
-                    sprite = sprite.concat("-megax.gif");
-                } else if (mega_type == " Y ") {
-                    sprite = gif_url.concat(title);
-                    sprite = sprite.concat("-megay.gif");
+                    description += "Types: " + type1 + ", " + type2 + "\n";
+                description += "Category: " + family + "\nHeight: " + height + "Weight: " + weight;
+                if (ability2 == "NULL")
+                    description += "Ability: " + ability1 + "\n";
+                else {
+                    if (ability3 == "NULL")
+                        description += "Abilities: " + ability1 + "/" + ability2 + "\n";
+                    else
+                        description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
                 }
-            }
-            sprite = sprite.toLocaleLowerCase();
-            channel.sendMessage("", false, {
-                color: color,
-                title: title,
-                description: description,
-                image: {
-                    url: sprite
-                },
-                url: search, 
-                footer : {
-                    text: "Informations from Bulbapedia"
+                if (!is_mega) {
+                    if (egg2 == "NULL")
+                        description += "Egg group: " + egg1 + "\n";
+                    else
+                        description += "Egg groups: " + egg1 + ", " + egg2 + "\n";
+                    description += "Catch rate: " + rate;
                 }
-            });
+                description += "\nHp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpecial Attack: " + spa + "\nSpecial Defense : " + spd + "\nSpeed : " + spe;
+                if (alola) {
+                    sprite = gif_url.concat(title.slice(7));
+                    sprite = sprite.concat("-alola.gif");
+                } else if (!is_mega) {
+                    sprite = gif_url.concat(title);
+                    sprite = sprite.concat(".gif");
+                } else if (is_mega) {
+                    if (mega_type == "") {
+                        sprite = gif_url.concat(title);
+                        sprite = sprite.concat("-mega.gif");
+                    } else if (mega_type == " X ") {
+                        sprite = gif_url.concat(title);
+                        sprite = sprite.concat("-megax.gif");
+                    } else if (mega_type == " Y ") {
+                        sprite = gif_url.concat(title);
+                        sprite = sprite.concat("-megay.gif");
+                    }
+                }
+                sprite = sprite.toLocaleLowerCase();
+                channel.sendMessage("", false, {
+                    color: color,
+                    title: title,
+                    description: description,
+                    image: {
+                        url: sprite
+                    },
+                    url: search, 
+                    footer : {
+                        text: "Informations from Bulbapedia"
+                    }
+                });
+            } else
+                types.show(type1, type2, channel);
             console.log("pokemon/english.js: successfully gathered info about " + content);
         });
     }
