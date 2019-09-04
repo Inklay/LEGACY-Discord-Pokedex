@@ -2,7 +2,7 @@ const request = require('request');
 const $ = require('cheerio');
 const types = require('../type/french.js');
 
-function specialCase(channel, content, shiny)
+function specialCase(channel, content, shiny, type)
 {
     var color = 0xffffff;
     var description;
@@ -2095,55 +2095,58 @@ function specialCase(channel, content, shiny)
         default:
             return false;
     }
-    description = "Nom anglais: " + name;
-    if (number != 0)
-        description += "\nNuméro du pokédex: " + number + "\n";
-    else
-        description += "\nNuméro du pokédex: ???\n";
-    if (type2 == "NULL")
-        description += "Type: " + type1 + "\n";
-    else
-        description += "Types: " + type1 + ", " + type2 + "\n";
-    description += "Famille: " + family + "\nTaille: " + height + "\nPoids: " + weight;
-    if (ability1 != "NULL") {
-        if (ability2 == "NULL")
-            description += "\nTalent: " + ability1 + "\n";
-        else {
-            if (ability3 == "NULL")
-                description += "\nTalents: " + ability1 + "/" + ability2 + "\n";
+    if (!type) {
+        description = "Nom anglais: " + name;
+        if (number != 0)
+            description += "\nNuméro du pokédex: " + number + "\n";
+        else
+            description += "\nNuméro du pokédex: ???\n";
+        if (type2 == "NULL")
+            description += "Type: " + type1 + "\n";
+        else
+            description += "Types: " + type1 + ", " + type2 + "\n";
+        description += "Famille: " + family + "\nTaille: " + height + "\nPoids: " + weight;
+        if (ability1 != "NULL") {
+            if (ability2 == "NULL")
+                description += "\nTalent: " + ability1 + "\n";
+            else {
+                if (ability3 == "NULL")
+                    description += "\nTalents: " + ability1 + "/" + ability2 + "\n";
+                else
+                    description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+            }
+        } else
+            description += "\n";
+        if (egg1 != "NULL") {
+            if (egg2 == "NULL")
+                description += "Groupe œuf: " + egg1 + "\n";
             else
-                description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+                description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
         }
+        if (rate != -1) {
+            if (rate == 0)
+                description += "Taux de capture: ???\n";
+            else
+                description += "Taux de capture: " + rate + "\n";
+        }
+        if (hp != 0)
+            description += "Pv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
+        else
+            description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
+        channel.sendMessage(other_forms, false, {
+            color: color,
+            title: title,
+            description: description,
+            image: {
+                url: sprite
+            },
+            url: url, 
+            footer : {
+                text: "Informations de Poképedia"
+            }
+        });
     } else
-        description += "\n";
-    if (egg1 != "NULL") {
-        if (egg2 == "NULL")
-            description += "Groupe œuf: " + egg1 + "\n";
-        else
-            description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
-    }
-    if (rate != -1) {
-        if (rate == 0)
-            description += "Taux de capture: ???\n";
-        else
-            description += "Taux de capture: " + rate + "\n";
-    }
-    if (hp != 0)
-        description += "Pv: " + hp + "\nAttaque: " + atk + "\nDéfense: " + def + "\nAttaque Spéciale: " + spa + "\nDéfense Spéciale: " + spd + "\nVitesse: " + spe;
-    else
-        description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
-    channel.sendMessage(other_forms, false, {
-        color: color,
-        title: title,
-        description: description,
-        image: {
-            url: sprite
-        },
-        url: url, 
-        footer : {
-            text: "Informations de Poképedia"
-        }
-    });
+        types.show(type1, type2, channel);
     return true;
 }
 
@@ -2252,9 +2255,9 @@ module.exports = {
             alola = 1;
             search = search.concat("_d%27Alola");
         }
-        if (specialCase(channel, content, shiny) && !is_mega)
+        if (specialCase(channel, content, shiny, type) && !is_mega)
             return;
-        else if (specialCase(channel, content.substring(content.search(" ")), shiny) && !is_mega)
+        else if (specialCase(channel, content.substring(content.search(" ")), shiny, type) && !is_mega)
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
