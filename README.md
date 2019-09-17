@@ -20,7 +20,7 @@ A Discord Pokedex bot powered by Node.js
 
 ### Usage
 
-In Discord type ```pokedex [pokemon name] <mega> <shiny>```, where [pokemon name] is required, <mega> and <shiny> optionnals
+In Discord type ```pokedex [pokemon name] (mega) (shiny)```, where [pokemon name] is required, (mega) and (shiny) optionnals
 
 
 ## Français
@@ -44,4 +44,4 @@ Un bot Discord pokedex utilisant Node.js
 
 ### Utilisation
 
-Ecrivez  ```pokedex [nom du pokemon] <mega> <shiny>``` dans Discord, avec [nom du pokemon] requis, <mega> et <shiny> optionnels
+Ecrivez  ```pokedex (mega) [nom du pokemon] (shiny)``` dans Discord, avec [nom du pokemon] requis, (mega) et (shiny) optionnels
