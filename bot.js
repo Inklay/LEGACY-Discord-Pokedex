@@ -74,12 +74,12 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
             case "français":
                 channel.sendMessage("```Avoir les informations d'un Pokémon: pokedex <mega> [nom du Pokémon] <shiny>\n" + 
                 "Voir le préfix actuel: pokedex prefix\nChanger le préfix: pokedex prefix [prefix]\nVoir la liste des langues supportées: pokedex language list\n" +
-                "Changer la langue du serveur: pokedex language [langue]```");
+                "Changer la langue du serveur: pokedex language [langue]\nVoir les affinités de type d'un Pokémon: pokedex type [nom du Pokémon]```");
                 break;
             case "english":
                     channel.sendMessage("```Get informations about a Pokémon: pokedex <mega> [Pokémon name] <shiny>\n" + 
                     "See configured prefix: pokedex prefix\nChange prefix: pokedex prefix [prefix]\nSee the list of supported language: pokedex language list\n" +
-                    "Change guild language: pokedex language [language]```");
+                    "Change guild language: pokedex language [language]\nSee type affinity of a Pokémon: `pokedex type [nom du Pokémon]``");
                 break;
         }
         
