@@ -31,6 +31,10 @@ module.exports = {
                 return;
             }
             title = $('.firstHeading', body).text();
+            $('th', body).each(function() {
+                if ($(this).text().startsWith("Nom anglais"))
+                    name = $(this).next().text();
+            });
             $('tr > th > a', body).each(function() {
                 if ($(this)[0].attribs.href == "/PP") {
                     pp = $(this).parent().next()[0].children[0].data;
@@ -43,10 +47,17 @@ module.exports = {
                     if (power.search(" ") != -1)
                         power = power.substring(0, power.search(" "));
                 }
+                if ($(this)[0].attribs.href == "/Pr%C3%A9cision") {
+                    accuray = $(this).parent().next()[0].children[0].data;
+                    if (accuray.search("% ") != -1)
+                        accuray = accuray.substring(0, accuray.search("% ") + 1);
+                }
             });
-            description = "PP: " + pp;
+            description = "Nom Anglais: " + name;
+            description += "PP: " + pp;
             description += "\nPP Max: " + ppMax;
             description += "\nPuissance: " + power;
+            description += "\nPrécision: " + accuray;
             console.log(pp);
             channel.sendMessage("", false, {
                 color: color,
