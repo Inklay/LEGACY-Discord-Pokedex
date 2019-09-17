@@ -4,6 +4,7 @@ const connect = require('./connect.js');
 const pokemon = require('./pokemon.js');
 const language = require('./language.js');
 const prefix = require('./prefix.js');
+const move = require('./move.js');
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
 
