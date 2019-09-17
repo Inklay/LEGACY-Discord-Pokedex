@@ -15,7 +15,12 @@ module.exports = {
         switch (language) {
             case "francais":
             case "français":
+            case "fr":
+                language = "francais";
+                break;
+            case "en":
             case "english":
+                language = "english";
                 break;
             default:
                 channel.sendMessage("English: unkown or unsupported language, type \'pokedex language list\' to view supported languages.\n"
@@ -60,6 +65,6 @@ module.exports = {
     },
     list: function(channel)
     {
-        channel.sendMessage("Français\nEnglish");
+        channel.sendMessage("Français (fr)\nEnglish (en)");
     }
 };
