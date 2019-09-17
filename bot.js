@@ -86,6 +86,9 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
         
     }
 
+    //Move infos
+    else if (content.startsWith("move "))
+        move.move(guildLanguage, content.substring(5), channel);
     //Pokémon infos
     else 
         pokemon.pokemon(guildLanguage, content, channel);
