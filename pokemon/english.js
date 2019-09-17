@@ -2025,10 +2025,12 @@ function specialCase(channel, content, shiny, type)
             if (ability2 == "NULL")
                 description += "\nAbility: " + ability1 + "\n";
             else {
-                if (ability3 == "NULL")
+                if (ability3 == "NULL" || ability1 != ability2)
                     description += "\nAbilities: " + ability1 + "/" + ability2 + "\n";
-                else
+                else if (ability1 != ability3 && ability2 != ability3)
                     description += "\nAbilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+                else
+                description += "\nAbility: " + ability1 + "\n";
             }
         } else
             description += "\n";
@@ -2219,7 +2221,7 @@ module.exports = {
                 } 
             }
             $('tr > td > a', body).each(function() {
-                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none") {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none" && ($(this)[0].prev == null || ($(this)[0].prev.type == "text" && $(this)[0].prev.data == " "))) {
                     if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].type == "tag" && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].name == "small") {
                         if (alola && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan")) {
                             if (ability1 == "NULL")
@@ -2297,7 +2299,7 @@ module.exports = {
                         height = height.substring(0, height.length - 1) + "/";
                         height = height.concat($(this).parent().next()[0].children[1].children[0].children[3].children[0].data.substring(1));
                     }
-                } else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/List_of_Pok%C3%A9mon_by_weight"){
+                } else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Weight"){
                     if (is_mega || alola) {
                         weight = $(this).parent().next()[0].children[1].children[4].children[1].children[0].data;
                         weight = weight.substring(0, weight.length - 1) + "/";
@@ -2379,10 +2381,12 @@ module.exports = {
                 if (ability2 == "NULL")
                     description += "Ability: " + ability1 + "\n";
                 else {
-                    if (ability3 == "NULL")
+                    if (ability3 == "NULL" || ability1 != ability2)
                         description += "Abilities: " + ability1 + "/" + ability2 + "\n";
-                    else
+                    else if (ability1 != ability3 && ability2 != ability3)
                         description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+                    else
+                    description += "Ability: " + ability1 + "\n";
                 }
                 if (!is_mega) {
                     if (egg2 == "NULL")
