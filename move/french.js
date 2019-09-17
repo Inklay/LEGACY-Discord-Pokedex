@@ -38,9 +38,15 @@ module.exports = {
                     ppMax = $(this).parent().next()[0].children[1].children[0].data;
                     ppMax = ppMax.substring(5);
                 }
+                if ($(this)[0].attribs.href == "/Puissance_(statistique)") {
+                    power = $(this).parent().next()[0].children[0].data;
+                    if (power.search(" ") != -1)
+                        power = power.substring(0, power.search(" "));
+                }
             });
             description = "PP: " + pp;
             description += "\nPP Max: " + ppMax;
+            description += "\nPuissance: " + power;
             console.log(pp);
             channel.sendMessage("", false, {
                 color: color,
