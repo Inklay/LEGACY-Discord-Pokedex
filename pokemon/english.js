@@ -1933,7 +1933,7 @@ function specialCase(channel, content, shiny, type)
             type2 = "Normal"
             family = "Rushing Pokémon";
             ability1 = "Pickup";
-            ability2 = "Gluttony"
+            ability2 = "Gluttony";
             egg1 = "Field"
             rate = 90;
             height = "1'08\"/0.5 m";
@@ -1951,14 +1951,14 @@ function specialCase(channel, content, shiny, type)
             type2 = "Normal"
             family = "Blocking Pokémon";
             ability1 = "Reckless";
-            ability2 = "Cuts"
-            egg1 = "Field"
+            ability2 = "Cuts";
+            egg1 = "Field";
             rate = 0;
             height = "5'03\"/1.6 m";
             weight = "101.4lbs./46.0 kg";
             hp = 0;
             break;
-         case "morpeko":
+        case "morpeko":
             other_forms = "";
             title = "Morpeko";
             url = "https://bulbapedia.bulbagarden.net/wiki/Morpeko";
@@ -1966,13 +1966,46 @@ function specialCase(channel, content, shiny, type)
             sprite = "https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/179px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png";
             number = 0;
             type1 = "Electrik";
-            type2 = "Dark"
+            type2 = "Dark";
             family = "Two-Sided Pokémon";
             ability1 = "Hunger Switch";
-            egg1 = "???"
+            egg1 = "???";
             rate = 0;
             height = "1'00\"/0.3 m";
             weight = "6.6lbs./3.0 kg";
+            hp = 0;
+            break;
+        case "polteageist":
+            other_forms = "";
+            title = "Polteageist";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Polteageist";
+            color = 0x6363b5;
+            sprite = "https://www.pokepedia.fr/images/thumb/f/f6/Polth%C3%A9geist-EB.png/257px-Polth%C3%A9geist-EB.png";
+            number = 0;
+            type1 = "Ghost";
+            family = "Black Tea Pokémon";
+            ability1 = "Weak Armor";
+            egg1 = "???";
+            rate = 0;
+            height = "0'08\"/0.2 m";
+            weight = "0.9lbs./0.4 kg";
+            hp = 0;
+            break;
+        case "cramorant":
+            other_forms = "";
+            title = "Cramorant";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Cramorant";
+            color = 0x399CFF;
+            sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
+            number = 0;
+            type1 = "Flying";
+            type2 = "Water";
+            family = "Gulp Pokémon";
+            ability1 = "Gulp Missile";
+            egg1 = "???";
+            rate = 0;
+            height = "2'70\"/0.8 m";
+            weight = "39.7lbs./18.0 kg";
             hp = 0;
             break;
         default:

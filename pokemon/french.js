@@ -2092,6 +2092,40 @@ function specialCase(channel, content, shiny, type)
                 weight = "3,0 kg, soit 6,6 livres";
                 hp = 0;
                 break;
+            case "polthégeist":
+            case "polthegeist":
+                title = "Polthégeist";
+                url = "https://www.pokepedia.fr/Polthégeist";
+                color = 0x6363b5;
+                sprite = "https://www.pokepedia.fr/images/thumb/f/f6/Polth%C3%A9geist-EB.png/257px-Polth%C3%A9geist-EB.png";
+                name = "Polteageist";
+                number = 0;
+                type1 = "Spectre";
+                family = "Thé Noir";
+                ability1 = "Armurouillée";
+                egg1 = "???";
+                rate = 0;
+                height = "0,2 m, soit 0,7 pied";
+                weight = "0,4 kg, soit 0,9 livre";
+                hp = 0;
+                break;
+            case "nigosier":
+                title = "Nigosier";
+                url = "https://www.pokepedia.fr/Nigosier";
+                color = 0x399CFF;
+                sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
+                name = "Cramorant";
+                number = 0;
+                type1 = "Vol";
+                type2 = "Eau";
+                family = "Avaltouron";
+                ability1 = "Dégobage";
+                egg1 = "???";
+                rate = 0;
+                height = "0,8 m, soit 2,6 pieds";
+                weight = "18,0 kg, soit 39,7 livres";
+                hp = 0;
+                break;
         default:
             return false;
     }
