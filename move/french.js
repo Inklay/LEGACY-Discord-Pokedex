@@ -8,6 +8,8 @@ module.exports = {
         var title;
         var color = 0xffffff;
         var pp;
+        var name;
+        var cat;
         var ppMax;
         var accuray;
         var power;
@@ -33,9 +35,12 @@ module.exports = {
                 if ($(this)[0].attribs.href == "/PP") {
                     pp = $(this).parent().next()[0].children[0].data;
                     pp = pp.substring(0, pp.length - 2);
+                    ppMax = $(this).parent().next()[0].children[1].children[0].data;
+                    ppMax = ppMax.substring(5);
                 }
             });
             description = "PP: " + pp;
+            description += "\nPP Max: " + ppMax;
             console.log(pp);
             channel.sendMessage("", false, {
                 color: color,
