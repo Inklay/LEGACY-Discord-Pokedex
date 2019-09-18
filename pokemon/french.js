@@ -2126,6 +2126,22 @@ function specialCase(channel, content, shiny, type)
                 weight = "18,0 kg, soit 39,7 livres";
                 hp = 0;
                 break;
+            case "palarticho":
+                title = "Palarticho";
+                url = "https://www.pokepedia.fr/Palarticho";
+                color = 0x399CFF;
+                sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
+                name = "Sirfetch'd";
+                number = 0;
+                type1 = "Combat";
+                family = "Canard Fou";
+                ability1 = "Impassible";
+                egg1 = "???";
+                rate = 0;
+                height = "0,8 m, soit 2,6 pieds";
+                weight = "117,0 kg, soit 257,9 livres";
+                hp = 0;
+                break;
         default:
             return false;
     }

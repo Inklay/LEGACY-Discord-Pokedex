@@ -1991,21 +1991,21 @@ function specialCase(channel, content, shiny, type)
             weight = "0.9lbs./0.4 kg";
             hp = 0;
             break;
-        case "cramorant":
+        case "sirfetch'd":
+        case "sirfetch d":
             other_forms = "";
-            title = "Cramorant";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Cramorant";
+            title = "Sirfetch'd";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Sirfetch'd";
             color = 0x399CFF;
             sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
             number = 0;
-            type1 = "Flying";
-            type2 = "Water";
-            family = "Gulp Pokémon";
-            ability1 = "Gulp Missile";
+            type1 = "Fighting";
+            family = "Wild Duck Pokémon";
+            ability1 = "Steadfast";
             egg1 = "???";
             rate = 0;
             height = "2'70\"/0.8 m";
-            weight = "39.7lbs./18.0 kg";
+            weight = "257.9lbs./117.0 kg";
             hp = 0;
             break;
         default:
