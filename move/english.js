@@ -41,6 +41,13 @@ module.exports = {
             $('tr > th > a', body).each(function() {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Damage_category")
                     cat = $(this)[0].parent.next.next.children[1].children[0].children[0].data;
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Power_Point") {
+                    pp = $(this)[0].parent.next.next.children[0].data;
+                    pp = pp.substring(2);
+                    ppMax = cat = $(this)[0].parent.next.next.children[1].children[0].data;
+                    ppMax = ppMax.substring(ppMax.search(" "));
+                    ppMax = ppMax.substring(0, ppMax.length - 1);
+                }
             });
             switch (type) {
                 case "Steel":
