@@ -2254,8 +2254,6 @@ module.exports = {
                             ability3 = $(this)[0].children[0].children[0].data;
                     }
                 }
-            });
-            $('tr > td > a', body).each(function() {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("(type)") != -1) {
                     if (alola && type1 == null) {
                         if ($(this).parent().parent().parent().parent().next()[0].type == "tag" && $(this).parent().parent().parent().parent().next()[0].name == "small"
