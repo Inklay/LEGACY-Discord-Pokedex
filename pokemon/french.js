@@ -2130,7 +2130,7 @@ function specialCase(channel, content, shiny, type)
                 title = "Palarticho";
                 url = "https://www.pokepedia.fr/Palarticho";
                 color = 0x399CFF;
-                sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
+                sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_sirfetchd.png";
                 name = "Sirfetch'd";
                 number = 0;
                 type1 = "Combat";

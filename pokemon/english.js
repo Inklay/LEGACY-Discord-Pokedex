@@ -1997,7 +1997,7 @@ function specialCase(channel, content, shiny, type)
             title = "Sirfetch'd";
             url = "https://bulbapedia.bulbagarden.net/wiki/Sirfetch'd";
             color = 0x399CFF;
-            sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
+            sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_sirfetchd.png";
             number = 0;
             type1 = "Fighting";
             family = "Wild Duck Pokémon";
