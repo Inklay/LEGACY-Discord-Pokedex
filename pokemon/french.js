@@ -2076,6 +2076,7 @@ function specialCase(channel, content, shiny, type)
                 hp = 0;
                 break;
             case "morpeko":
+                other_forms = "";
                 title = "Morpeko";
                 url = "https://www.pokepedia.fr/Morpeko";
                 color = 0x735A4A;
@@ -2094,6 +2095,7 @@ function specialCase(channel, content, shiny, type)
                 break;
             case "polthégeist":
             case "polthegeist":
+                other_forms = "";
                 title = "Polthégeist";
                 url = "https://www.pokepedia.fr/Polthégeist";
                 color = 0x6363b5;
@@ -2110,6 +2112,7 @@ function specialCase(channel, content, shiny, type)
                 hp = 0;
                 break;
             case "nigosier":
+                other_forms = "";
                 title = "Nigosier";
                 url = "https://www.pokepedia.fr/Nigosier";
                 color = 0x399CFF;
@@ -2127,6 +2130,7 @@ function specialCase(channel, content, shiny, type)
                 hp = 0;
                 break;
             case "palarticho":
+                other_forms = "";
                 title = "Palarticho";
                 url = "https://www.pokepedia.fr/Palarticho";
                 color = 0x399CFF;
