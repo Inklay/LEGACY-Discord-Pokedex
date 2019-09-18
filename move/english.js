@@ -48,6 +48,10 @@ module.exports = {
                     ppMax = ppMax.substring(ppMax.search(" "));
                     ppMax = ppMax.substring(0, ppMax.length - 1);
                 }
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Power")
+                    power = $(this)[0].parent.next.next.children[1].children[0].data;
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Accuracy")
+                    accuray = $(this)[0].parent.next.next.children[1].children[0].data + "%";
             });
             switch (type) {
                 case "Steel":
