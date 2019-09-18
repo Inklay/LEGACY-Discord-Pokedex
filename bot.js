@@ -1,10 +1,10 @@
 //Node.js modules
 const Discordie = require('discordie');
-const connect = require('./connect.js');
-const pokemon = require('./pokemon.js');
-const language = require('./language.js');
-const prefix = require('./prefix.js');
-const move = require('./move.js');
+const connect = require('./src/connect.js');
+const pokemon = require('./src/pokemon.js');
+const language = require('./src/language.js');
+const prefix = require('./src/prefix.js');
+const move = require('./src/move.js');
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
 
