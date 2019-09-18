@@ -35,10 +35,12 @@ module.exports = {
             }
             title = $('.firstHeading', body).text().substring(0, $('.firstHeading', body).text().length - 7);
             $('tr > td > a', body).each(function() {
-                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("(type)") != -1 && type == "NULL") {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("(type)") != -1 && type == "NULL")
                     type = $(this)[0].children[0].children[0].children[0].data;
-                    console.log(type);
-                } 
+            });
+            $('tr > th > a', body).each(function() {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Damage_category")
+                    cat = $(this)[0].parent.next.next.children[1].children[0].children[0].data;
             });
             switch (type) {
                 case "Steel":
