@@ -2146,6 +2146,25 @@ function specialCase(channel, content, shiny, type)
                 weight = "117,0 kg, soit 257,9 livres";
                 hp = 0;
                 break;
+            case "ponyta de galar":
+            case "ponyta galar":
+                other_forms = "";
+                title = "Ponyta de Galar";
+                url = "https://www.pokepedia.fr/Ponyta_de_Galar";
+                color = 0xff73a5;
+                sprite = "https://www.pokepedia.fr/images/thumb/0/0c/Ponyta_de_Galar-EB.png/260px-Ponyta_de_Galar-EB.png";
+                name = "Galarian Ponyta";
+                number = 77;
+                type1 = "Psy";
+                family = "Monocorne";
+                ability1 = "Fuite";
+                ability2 = "Voile Pastel";
+                egg1 = "???";
+                rate = 0;
+                height = "0,8 m, soit 2,6 pieds";
+                weight = "24 kg, soit 52,9 livres";
+                hp = 0;
+                break;
         default:
             return false;
     }

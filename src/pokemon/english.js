@@ -2008,6 +2008,24 @@ function specialCase(channel, content, shiny, type)
             weight = "257.9lbs./117.0 kg";
             hp = 0;
             break;
+        case "galarian ponyta":
+        case "galar ponyta":
+            other_forms = "";
+            title = "Galarian Ponyta";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Ponyta";
+            color = 0xff73a5;
+            sprite = "https://www.pokepedia.fr/images/thumb/0/0c/Ponyta_de_Galar-EB.png/260px-Ponyta_de_Galar-EB.png";
+            number = 77;
+            type1 = "Psychic";
+            family = "Unique Horn";
+            ability1 = "Run away";
+            ability2 = "Pastel Veil";
+            egg1 = "???";
+            rate = 0;
+            height = "2'70\"/0.8 m";
+            weight = "25.9lbs./24.0 kg";
+            hp = 0;
+            break;
         default:
             return false;
     }
