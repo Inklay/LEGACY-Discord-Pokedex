@@ -9,6 +9,7 @@ const express = require('express');
 const app = express();
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
+const fs = require('fs');
 
 connect.connect(client);
 
@@ -18,6 +19,17 @@ client.Dispatcher.on("GATEWAY_READY", e => {
         console.log('bot.js: app listening on port' + process.env.PORT);
     });
     client.User.setGame({name: "pokedex help", type: 0});
+    if (!fs.existsSync('language.json')) {
+        rawData = '{"servers":[{}]}'
+        fs.writeFileSync('language.json', rawData);
+    } else
+        rawData = fs.readFileSync('language.json');
+    try {
+        JSON.parse(rawData);
+    } catch {
+        rawData = '{"servers":[{}]}'
+        fs.writeFileSync('language.json', rawData);
+    }
 });
 
 client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
