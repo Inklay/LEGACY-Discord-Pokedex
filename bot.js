@@ -5,8 +5,6 @@ const pokemon = require('./src/pokemon.js');
 const language = require('./src/language.js');
 const prefix = require('./src/prefix.js');
 const move = require('./src/move.js');
-const express = require('express');
-const app = express();
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
 const fs = require('fs');
@@ -15,9 +13,13 @@ connect.connect(client);
 
 client.Dispatcher.on("GATEWAY_READY", e => {
     console.log("bot.js: connected as " + client.User.username);
-    app.listen(process.env.PORT, function () {
-        console.log('bot.js: app listening on port' + process.env.PORT);
-    });
+    if (process.env.PORT) {
+        express = require('express');
+        app = express();
+        app.listen(process.env.PORT, function () {
+            console.log('bot.js: app listening on port ' + process.env.PORT);
+        });
+    }
     client.User.setGame({name: "pokedex help", type: 0});
     if (!fs.existsSync('language.json')) {
         rawData = '{"servers":[{}]}'
