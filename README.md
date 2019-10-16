@@ -20,7 +20,15 @@ A Discord Pokedex bot powered by Node.js
 
 ### Usage
 
-In Discord type ```pokedex [pokemon name] (mega) (shiny)```, where [pokemon name] is required, (mega) and (shiny) optionnals
+```pokedex (mega) [Pokémon name] (shiny)``` with [Pokémon name] required, (mega) and (shiny) optionals to get informations about a Pokémon
+
+```pokedex type (mega) [Pokémon name]``` with [Pokémon name] required, (mega) optionals to view Pokémon's affinities
+
+```pokedex move [move name]``` with [move name] required, to get informations about a move
+
+```pokedex language [language]``` with [language] required, to change bot's language
+
+```pokedex prefix [prefix]``` with [prefix] required, to change bot's prefix
 
 
 ## Français
@@ -44,4 +52,12 @@ Un bot Discord pokedex utilisant Node.js
 
 ### Utilisation
 
-Ecrivez  ```pokedex (mega) [nom du pokemon] (shiny)``` dans Discord, avec [nom du pokemon] requis, (mega) et (shiny) optionnels
+```pokedex (mega) [nom du Pokémon] (shiny)``` avec [nom du Pokémon] requis, (mega) et (shiny) optionnels pour avoir des informations sur un Pokémon
+
+```pokedex type (mega) [nom du Pokémon]``` avec [nom du Pokémon] requis, (mega)  optionnels pour voir les affinités d'un Pokémon
+
+```pokedex move [nom de l'attaque]``` avec [nom de l'attaque] requis, pour avoir des informations sur une attaque
+
+```pokedex language [langue]``` avec [langue] requis, pour changer la langue du bot
+
+```pokedex prefix [prefix]``` avec [prefix] requis, pour changer le prefix du bot
