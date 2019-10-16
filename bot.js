@@ -8,6 +8,25 @@ const move = require('./src/move.js');
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
 const fs = require('fs');
+var playing = 0;
+
+function changePlaying() {
+    if (playing == 0) {
+        client.User.setGame({name: "is available on GitHub", type: 0});
+        playing = 1;
+    } else if (playing == 1) {
+        client.User.setGame({name: "Eevee > Pikachu", type: 0});
+        playing = 2;
+    } else if (playing == 2) {
+        rawData = fs.readFileSync('language.json');
+        data = JSON.parse(rawData);
+        client.User.setGame({name: 'on ' + data.servers.length + ' servers', type: 0});
+        playing = 3;
+    } else {
+        client.User.setGame({name: "pokedex help", type: 0});
+        playing = 0;
+    }
+}
 
 connect.connect(client);
 
@@ -32,6 +51,7 @@ client.Dispatcher.on("GATEWAY_READY", e => {
         rawData = '{"servers":[{}]}'
         fs.writeFileSync('language.json', rawData);
     }
+    setInterval(changePlaying, 60000);
 });
 
 client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
