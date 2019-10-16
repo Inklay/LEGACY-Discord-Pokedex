@@ -1,6 +1,6 @@
 {
   "name": "discord-pokedex",
-  "version": "1.4.0",
+  "version": "2.1.0",
   "description": "A discord french Pokedex bot powered by node.js",
   "main": "bot.js",
   "scripts": {
