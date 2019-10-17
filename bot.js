@@ -57,6 +57,7 @@ client.Dispatcher.on("GATEWAY_READY", e => {
 client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
     var content = e.message.content.toLowerCase();
     var channel = e.message.channel;
+    var id = e.message.id;
 
     //Check if message starts with prefix
     if (e.message.guild)
@@ -132,5 +133,5 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
         move.move(guildLanguage, content.substring(5), channel);
     //Pokémon infos
     else 
-        pokemon.pokemon(guildLanguage, content, channel);
+        pokemon.pokemon(guildLanguage, content, channel, id);
 });
