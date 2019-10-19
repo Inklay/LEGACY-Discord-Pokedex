@@ -48,7 +48,7 @@ client.Dispatcher.on("GATEWAY_READY", e => {
     try {
         JSON.parse(rawData);
     } catch {
-        rawData = '{"servers":[{}]}'
+        rawData = '{"servers":[{}]}';
         fs.writeFileSync('language.json', rawData);
     }
     setInterval(changePlaying, 120000);

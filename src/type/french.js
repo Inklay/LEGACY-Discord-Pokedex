@@ -1,4 +1,5 @@
 const jimp = require('jimp');
+const fs = require('fs');
 
 function calcNormal(type) {
     if (type == "Roche" || type == "Acier")
@@ -176,6 +177,10 @@ function calcFairy(type) {
         return 1;
 }
 
+function send(id, channel) {
+    channel.uploadFile(id + '.png');
+}
+
 module.exports = {
     show: function(type1, type2, channel, id) {
         console.log(type1 + " " + type2);
@@ -251,7 +256,7 @@ module.exports = {
                 }
                 image[18].composite(lineH, 0, 20);
                 image[18].write(id + '.png');
-                //channel.uploadFile(id + '.png');
+                setTimeout(function (){channel.uploadFile(id + '.png');fs.unlinkSync(id + '.png')}, 250);
             });
         })
     }

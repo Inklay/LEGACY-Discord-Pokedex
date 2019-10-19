@@ -10,7 +10,7 @@ module.exports = {
                 french.pokemon(content, channel, id);
                 break;
             case "english":
-                english.pokemon(content, channel);
+                english.pokemon(content, channel, id);
                 break;
             default:
                 return;

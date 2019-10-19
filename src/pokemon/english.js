@@ -2118,7 +2118,7 @@ function getByNumber(content, channel) {
 }
 
 module.exports = {
-    pokemon: function (content, channel)
+    pokemon: function (content, channel, id)
     {
         if (parseInt(content)) {
             getByNumber(content, channel)
@@ -2444,7 +2444,7 @@ module.exports = {
                     }
                 });
             } else
-                types.show(type1, type2, channel);
+                types.show(type1, type2, channel, id);
             console.log("pokemon/english.js: successfully gathered info about " + content);
         });
     }
