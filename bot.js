@@ -28,7 +28,8 @@ function changePlaying() {
     }
 }
 
-connect.connect(client);
+token = fs.readFileSync('token', 'utf8');
+connect.connect(client, token);
 
 client.Dispatcher.on("GATEWAY_READY", e => {
     console.log("bot.js: connected as " + client.User.username);
