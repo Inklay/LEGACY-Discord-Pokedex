@@ -2375,8 +2375,13 @@ module.exports = {
                     else {
                         ability1 = $(this).parent().next()[0].children[1].children[0].data;
                         ability2 = $(this).parent().next()[0].children[4].children[0].data;
-                        if ($(this).parent().next()[0].children.length == 10)
+                        if ($(this).parent().next()[0].children.length > 5 && $(this).parent().next()[0].children[5].type == "tag" && $(this).parent().next()[0].children[5].name == "small" && $(this).parent().next()[0].children[5].children[2].children[0].data == "Talent caché")
+                            ability2 += " (caché)";
+                        if ($(this).parent().next()[0].children.length == 10) {
                             ability3 = $(this).parent().next()[0].children[7].children[0].data;
+                            if ($(this).parent().next()[0].children[8].type == "tag" && $(this).parent().next()[0].children[8].name == "small" && $(this).parent().next()[0].children[8].children[2].children[0].data == "Talent caché")
+                                ability3 += " (caché)";
+                        }
                     }
                 }
                 if ($(this)[0].attribs.href == "/%C5%92uf" && $(this).parent().next()[0].attribs.colspan == "3" && !is_mega) {

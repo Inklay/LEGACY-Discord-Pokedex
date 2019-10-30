@@ -2239,36 +2239,39 @@ module.exports = {
                 } 
             }
             $('tr > td > a', body).each(function() {
-                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none" && ($(this)[0].prev == null || ($(this)[0].prev.type == "text" && $(this)[0].prev.data == " "))) {
+                if ($(this)[0].attribs.href != null && $(this)[0].attribs.href.search("Ability") != -1 && $(this)[0].attribs.href != "/wiki/Ability" && $(this)[0].parent.attribs.style != "display: none" && ($(this)[0].prev == null || ($(this)[0].prev.type == "text" && ($(this)[0].prev.data == " " || $(this)[0].prev.data.search("or") != -1)))) {
                     if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].type == "tag" && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].name == "small") {
                         if (alola && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan")) {
                             if (ability1 == "NULL")
                                 ability1 = $(this)[0].children[0].children[0].data;
-                            else if (ability2 == "NULL")
+                            else if (ability2 == "NULL") {
                                 ability2 = $(this)[0].children[0].children[0].data;
-                            else
+                                if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.search("Hidden Ability") != -1)
+                                    ability2 += " (hidden)";
+                            } else if (ability3 == "NULL") {
                                 ability3 = $(this)[0].children[0].children[0].data;
+                                if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.search("Hidden Ability") != -1)
+                                    ability3 += " (hidden)";
+                            }
                         } else if (is_mega && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
                             if (ability1 == "NULL")
                                 ability1 = $(this)[0].children[0].children[0].data;
                             else if (ability2 == "NULL")
                                 ability2 = $(this)[0].children[0].children[0].data;
-                            else
+                            else (ability3 == "NULL")
                                 ability3 = $(this)[0].children[0].children[0].data;
                         } else if (!alola && !is_mega && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan") && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
-                            if (ability1 == "NULL")
-                                ability1 = $(this)[0].children[0].children[0].data;
-                            else if (ability2 == "NULL")
-                                ability2 = $(this)[0].children[0].children[0].data;
-                            else
-                                ability3 = $(this)[0].children[0].children[0].data;
+                            if (ability2 == "NULL")
+                                ability2 = $(this)[0].children[0].children[0].data + " (hidden)";
+                            else if (ability3 == "NULL")
+                                ability3 = $(this)[0].children[0].children[0].data + " (hidden)";
                         }
                     } else {
                         if (ability1 == "NULL")
                             ability1 = $(this)[0].children[0].children[0].data;
                         else if (ability2 == "NULL")
                             ability2 = $(this)[0].children[0].children[0].data;
-                        else
+                        else if (ability3 == "NULL")
                             ability3 = $(this)[0].children[0].children[0].data;
                     }
                 }
@@ -2397,12 +2400,12 @@ module.exports = {
                 if (ability2 == "NULL")
                     description += "Ability: " + ability1 + "\n";
                 else {
-                    if (ability3 == "NULL" || ability1 != ability2)
+                    if (ability3 == "NULL" && ability1 != ability2)
                         description += "Abilities: " + ability1 + "/" + ability2 + "\n";
                     else if (ability1 != ability3 && ability2 != ability3)
                         description += "Abilities: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
                     else
-                    description += "Ability: " + ability1 + "\n";
+                        description += "Ability: " + ability1 + "\n";
                 }
                 if (!is_mega) {
                     if (egg2 == "NULL")
