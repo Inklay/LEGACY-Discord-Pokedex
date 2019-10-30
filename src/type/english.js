@@ -180,6 +180,13 @@ function calcFairy(type) {
 module.exports = {
     show: function(type1, type2, channel, id) {
         var type = new Array();
+        var image = new Array();
+
+        if (type1 == "???" || type1 == "NULL") {
+            channel.sendMessage("This Pokémon's type haven't been revealed yet.");
+            return;
+        }
+
         type[0] = 1 * calcNormal(type1) * calcNormal(type2);
         type[1] = 1 * calcFire(type1) * calcFire(type2);
         type[2] = 1 * calcWater(type1) * calcWater(type2);
@@ -199,7 +206,6 @@ module.exports = {
         type[16] = 1 * calcSteel(type1) * calcSteel(type2);
         type[17] = 1 * calcFairy(type1) * calcFairy(type2);
         
-        image = new Array();
         image[0] = new jimp(80, 20, "#ada594");
         image[1] = new jimp(80, 20, "#f75231");
         image[2] = new jimp(80, 20, "#399cff");
