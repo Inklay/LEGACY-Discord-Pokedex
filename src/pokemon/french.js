@@ -2068,10 +2068,9 @@ module.exports = {
                     }
                 }
                 if (number == "???" || parseInt(number) > 809 || galar)
-                    sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + name.replace(/\W/g, '') + ".png";
+                    sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + name.replace(/\W/g, '') + "_2x.png";
                 sprite = sprite.toLocaleLowerCase();
                 sprite = sprite.replace("galarian", "");
-                console.log(sprite);
                 channel.sendMessage("", false, {
                     color: color,
                     title: title,

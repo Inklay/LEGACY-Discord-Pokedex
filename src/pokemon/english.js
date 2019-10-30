@@ -1851,7 +1851,7 @@ function specialCase(channel, content, shiny, type)
             weight = "88.2lbs./40.0 kg";
             hp = 0;
             break;
-        case "zacian":
+        /*case "zacian":
             other_forms = "";
             title = "Zacian";
             url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
@@ -1865,7 +1865,7 @@ function specialCase(channel, content, shiny, type)
             height = "???";
             weight = "???";
             hp = 0;
-            break;
+            break;*/
         case "zamazenta":
             other_forms = "";
             title = "Zamazenta";
@@ -2117,6 +2117,47 @@ function getByNumber(content, channel) {
     });
 }
 
+function getColor(type) {
+    switch (type) {
+        case "Fire":
+            return 0xf75231;
+        case "Water":
+            return 0x399cff;
+        case "Grass":
+            return 0x7bce52;
+        case "Electric":
+            return 0xffc631;
+        case "Ice":
+            return 0x5acee7;
+        case "Fighting":
+            return 0xa55239;
+        case "Poison":
+            return 0xb55aa5;
+        case "Ground":
+            return 0xd6b55a;
+        case "Fly":
+            return 0x9cadf7;
+        case "Psychic":
+            return 0xff73a5;
+        case "Bug":
+            return 0xadbd21;
+        case "Rock":
+            return 0xbda55a;
+        case "Ghost":
+            return 0x6363b5;
+        case "Dragon":
+            return 0x8858f6;
+        case "Steel":
+            return 0x735a4a;
+        case "Dark":
+            return 0xadadc6;
+        case "Fairy":
+            return 0xe09ae3;
+        default:
+            return 0xada594;
+    }
+}
+
 module.exports = {
     pokemon: function (content, channel, id)
     {
@@ -2151,6 +2192,7 @@ module.exports = {
         var spd = 0;
         var spe = 0;
         var alola = 0;
+        var galar = 0;
         var is_mega = 0;
         var mega = "Méga-";
         var mega_type = "";
@@ -2193,6 +2235,15 @@ module.exports = {
                 search = url.concat(content.substring(0, content.search(" ")));
             else
                 search = url.concat(content);
+        } else if (content.search(" galarian") != -1 || content.startsWith("galarian ")) {
+            if (content.startsWith("galarian "))
+                content = content.substring(9);
+            title = "Galarian ";
+            galar = 1;
+            if (content.search(" ") != -1)
+                search = url.concat(content.substring(0, content.search(" ")));
+            else
+                search = url.concat(content);
         }
         if (specialCase(channel, content, shiny, type) && !is_mega)
             return;
@@ -2210,6 +2261,8 @@ module.exports = {
             if (!found) {
                 if (alola)
                     channel.sendMessage("Can not find \"Alolan " + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\".");
+                if (alola)
+                    channel.sendMessage("Can not find \"Galarian " + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\".");
                 else
                     channel.sendMessage("Can not find \"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\".");
                 return;
@@ -2226,12 +2279,17 @@ module.exports = {
             $('tr > td > a', body).each(function() {
                 if (alola && $(this)[0].attribs.class != null && $(this)[0].attribs.class == "image" && $(this)[0].attribs.title != null && $(this)[0].attribs.title.search("Alolan") != -1)
                     found = 1;
+                else if (galar && $(this)[0].attribs.class != null && $(this)[0].attribs.class == "image" && $(this)[0].attribs.title != null && $(this)[0].attribs.title.search("Galarian") != -1)
+                    found = 1;
                 else if (is_mega && $(this)[0].attribs.class != null && $(this)[0].attribs.class == "image" && $(this)[0].attribs.title != null && $(this)[0].attribs.title.search("Mega") != -1)
                     found = 1;
             });
             if (!found) {
                 if (alola) {
                     channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have an alolan form.");
+                    return;
+                } else if (galar) {
+                    channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have an galarian form.");
                     return;
                 } else if (is_mega) {
                     channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have a mega evolution.");
@@ -2253,6 +2311,18 @@ module.exports = {
                                 if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.search("Hidden Ability") != -1)
                                     ability3 += " (hidden)";
                             }
+                        } else if (galar && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Galarian")) {
+                            if (ability1 == "NULL")
+                                ability1 = $(this)[0].children[0].children[0].data;
+                            else if (ability2 == "NULL") {
+                                ability2 = $(this)[0].children[0].children[0].data;
+                                if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.search("Hidden Ability") != -1)
+                                    ability2 += " (hidden)";
+                            } else if (ability3 == "NULL") {
+                                ability3 = $(this)[0].children[0].children[0].data;
+                                if ($(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.search("Hidden Ability") != -1)
+                                    ability3 += " (hidden)";
+                            }
                         } else if (is_mega && $(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
                             if (ability1 == "NULL")
                                 ability1 = $(this)[0].children[0].children[0].data;
@@ -2260,7 +2330,7 @@ module.exports = {
                                 ability2 = $(this)[0].children[0].children[0].data;
                             else (ability3 == "NULL")
                                 ability3 = $(this)[0].children[0].children[0].data;
-                        } else if (!alola && !is_mega && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan") && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
+                        } else if (!alola && !is_mega && !galar && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Alolan") && !$(this)[0].parent.children[$(this)[0].parent.children.length - 2].children[0].data.startsWith("Mega")) {
                             if (ability2 == "NULL")
                                 ability2 = $(this)[0].children[0].children[0].data + " (hidden)";
                             else if (ability3 == "NULL")
@@ -2279,6 +2349,12 @@ module.exports = {
                     if (alola && type1 == null) {
                         if ($(this).parent().parent().parent().parent().next()[0].type == "tag" && $(this).parent().parent().parent().parent().next()[0].name == "small"
                         && $(this).parent().parent().parent().parent().next()[0].children[0].data.search("Alolan") != -1) {
+                            type1 = $(this)[0].attribs.href.substring(6, ($(this)[0].attribs.href.length - 7));
+                            type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
+                        }
+                    } else if (galar && type1 == null) {
+                        if ($(this).parent().parent().parent().parent().next()[0].type == "tag" && $(this).parent().parent().parent().parent().next()[0].name == "small"
+                        && $(this).parent().parent().parent().parent().next()[0].children[0].data.search("Galarian") != -1) {
                             type1 = $(this)[0].attribs.href.substring(6, ($(this)[0].attribs.href.length - 7));
                             type2 = $(this).parent().next().children()[0].attribs.href.substring(6, ($(this).parent().next().children()[0].attribs.href.length - 7));
                         }
@@ -2308,8 +2384,7 @@ module.exports = {
             });
             $('tr > td > b > a', body).each(function() {
                 if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/List_of_Pok%C3%A9mon_by_height") {
-                    color = parseInt("0x" + $(this).parent().parent()[0].attribs.style.substring(12));
-                    if (is_mega || alola) {
+                    if (is_mega || alola || galar) {
                         height = $(this).parent().next()[0].children[1].children[4].children[1].children[0].data;
                         height = height.substring(0, height.length - 1) + "/";
                         height = height.concat($(this).parent().next()[0].children[1].children[4].children[3].children[0].data.substring(1));
@@ -2319,7 +2394,7 @@ module.exports = {
                         height = height.concat($(this).parent().next()[0].children[1].children[0].children[3].children[0].data.substring(1));
                     }
                 } else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Weight"){
-                    if (is_mega || alola) {
+                    if (is_mega || alola || galar) {
                         weight = $(this).parent().next()[0].children[1].children[4].children[1].children[0].data;
                         weight = weight.substring(0, weight.length - 1) + "/";
                         weight = weight.concat($(this).parent().next()[0].children[1].children[4].children[3].children[0].data.substring(1));
@@ -2334,6 +2409,19 @@ module.exports = {
             $('tr > th > div > a', body).each(function() {
                 if ($(this).parent().parent().parent().parent().parent().prev()[0]) {
                     if (alola && $(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Alolan")) {
+                        if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
+                            hp = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
+                            atk = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Defense")
+                            def = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Attack")
+                            spa = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Special_Defense")
+                            spd = $(this).parent().next()[0].children[0].data;
+                        else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Speed")
+                            spe = $(this).parent().next()[0].children[0].data;
+                    } else if (galar && $(this).parent().parent().parent().parent().parent().prev()[0].children[0].children[0].data.startsWith("Galarian")) {
                         if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Hit_Points")
                             hp = $(this).parent().next()[0].children[0].data;
                         else if ($(this)[0].attribs.href != null && $(this)[0].attribs.href == "/wiki/Statistic#Attack")
@@ -2390,6 +2478,21 @@ module.exports = {
             });
             type1 = type1.charAt(0).toUpperCase() + type1.slice(1);
             type2 = type2.charAt(0).toUpperCase() + type2.slice(1);
+            color = getColor(type1);
+            if (type1 == "Unknown")
+                type1 = "???";
+            if (family == "Unknown Pokémon")
+                family = "???";
+            if (height.charAt(1) == '?')
+                height = "???\n";
+            if (weight.charAt(1) == '?')
+                weight = "???\n";
+            if (ability1 == "Unknown")
+                ability1 = "???";
+            if (egg1 == "Unknown")
+                egg1 = "???";
+            if (rate == " Unknown\n")
+                rate = "???";
             if (!type) {
                 description = "Pokédex number: " + number + "\n";
                 if (type2 == "Unknown")
@@ -2414,7 +2517,10 @@ module.exports = {
                         description += "Egg groups: " + egg1 + ", " + egg2 + "\n";
                     description += "Catch rate: " + rate;
                 }
-                description += "\nHp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpecial Attack: " + spa + "\nSpecial Defense : " + spd + "\nSpeed : " + spe;
+                if (hp != 0)
+                    description += "\nHp: " + hp + "\nAttack: " + atk + "\nDefense: " + def + "\nSpeciale Attaque: " + spa + "\nSpeciale Defense: " + spd + "\nSpeed: " + spe;
+                else
+                    description += "\nHp: ???\nAttack: ???\nDefense: ???\nSpecial Attaque: ???\nSpecial Defense: ???\nSpeed: ???";
                 if (alola) {
                     sprite = gif_url.concat(title.slice(7));
                     sprite = sprite.concat("-alola.gif");
@@ -2433,7 +2539,10 @@ module.exports = {
                         sprite = sprite.concat("-megay.gif");
                     }
                 }
+                if (number == "???" || parseInt(number) > 809 || galar)
+                    sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + title.replace(/\W/g, '') + "_2x.png";
                 sprite = sprite.toLocaleLowerCase();
+                sprite = sprite.replace("galarian", "");
                 channel.sendMessage("", false, {
                     color: color,
                     title: title,
