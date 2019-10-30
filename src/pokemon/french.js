@@ -1714,457 +1714,6 @@ function specialCase(channel, content, shiny, type)
             spd = 90;
             spe = 90;
             break;
-        //8th Generation pokemon, will be removed when Sword and Sheild will be released.
-        case "meltan":
-            other_forms = "";
-            title = "Meltan";
-            url = "https://pokepedia.fr/Meltan";
-            color = 0xADADC6;
-            sprite = "https://www.pokepedia.fr/images/thumb/5/57/Meltan-LGPE.png/57px-Meltan-LGPE.png";
-            name = "Meltan";
-            number = 808;
-            type1 = "Acier";
-            family = "Écrou";
-            ability1 = "NULL";
-            egg1 = "Inconnu";
-            rate = -1;
-            height = "0,2 m, soit 0,7 pied";
-            weight = "8,0 kg, soit 17,6 livres";
-            hp = 46;
-            atk = 65;
-            def = 65;
-            spa = 55;
-            spd = 35;
-            spe = 34;
-            break;
-        case "melmetal":
-            other_forms = "";
-            title = "Melmetal";
-            url = "https://pokepedia.fr/Melmetal";
-            color = 0xADADC6;
-            sprite = "https://www.pokepedia.fr/images/thumb/d/d6/Melmetal-LGPE.png/131px-Melmetal-LGPE.png";
-            name = "Melmetal";
-            number = 809;
-            type1 = "Acier";
-            family = "Écrou";
-            ability1 = "NULL";
-            egg1 = "Inconnu";
-            rate = 3;
-            height = "2,5 m, soit 8,2 pieds";
-            weight = "800,0 kg, soit 1 763,7 livres";
-            hp = 135;
-            atk = 143;
-            def = 143;
-            spa = 80;
-            spd = 65;
-            spe = 34;
-            break;
-        case "ouistempo":
-            other_forms = "";
-            title = "Ouistempo";
-            url = "https://pokepedia.fr/Ouistempo";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/e1/Ouistempo-EB.png/182px-Ouistempo-EB.png";
-            name = "Grookey";
-            number = 810;
-            type1 = "Plante";
-            family = "Chimpanzé";
-            ability1 = "Engrais";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "5,0 kg, soit 11 livres";
-            hp = 0;
-            break;
-        case "flambino":
-            other_forms = "";
-            title = "Flambino";
-            url = "https://pokepedia.fr/Flambino";
-            color = 0xf75231;
-            sprite = "https://www.pokepedia.fr/images/thumb/c/c6/Flambino-EB.png/118px-Flambino-EB.png";
-            name = "Scorbunny";
-            number = 813;
-            type1 = "Feu";
-            family = "Lapin";
-            ability1 = "Braiser";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "4,5 kg, soit 9,9 livres";
-            hp = 0;
-            break;
-        case "larméléon":
-        case "larmeleon":
-            other_forms = "";
-            title = "Larméléon";
-            url = "https://pokepedia.fr/Larméléon";
-            color = 0x399cff;
-            sprite = "https://www.pokepedia.fr/images/thumb/2/2c/Larm%C3%A9l%C3%A9on-EB.png/160px-Larm%C3%A9l%C3%A9on-EB.png";
-            name = "Sobble";
-            number = 816;
-            type1 = "Eau";
-            family = "Lézard'Eau";
-            ability1 = "Torrent";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "4,0 kg, soit 8,8 livres";
-            hp = 0;
-            break;
-         case "tournicoton":
-            other_forms = "";
-            title = "Tournicoton";
-            url = "https://pokepedia.fr/Tournicoton";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/2/20/Tournicoton-EB.png/253px-Tournicoton-EB.png";
-            name = "Gossifleur";
-            number = 0;
-            type1 = "Plante";
-            family = "Chef-Fleur";
-            ability1 = "Effilochage";
-            ability2 = "Régé-Force";
-            egg1 = "???";
-            rate = 0;
-            height = "0,4 m, soit 1,3 pieds";
-            weight = "2,2 kg, soit 4,9 livres";
-            hp = 0;
-            break;
-        case "blancoton":
-            other_forms = "";
-            title = "Blancoton";
-            url = "https://pokepedia.fr/Blancoton";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/f/f7/Blancoton-EB.png/204px-Blancoton-EB.png";
-            name = "Eldegoss";
-            number = 0;
-            type1 = "Plante";
-            family = "Chef-Coton";
-            ability1 = "Effilochage";
-            ability2 = "Régé-Force";
-            egg1 = "???";
-            rate = 0;
-            height = "0,5 m, soit 1,6 pieds";
-            weight = "2,5 kg, soit 5,5 livres";
-            hp = 0;
-            break;
-        case "moumouton":
-            other_forms = "";
-            title = "Moumouton";
-            url = "https://pokepedia.fr/Moumouton";
-            color = 0xada594;
-            sprite = "https://www.pokepedia.fr/images/thumb/7/75/Moumouton-EB.png/267px-Moumouton-EB.png";
-            name = "Wooloo";
-            number = 0;
-            type1 = "Normal";
-            family = "Mouton";
-            ability1 = "Boule de Poils";
-            ability2 = "Fuite";
-            egg1 = "???";
-            rate = 0;
-            height = "0,6 m, soit 2 pieds";
-            weight = "6,0 kg, soit 13,2 livres";
-            hp = 0;
-            break;
-        case "corvaillus":
-            other_forms = "";
-            title = "Corvaillus";
-            url = "https://pokepedia.fr/Corvaillus";
-            color = 0x9cadf7;
-            sprite = "https://www.pokepedia.fr/images/thumb/3/38/Corvaillus-EB.png/193px-Corvaillus-EB.png";
-            name = "Corviknight";
-            number = 0;
-            type1 = "Vol";
-            type2 = "Acier";
-            family = "Corbeau";
-            ability1 = "Pression";
-            ability2 = "Tension";
-            ability3 = "Armure Miroir";
-            egg1 = "???";
-            rate = 0;
-            height = "2,2 m, soit 7,2 pieds";
-            weight = "75 kg, soit 165,3 livres";
-            hp = 0;
-            break;
-        case "charmilly":
-            other_forms = "";
-            title = "Charmilly";
-            url = "https://pokepedia.fr/Charmilly";
-            color = 0xe09ae3;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/ef/Charmilly-EB.png/183px-Charmilly-EB.png";
-            name = "Alcremie";
-            number = 0;
-            type1 = "Fée";
-            family = "Crème";
-            ability1 = "Gluco-Voile";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "0,5 kg, soit 1,1 livres";
-            hp = 0;
-            break;
-        case "voltoutou":
-            other_forms = "";
-            title = "Voltoutou";
-            url = "https://pokepedia.fr/Voltoutou";
-            color = 0xffc631;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/eb/Voltoutou-EB.png/197px-Voltoutou-EB.png";
-            name = "Yamper";
-            number = 0;
-            type1 = "Électrik";
-            family = "Chiot";
-            ability1 = "Ramasse Ball";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "13,5 kg, soit 29,8 livres";
-            hp = 0;
-            break;
-        case "charbi":
-            other_forms = "";
-            title = "Charbi";
-            url = "https://pokepedia.fr/Charbi";
-            color = 0xbda55a;
-            sprite = "https://www.pokepedia.fr/images/thumb/8/8d/Charbi-EB.png/286px-Charbi-EB.png";
-            name = "Rolycoly";
-            number = 0;
-            type1 = "Roche";
-            family = "Charbon";
-            ability1 = "Turbine";
-            ability2 = "Ignifugé";
-            egg1 = "???";
-            rate = 0;
-            height = "0,3 m, soit 1 pied";
-            weight = "12,0 kg, soit 26,5 livres";
-            hp = 0;
-            break;
-        case "duralugon":
-            other_forms = "";
-            title = "Duralugon";
-            url = "https://pokepedia.fr/Duralugon";
-            color = 0xadadc6;
-            sprite = "https://www.pokepedia.fr/images/thumb/6/6c/Duralugon-EB.png/199px-Duralugon-EB.png";
-            name = "Duraludon";
-            number = 0;
-            type1 = "Acier";
-            type2 = "Dragon"
-            family = "Alliage";
-            ability1 = "Light Metal";
-            ability2 = "Heavy Metal";
-            egg1 = "???";
-            rate = 0;
-            height = "1,8 m, soit 5,9 pieds";
-            weight = "40,0 kg, soit 88,2 livres";
-            hp = 0;
-            break;
-        case "zacian":
-            other_forms = "";
-            title = "Zacian";
-            url = "https://pokepedia.fr/Zacian";
-            sprite = "https://www.pokepedia.fr/images/thumb/c/cc/Zacian-EB.png/249px-Zacian-EB.png";
-            name = "Zacian";
-            number = 0;
-            type1 = "???";
-            family = "???";
-            ability1 = "???";
-            ability2 = "???";
-            egg1 = "???";
-            rate = 0;
-            height = "???";
-            weight = "???";
-            hp = 0;
-            break;
-        case "zamazenta":
-            other_forms = "";
-            title = "Zamazenta";
-            url = "https://pokepedia.fr/Zamazenta";
-            sprite = "https://www.pokepedia.fr/images/thumb/d/d7/Zamazenta-EB.png/209px-Zamazenta-EB.png";
-            name = "Zamazenta";
-            number = 0;
-            type1 = "???";
-            family = "???";
-            ability1 = "???";
-            ability2 = "???";
-            egg1 = "???";
-            rate = 0;
-            height = "???";
-            weight = "???";
-            hp = 0;
-            break;
-        case "smogogo galar":
-        case "galar smogogo":
-        case "smogogo de galar":
-                other_forms = "";
-                title = "Smogogo de Galar";
-                url = "https://www.pokepedia.fr/Smogogo_de_Galar";
-                color = 0xE09AE3;
-                sprite = "https://www.pokepedia.fr/images/thumb/1/15/Smogogo_de_Galar-EB.png/218px-Smogogo_de_Galar-EB.png";
-                name = "Galarian Weezing";
-                number = 110;
-                type1 = "Poison";
-                type2 = "Fée";
-                family = "Gaz Mortel";
-                ability1 = "Lévitation";
-                ability2 = "Gaz Inhibiteur"
-                egg1 = "Amorphe";
-                rate = 60;
-                height = "3,0 m, soit 9,8 pieds";
-                weight = "16,0 kg, soit 35,3 livres";
-                hp = 0;
-                break;
-        case "zigzaton galar":
-        case "galar zigzaton":
-        case "zigzaton de galar":
-                other_forms = "";
-                title = "Zigzaton de Galar";
-                url = "https://www.pokepedia.fr/Zigzaton_de_Galar";
-                color = 0xADA594;
-                sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
-                name = "Galarian Zigzagoon";
-                number = 263;
-                type1 = "Ténèbres";
-                type2 = "Normal";
-                family = "Petit Raton";
-                ability1 = "Ramassage";
-                ability2 = "Gloutonnerie";
-                egg1 = "Terrestre";
-                rate = 255;
-                height = "0,4 m, soit 1,3 pieds";
-                weight = "17,5 kg, soit 38,6 livres";
-                hp = 0;
-                break;
-        case "lineon galar":
-        case "galar lineon":
-        case "lineon de galar":
-        case "linéon galar":
-        case "galar linéon":
-        case "linéon de galar":
-                other_forms = "";
-                title = "Linéon de Galar";
-                url = "https://www.pokepedia.fr/Lin%C3%A9on_de_Galar";
-                color = 0xADA594;
-                sprite = "https://www.pokepedia.fr/images/thumb/c/c5/Lin%C3%A9on_de_Galar-EB.png/320px-Lin%C3%A9on_de_Galar-EB.png";
-                name = "Galarian Linoone";
-                number = 264;
-                type1 = "Ténèbres";
-                type2 = "Normal";
-                family = "Fonceur";
-                ability1 = "Ramassage";
-                ability2 = "Gloutonnerie";
-                egg1 = "Terrestre"
-                rate = 90;
-                height = "0,5 m, soit 1,6 pieds";
-                weight = "32,5 kg, soit 71,6 livres";
-                hp = 0;
-                break;
-            case "ixon":
-                other_forms = "";
-                title = "Ixon";
-                url = "https://www.pokepedia.fr/Ixon";
-                color = 0xADA594;
-                sprite = "https://www.pokepedia.fr/images/thumb/8/82/Ixon-EB.png/171px-Ixon-EB.png";
-                name = "Obstagoon";
-                number = 0;
-                type1 = "Ténèbres";
-                type2 = "Normal";
-                family = "Fonceur";
-                ability1 = "Téméraire";
-                ability2 = "Cran";
-                egg1 = "???";
-                rate = 0;
-                height = "1,6 m, soit 5,2 pieds";
-                weight = "46,0 kg, soit 101,4 livres";
-                hp = 0;
-                break;
-            case "morpeko":
-                other_forms = "";
-                title = "Morpeko";
-                url = "https://www.pokepedia.fr/Morpeko";
-                color = 0x735A4A;
-                sprite = "https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/179px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png";
-                name = "Morpeko";
-                number = 0;
-                type1 = "Électrik";
-                type2 = "Ténèbres";
-                family = "Volt Face";
-                ability1 = "Déclic Fringale";
-                egg1 = "???";
-                rate = 0;
-                height = "0,3 m, soit 1 pied";
-                weight = "3,0 kg, soit 6,6 livres";
-                hp = 0;
-                break;
-            case "polthégeist":
-            case "polthegeist":
-                other_forms = "";
-                title = "Polthégeist";
-                url = "https://www.pokepedia.fr/Polthégeist";
-                color = 0x6363b5;
-                sprite = "https://www.pokepedia.fr/images/thumb/f/f6/Polth%C3%A9geist-EB.png/257px-Polth%C3%A9geist-EB.png";
-                name = "Polteageist";
-                number = 0;
-                type1 = "Spectre";
-                family = "Thé Noir";
-                ability1 = "Armurouillée";
-                egg1 = "???";
-                rate = 0;
-                height = "0,2 m, soit 0,7 pied";
-                weight = "0,4 kg, soit 0,9 livre";
-                hp = 0;
-                break;
-            case "nigosier":
-                other_forms = "";
-                title = "Nigosier";
-                url = "https://www.pokepedia.fr/Nigosier";
-                color = 0x399CFF;
-                sprite = "https://www.pokepedia.fr/images/thumb/1/13/Nigosier-EB.png/189px-Nigosier-EB.png";
-                name = "Cramorant";
-                number = 0;
-                type1 = "Vol";
-                type2 = "Eau";
-                family = "Avaltouron";
-                ability1 = "Dégobage";
-                egg1 = "???";
-                rate = 0;
-                height = "0,8 m, soit 2,6 pieds";
-                weight = "18,0 kg, soit 39,7 livres";
-                hp = 0;
-                break;
-            case "palarticho":
-                other_forms = "";
-                title = "Palarticho";
-                url = "https://www.pokepedia.fr/Palarticho";
-                color = 0x399CFF;
-                sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_sirfetchd.png";
-                name = "Sirfetch'd";
-                number = 0;
-                type1 = "Combat";
-                family = "Canard Fou";
-                ability1 = "Impassible";
-                egg1 = "???";
-                rate = 0;
-                height = "0,8 m, soit 2,6 pieds";
-                weight = "117,0 kg, soit 257,9 livres";
-                hp = 0;
-                break;
-            case "ponyta de galar":
-            case "ponyta galar":
-                other_forms = "";
-                title = "Ponyta de Galar";
-                url = "https://www.pokepedia.fr/Ponyta_de_Galar";
-                color = 0xff73a5;
-                sprite = "https://www.pokepedia.fr/images/thumb/0/0c/Ponyta_de_Galar-EB.png/260px-Ponyta_de_Galar-EB.png";
-                name = "Galarian Ponyta";
-                number = 77;
-                type1 = "Psy";
-                family = "Monocorne";
-                ability1 = "Fuite";
-                ability2 = "Voile Pastel";
-                egg1 = "???";
-                rate = 0;
-                height = "0,8 m, soit 2,6 pieds";
-                weight = "24 kg, soit 52,9 livres";
-                hp = 0;
-                break;
         default:
             return false;
     }
@@ -2253,6 +1802,47 @@ function getByNumber(content, channel) {
     });
 }
 
+function getColor(type) {
+    switch (type) {
+        case "Feu":
+            return 0xf75231;
+        case "Eau":
+            return 0x399cff;
+        case "Plante":
+            return 0x7bce52;
+        case "Électrik":
+            return 0xffc631;
+        case "Glace":
+            return 0x5acee7;
+        case "Combat":
+            return 0xa55239;
+        case "Poison":
+            return 0xb55aa5;
+        case "Sol":
+            return 0xd6b55a;
+        case "Vol":
+            return 0x9cadf7;
+        case "Psy":
+            return 0xff73a5;
+        case "Insecte":
+            return 0xadbd21;
+        case "Roche":
+            return 0xbda55a;
+        case "Spectre":
+            return 0x6363b5;
+        case "Dragon":
+            return 0x8858f6;
+        case "Acier":
+            return 0x735a4a;
+        case "Ténèbres":
+            return 0xadadc6;
+        case "Fée":
+            return 0xe09ae3;
+        default:
+            return 0xada594;
+    }
+}
+
 module.exports = {
     pokemon: function (content, channel, id)
     {
@@ -2288,6 +1878,7 @@ module.exports = {
         var spd = 0;
         var spe = 0;
         var alola = 0;
+        var galar = 0;
         var is_mega = 0;
         var mega = "Méga-";
         var mega_type = "";
@@ -2327,6 +1918,9 @@ module.exports = {
         if (content.search(" alola") != -1 || content.search(" d'alola") != -1) {
             alola = 1;
             search = search.concat("_d%27Alola");
+        } else if (content.search(" galar") != -1 || content.search(" de galar") != -1) {
+            galar = 1;
+            search = search.concat("_de_Galar");
         }
         if (specialCase(channel, content, shiny, type) && !is_mega)
             return;
@@ -2346,6 +1940,8 @@ module.exports = {
             if (!found) {
                 if (alola)
                     channel.sendMessage("Impossible de trouver \"" + content.charAt(0).toUpperCase() + content.slice(1) + " d\'Alola\" merci de vérifier l'orthographe.");
+                else if (galar)
+                    channel.sendMessage("Impossible de trouver \"" + content.charAt(0).toUpperCase() + content.slice(1) + " de Galar\" merci de vérifier l'orthographe.");
                 else
                     channel.sendMessage("Impossible de trouver \"" + content.charAt(0).toUpperCase() + content.slice(1) + "\" merci de vérifier l'orthographe.");
                 return;
@@ -2356,7 +1952,6 @@ module.exports = {
                     name = $(this).next().text();
             });
             number = $('.entêtesection > big > span', body).text().substring(2);
-            color = parseInt("0x" + ($('tr > .entêtesection', body)[0].attribs.style.substring(13, 19)));
             $('tr > th > a', body).each(function() {
                 if ($(this)[0].attribs.href == "/Type" && $(this).parent().next()[0].attribs.colspan == "3") {
                     type1 = $(this).parent().next()[0].children[0].children[0].attribs.alt;
@@ -2373,21 +1968,28 @@ module.exports = {
                     if ($(this).parent().next()[0].children.length == 2)
                         ability1 = $(this).parent().next()[0].children[0].children[0].data;
                     else {
-                        ability1 = $(this).parent().next()[0].children[1].children[0].data;
-                        ability2 = $(this).parent().next()[0].children[4].children[0].data;
-                        if ($(this).parent().next()[0].children.length > 5 && $(this).parent().next()[0].children[5].type == "tag" && $(this).parent().next()[0].children[5].name == "small" && $(this).parent().next()[0].children[5].children[2].children[0].data == "Talent caché")
-                            ability2 += " (caché)";
-                        if ($(this).parent().next()[0].children.length == 10) {
-                            ability3 = $(this).parent().next()[0].children[7].children[0].data;
-                            if ($(this).parent().next()[0].children[8].type == "tag" && $(this).parent().next()[0].children[8].name == "small" && $(this).parent().next()[0].children[8].children[2].children[0].data == "Talent caché")
-                                ability3 += " (caché)";
+                        if ($(this).parent().next()[0].children[1] == null)
+                            ability1 = "???";
+                        else {
+                            ability1 = $(this).parent().next()[0].children[1].children[0].data;
+                            ability2 = $(this).parent().next()[0].children[4].children[0].data;
+                            if ($(this).parent().next()[0].children.length > 5 && $(this).parent().next()[0].children[5].type == "tag" && $(this).parent().next()[0].children[5].name == "small" && $(this).parent().next()[0].children[5].children[2].children[0].data == "Talent caché")
+                                ability2 += " (caché)";
+                            if ($(this).parent().next()[0].children.length == 10) {
+                                ability3 = $(this).parent().next()[0].children[7].children[0].data;
+                                if ($(this).parent().next()[0].children[8].type == "tag" && $(this).parent().next()[0].children[8].name == "small" && $(this).parent().next()[0].children[8].children[2].children[0].data == "Talent caché")
+                                    ability3 += " (caché)";
+                            }
                         }
                     }
                 }
                 if ($(this)[0].attribs.href == "/%C5%92uf" && $(this).parent().next()[0].attribs.colspan == "3" && !is_mega) {
-                    egg1 = $(this).parent().next()[0].children[0].children[0].data;
-                    if ($(this).parent().next()[0].children.length == 4)
-                        egg2 = $(this).parent().next()[0].children[2].children[0].data;
+                    if ($(this).parent().next()[0].children[0].children != null) {
+                        egg1 = $(this).parent().next()[0].children[0].children[0].data;
+                        if ($(this).parent().next()[0].children.length == 4)
+                            egg2 = $(this).parent().next()[0].children[2].children[0].data;
+                    } else
+                        egg1 = "???";
                 }
                 if ($(this)[0].attribs.href == "/Capture_des_Pok%C3%A9mon" && $(this).parent().next()[0].attribs.colspan == "3" && !is_mega)
                     rate = $(this).parent().next()[0].children[0].data;
@@ -2408,6 +2010,19 @@ module.exports = {
             });
             type1 =  type1.charAt(0).toUpperCase() + type1.slice(1);
             type2 = type2.charAt(0).toUpperCase() + type2.slice(1);
+            if (number == ".")
+                number = "???";
+            if (rate == "\n")
+                rate = "???\n";
+            if (height == null)
+                height = "???\n";
+            if (weight == null)
+                weight = "???\n";
+            if (type1 == "Inconnu")
+                type1 = "???";
+            if (family == "Pokémon \n")
+                family = "???\n";
+            color = getColor(type1);
             if (!type) {
                 description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
                 if (type2 == "NULL")
@@ -2430,7 +2045,10 @@ module.exports = {
                         description += "Groupe œuf: " + egg1 + ", " + egg2 + "\n";
                     description += "Taux de capture: " + rate;
                 }
-                description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
+                if (hp == 0)
+                    description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
+                else
+                    description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
                 if (alola) {
                     sprite = gif_url.concat(name.slice(7, name.length - 1));
                     sprite = sprite.concat("-alola.gif");
@@ -2449,7 +2067,11 @@ module.exports = {
                         sprite = sprite.concat("-megay.gif");
                     }
                 }
+                if (number == "???" || parseInt(number) > 809 || galar)
+                    sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + name.replace(/\W/g, '') + ".png";
                 sprite = sprite.toLocaleLowerCase();
+                sprite = sprite.replace("galarian", "");
+                console.log(sprite);
                 channel.sendMessage("", false, {
                     color: color,
                     title: title,

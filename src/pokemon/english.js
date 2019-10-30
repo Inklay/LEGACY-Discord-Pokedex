@@ -2113,7 +2113,7 @@ function getByNumber(content, channel) {
             }
         });
         if (!found)
-            channel.sendMessage("No Pkémon found with this pokedex nunmber: " + parseInt(content));
+            channel.sendMessage("No Pokémon found with this pokedex nunmber: " + parseInt(content));
     });
 }
 
