@@ -2159,7 +2159,7 @@ function getColor(type) {
 }
 
 module.exports = {
-    pokemon: function (content, channel, id)
+    pokemon: function (content, channel, id, guildType)
     {
         if (parseInt(content)) {
             getByNumber(content, channel)
@@ -2198,6 +2198,7 @@ module.exports = {
         var mega_type = "";
         var shiny = 0;
         var type = false;
+        const spoiler = require('../spoiler.js');
 
         if (content.startsWith("type ")) {
             type = true;
@@ -2539,8 +2540,14 @@ module.exports = {
                         sprite = sprite.concat("-megay.gif");
                     }
                 }
-                if (number == "???" || parseInt(number) > 809 || galar)
+                if (number == "???" || parseInt(number) > 809 || galar) {
                     sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + title.replace(/\W/g, '') + "_2x.png";
+                    if (spoiler.get(id, guildType) == "off") {
+                        channel.sendMessage("This Pokémon is considered as spoiler, to enable spoilers, type \"pokedex spoiler on\".\n\n");
+                        return;
+                    } else
+                        description = "This Pokémon is considered as spoiler, to disable spoilers, type \"pokedex spoiler off\".\n\n" + description;
+                }
                 sprite = sprite.toLocaleLowerCase();
                 sprite = sprite.replace("galarian", "");
                 channel.sendMessage("", false, {

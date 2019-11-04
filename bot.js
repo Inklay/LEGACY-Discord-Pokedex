@@ -4,6 +4,7 @@ const connect = require('./src/connect.js');
 const pokemon = require('./src/pokemon.js');
 const language = require('./src/language.js');
 const prefix = require('./src/prefix.js');
+const spoiler = require('./src/spoiler.js');
 const move = require('./src/move.js');
 const Events = Discordie.Events;
 const client = new Discordie({autoReconnect: true});
@@ -99,7 +100,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
         return;
     }
 
-    //Prefix hangling
+    //Prefix handling
     if (content == "prefix")
         prefix.show(guildPrefix, guildLanguage, channel);
     else if (content.startsWith("prefix ")) {
@@ -109,6 +110,13 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
             prefix.set(e.message.author.id, 'user', content.substring(7), guildLanguage, channel);
     }
 
+    //Spoiler handling
+    if (content.startsWith("spoiler ")) {
+        if (e.message.guild)
+            spoiler.set(e.message.channel.guild.id, 'guild', content.substring(8), guildLanguage, channel);
+        else
+            spoiler.set(e.message.author.id, 'user', content.substring(8), guildLanguage, channel);
+    }
     //Help message
     else if(content == "help") {
         switch (guildLanguage) {
@@ -132,7 +140,12 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
     //Move infos
     else if (content.startsWith("move "))
         move.move(guildLanguage, content.substring(5), channel);
+
     //Pokémon infos
-    else 
-        pokemon.pokemon(guildLanguage, content, channel, id);
+    else {
+        if (e.message.guild)
+            pokemon.pokemon(guildLanguage, content, channel, e.message.channel.guild.id, 'guild');
+        else
+            pokemon.pokemon(guildLanguage, content, channel, e.message.author.id, 'user');
+    }
 });

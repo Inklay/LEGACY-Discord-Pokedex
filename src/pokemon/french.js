@@ -1844,7 +1844,7 @@ function getColor(type) {
 }
 
 module.exports = {
-    pokemon: function (content, channel, id)
+    pokemon: function (content, channel, id, guildType)
     {
         if (parseInt(content)) {
             getByNumber(content, channel)
@@ -1884,6 +1884,7 @@ module.exports = {
         var mega_type = "";
         var shiny = 0;
         var type = false;
+        const spoiler = require('../spoiler.js');
 
         if (content.startsWith("type ")) {
             type = true;
@@ -1934,7 +1935,7 @@ module.exports = {
             $('.toctext', body).each(function(i) {
                 if (($(this).text() == "À propos du Pokémon" || $(this).text() == "Origine de Mew") && !i && !is_mega)
                     found = 1;
-                else if ($(this).text() == "À propos du Méga-Pokémon" && !i && is_mega)
+                else if (($(this).text() == "À propos du Pokémon" || $(this).text() == "À propos du Méga-Pokémon") && !i && is_mega)
                     found = 1;
             });
             if (!found) {
@@ -1954,11 +1955,11 @@ module.exports = {
             number = $('.entêtesection > big > span', body).text().substring(2);
             $('tr > th > a', body).each(function() {
                 if ($(this)[0].attribs.href == "/Type" && $(this).parent().next()[0].attribs.colspan == "3") {
-                    type1 = $(this).parent().next()[0].children[0].children[0].attribs.alt;
+                    type1 = $(this).parent().next()[0].children[0].attribs.title.replace(" (type)", "");
                     if ($(this).parent().next()[0].children.length == 4)
-                        type2 = $(this).parent().next()[0].children[2].children[0].attribs.alt;
+                        type2 = $(this).parent().next()[0].children[2].attribs.title.replace(" (type)", "");
                 }
-                if ($(this)[0].attribs.href == "/Famille" && $(this).parent().next()[0].attribs.colspan == "3")
+                if ($(this)[0].attribs.href == "/Famille" && $(this).parent().next()[0].attribs.colspan == "3" && $(this).parent().next()[0].children[1])
                     family = "Pokémon " + $(this).parent().next()[0].children[1].data;
                 if ($(this)[0].attribs.href == "/Liste_des_Pok%C3%A9mon_par_taille" && $(this).parent().next()[0].attribs.colspan == "3")
                     height = $(this).parent().next()[0].children[0].data;
@@ -1966,24 +1967,24 @@ module.exports = {
                     weight = $(this).parent().next()[0].children[0].data;
                 if ($(this)[0].attribs.href == "/Talent" && $(this).parent().next()[0].attribs.colspan == "3") {
                     if ($(this).parent().next()[0].children.length == 2)
-                        ability1 = $(this).parent().next()[0].children[0].children[0].data;
+                        ability1 = $(this).parent().next()[0].children[1].children[0].data;
                     else {
                         if ($(this).parent().next()[0].children[1] == null)
                             ability1 = "???";
                         else {
                             ability1 = $(this).parent().next()[0].children[1].children[0].data;
                             ability2 = $(this).parent().next()[0].children[4].children[0].data;
-                            if ($(this).parent().next()[0].children.length > 5 && $(this).parent().next()[0].children[5].type == "tag" && $(this).parent().next()[0].children[5].name == "small" && $(this).parent().next()[0].children[5].children[2].children[0].data == "Talent caché")
+                            if ($(this).parent().next()[0].children.length > 5 && $(this).parent().next()[0].children[5].type == "tag" && $(this).parent().next()[0].children[5].name == "small" && $(this).parent().next()[0].children[5].children[1].children[1].children[0].data == "Talent caché")
                                 ability2 += " (caché)";
-                            if ($(this).parent().next()[0].children.length == 10) {
+                            if ($(this).parent().next()[0].children.length == 9) {
                                 ability3 = $(this).parent().next()[0].children[7].children[0].data;
-                                if ($(this).parent().next()[0].children[8].type == "tag" && $(this).parent().next()[0].children[8].name == "small" && $(this).parent().next()[0].children[8].children[2].children[0].data == "Talent caché")
+                                if ($(this).parent().next()[0].children[8].type == "tag" && $(this).parent().next()[0].children[8].name == "small" && $(this).parent().next()[0].children[8].children[1].children[1].children[0].data == "Talent caché")
                                     ability3 += " (caché)";
                             }
                         }
                     }
                 }
-                if ($(this)[0].attribs.href == "/%C5%92uf" && $(this).parent().next()[0].attribs.colspan == "3" && !is_mega) {
+                if ($(this)[0].attribs.href == "/Liste_des_Pok%C3%A9mon_par_groupe_d%27%C5%93uf" && $(this).parent().next()[0].attribs.colspan == "3" && !is_mega) {
                     if ($(this).parent().next()[0].children[0].children != null) {
                         egg1 = $(this).parent().next()[0].children[0].children[0].data;
                         if ($(this).parent().next()[0].children.length == 4)
@@ -2012,31 +2013,33 @@ module.exports = {
             type2 = type2.charAt(0).toUpperCase() + type2.slice(1);
             if (number == ".")
                 number = "???";
-            if (rate == "\n")
+            if (rate == "\n" || rate == "—")
                 rate = "???\n";
-            if (height == null)
-                height = "???\n";
-            if (weight == null)
-                weight = "???\n";
+            if (height == null || height == "—")
+                height = "???";
+            if (weight == null || weight == "—")
+                weight = "???";
+            if (family == null || family == "Pokémon \n")
+                family = "???";
             if (type1 == "Inconnu")
                 type1 = "???";
-            if (family == "Pokémon \n")
-                family = "???\n";
+            if (ability1 == "???")
+                ability1 = "???\n";
             color = getColor(type1);
             if (!type) {
-                description = "Nom anglais: " + name + "Numéro du pokédex: " + number + "\n";
+                description = "Nom anglais: " + name + "\nNuméro du pokédex: " + number + "\n";
                 if (type2 == "NULL")
                     description += "Type: " + type1 + "\n";
                 else
                     description += "Types: " + type1 + ", " + type2 + "\n";
-                description += "Famille: " + family + "Taille: " + height + "Poids: " + weight;
+                description += "Famille: " + family + "\nTaille: " + height + "\nPoids: " + weight;
                 if (ability2 == "NULL")
-                    description += "Talent: " + ability1 + "\n";
+                    description += "\nTalent: " + ability1;
                 else {
                     if (ability3 == "NULL")
-                        description += "Talents: " + ability1 + "/" + ability2 + "\n";
+                        description += "\nTalents: " + ability1 + "/" + ability2 + "\n";
                     else
-                        description += "Talents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
+                        description += "\nTalents: " + ability1 + "/" + ability2 + "/" + ability3 + "\n";
                 }
                 if (!is_mega) {
                     if (egg2 == "NULL")
@@ -2048,27 +2051,33 @@ module.exports = {
                 if (hp == 0)
                     description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
                 else
-                    description += "Pv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
+                    description += "\nPv: " + hp + "Attaque: " + atk + "Défense: " + def + "Attaque Spéciale: " + spa + "Défense Spéciale: " + spd + "Vitesse: " + spe;
                 if (alola) {
-                    sprite = gif_url.concat(name.slice(7, name.length - 1));
+                    sprite = gif_url.concat(name.slice(7, name.length));
                     sprite = sprite.concat("-alola.gif");
                 } else if (!is_mega) {
-                    sprite = gif_url.concat(name.slice(0, name.length - 1));
+                    sprite = gif_url.concat(name);
                     sprite = sprite.concat(".gif");
                 } else if (is_mega) {
                     if (mega_type == "") {
-                        sprite = gif_url.concat(name.slice(5, name.length - 1));
+                        sprite = gif_url.concat(name.slice(5, name.length));
                         sprite = sprite.concat("-mega.gif");
                     } else if (mega_type == " X ") {
-                        sprite = gif_url.concat(name.slice(5, name.length - 3));
+                        sprite = gif_url.concat(name.slice(5, name.length - 2));
                         sprite = sprite.concat("-megax.gif");
                     } else if (mega_type == " Y ") {
-                        sprite = gif_url.concat(name.slice(5, name.length - 3));
+                        sprite = gif_url.concat(name.slice(5, name.length - 2));
                         sprite = sprite.concat("-megay.gif");
                     }
                 }
-                if (number == "???" || parseInt(number) > 809 || galar)
+                if (number == "???" || parseInt(number) > 809 || galar) {
                     sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_" + name.replace(/\W/g, '') + "_2x.png";
+                    if (spoiler.get(id, guildType) == "off") {
+                        channel.sendMessage("Ce Pokémon est considéré comme un spoiler, pour activer les spoilers, faites \"pokedex spoiler on\".\n\n");
+                        return;
+                    } else
+                        description = "Ce Pokémon est considéré comme un spoiler, pour désactiver les spoilers, faites \"pokedex spoiler off\".\n\n" + description;
+                }
                 sprite = sprite.toLocaleLowerCase();
                 sprite = sprite.replace("galarian", "");
                 channel.sendMessage("", false, {
