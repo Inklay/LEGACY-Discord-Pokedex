@@ -1,6 +1,5 @@
 //Node.js modules
 const Discordie = require('discordie');
-const connect = require('./src/connect.js');
 const pokemon = require('./src/pokemon.js');
 const language = require('./src/language.js');
 const prefix = require('./src/prefix.js');
@@ -31,7 +30,7 @@ function changePlaying() {
 
 console.log("connect.js: connecting");
 token = fs.readFileSync('token', 'utf8').replace('\n', '');
-connect.connect(client, token);
+client.connect({token});
 
 client.Dispatcher.on("DISCONNECTED", e => {
     console.log("connect.js: can not connect to Discord, please verify your token and check Discord's server statues.");
