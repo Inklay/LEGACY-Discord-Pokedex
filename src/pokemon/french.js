@@ -4,7 +4,6 @@ const types = require('../type/french.js');
 
 function specialCase(channel, content, shiny, type)
 {
-    var color = 0xffffff;
     var description;
     var url;
     var title;
@@ -39,7 +38,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: morphéo soleil, morphéo pluie, morphéo neige"
             title = "Morphéo";
             url = "https://pokepedia.fr/Morphéo";
-            color = 0xADA594;
             sprite = gif_url.concat("castform.gif");
             name = "Castform";
             number = 351;
@@ -63,7 +61,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: morphéo, morphéo pluie, morphéo neige"
             title = "Morphéo Forme Soleil";
             url = "https://pokepedia.fr/Morphéo";
-            color = 0xF75231;
             sprite = gif_url.concat("castform-sunny.gif");
             name = "Castform";
             number = 351;
@@ -87,7 +84,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: morphéo, morphéo soleil, morphéo neige"
             title = "Morphéo Forme Pluie";
             url = "https://pokepedia.fr/Morphéo";
-            color = 0x399CFF;
             sprite = gif_url.concat("castform-rainy.gif");
             name = "Castform";
             number = 351;
@@ -111,7 +107,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: morphéo, morphéo soleil, morphéo pluie"
             title = "Morphéo Forme Neige";
             url = "https://pokepedia.fr/Morphéo";
-            color = 0x5ACEE7;
             sprite = gif_url.concat("castform-snowy.gif");
             name = "Castform";
             number = 351;
@@ -135,7 +130,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: deoxys attaque, deoxys défense, deoxys vitesse"
             title = "Deoxys";
             url = "https://pokepedia.fr/Deoxys";
-            color = 0xFF73A5;
             sprite = gif_url.concat("deoxys.gif");
             name = "Deoxys";
             number = 351;
@@ -158,7 +152,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: deoxys, deoxys défense, deoxys vitesse"
             title = "Deoxys Forme Attaque";
             url = "https://pokepedia.fr/Deoxys";
-            color = 0xFF73A5;
             sprite = gif_url.concat("deoxys-attack.gif");
             name = "Deoxys";
             number = 351;
@@ -181,7 +174,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: deoxys, deoxys attaque, deoxys vitesse"
             title = "Deoxys Forme Défense";
             url = "https://pokepedia.fr/Deoxys";
-            color = 0xFF73A5;
             sprite = gif_url.concat("deoxys-defense.gif");
             name = "Deoxys";
             number = 351;
@@ -204,7 +196,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: deoxys, deoxys attaque, deoxys défense"
             title = "Deoxys Forme Vitesse";
             url = "https://pokepedia.fr/Deoxys";
-            color = 0xFF73A5;
             sprite = gif_url.concat("deoxys-speed.gif");
             name = "Deoxys";
             number = 351;
@@ -227,7 +218,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: cheniselle sable, cheniselle déchet"
             title = "Cheniselle";
             url = "https://pokepedia.fr/Cheniselle";
-            color = 0xADBD21;
             sprite = gif_url.concat("wormadam.gif");
             name = "Wormadam";
             number = 413;
@@ -251,7 +241,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: cheniselle, cheniselle déchet"
             title = "Cheniselle Cape Sable";
             url = "https://pokepedia.fr/Cheniselle";
-            color = 0xADBD21;
             sprite = gif_url.concat("wormadam-sandy.gif");
             name = "Wormadam";
             number = 413;
@@ -275,7 +264,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: cheniselle, cheniselle sable"
             title = "Cheniselle Cape Déchet";
             url = "https://pokepedia.fr/Cheniselle";
-            color = 0xADBD21;
             sprite = gif_url.concat("wormadam-trash.gif");
             name = "Wormadam";
             number = 413;
@@ -299,7 +287,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma chaleur, motisma hélice, motisma froid, motisma lavage, motisma tonte"
             title = "Motisma";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom.gif");
             name = "Rotom";
             number = 479;
@@ -322,7 +309,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma, motisma hélice, motisma froid, motisma lavage, motisma tonte"
             title = "Motisma Forme Chaleur";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-heat.gif");
             name = "Rotom";
             number = 479;
@@ -345,7 +331,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma, motisma chaleur, motisma froid, motisma lavage, motisma tonte"
             title = "Motisma Forme Hélice";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-fan.gif");
             name = "Rotom";
             number = 479;
@@ -368,7 +353,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma lavage, motisma tonte"
             title = "Motisma Forme Froid";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-frost.gif");
             name = "Rotom";
             number = 479;
@@ -391,7 +375,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma tonte"
             title = "Motisma Forme Lavage";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-wash.gif");
             name = "Rotom";
             number = 479;
@@ -414,7 +397,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: motisma, motisma chaleur, motisma hélice, motisma froid, motisma lavage"
             title = "Motisma Forme Tonte";
             url = "https://pokepedia.fr/Motisma";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-mow.gif");
             name = "Rotom";
             number = 479;
@@ -438,7 +420,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: giratina originelle"
             title = "Giratina";
             url = "https://pokepedia.fr/Giratina";
-            color = 0x6363B5;
             sprite = gif_url.concat("giratina.gif");
             name = "Giratina";
             number = 487;
@@ -462,7 +443,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: giratina"
             title = "Giratina Forme Originelle";
             url = "https://pokepedia.fr/Giratina";
-            color = 0x6363B5;
             sprite = gif_url.concat("giratina-origin.gif");
             name = "Giratina";
             number = 487;
@@ -486,7 +466,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: shaymin céleste"
             title = "Shaymin";
             url = "https://pokepedia.fr/Shaymin";
-            color = 0x7BCE52;
             sprite = gif_url.concat("shaymin.gif");
             name = "Shaymin";
             number = 487;
@@ -508,7 +487,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: shaymin"
             title = "Shaymin Forme Céleste";
             url = "https://pokepedia.fr/Shaymin";
-            color = 0x7BCE52;
             sprite = gif_url.concat("shaymin-sky.gif");
             name = "Shaymin";
             number = 487;
@@ -531,7 +509,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: darumacho transe"
             title = "Darumacho";
             url = "https://pokepedia.fr/Darumacho";
-            color = 0xF75231;
             sprite = gif_url.concat("darmanitan.gif");
             name = "Darmanitan";
             number = 555;
@@ -554,7 +531,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: darumacho"
             title = "Darumacho Mode Transe";
             url = "https://pokepedia.fr/Darumacho";
-            color = 0xF75231;
             sprite = gif_url.concat("darmanitan-zen.gif");
             name = "Darmanitan";
             number = 555;
@@ -578,7 +554,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: boréas totémique"
             title = "Boréas";
             url = "https://pokepedia.fr/Boréas";
-            color = 0x9CADF7;
             sprite = gif_url.concat("tornadus.gif");
             name = "Tornadus";
             number = 641;
@@ -601,7 +576,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: boréas"
             title = "Boréas Totémique";
             url = "https://pokepedia.fr/Boréas";
-            color = 0x9CADF7;
             sprite = gif_url.concat("tornadus-therian.gif");
             name = "Tornadus";
             number = 641;
@@ -624,7 +598,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: fulguris totémique"
             title = "Fulguris";
             url = "https://pokepedia.fr/Fulguris";
-            color = 0xFFC631;
             sprite = gif_url.concat("thundurus.gif");
             name = "Thundurus";
             number = 642;
@@ -648,7 +621,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: fulguris"
             title = "Fulguris Totémique";
             url = "https://pokepedia.fr/Fulguris";
-            color = 0x9CADF7;
             sprite = gif_url.concat("thundurus-therian.gif");
             name = "Thundurus";
             number = 642;
@@ -673,7 +645,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: démétéros totémique"
             title = "Démétéros";
             url = "https://pokepedia.fr/Démétéros";
-            color = 0xD6B55A;
             sprite = gif_url.concat("landorus.gif");
             name = "Landorus";
             number = 645;
@@ -698,7 +669,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: démétéros"
             title = "Démétéros Totémique";
             url = "https://pokepedia.fr/Démétéros";
-            color = 0xD6B55A;
             sprite = gif_url.concat("landorus-therian.gif");
             name = "Landorus";
             number = 645;
@@ -722,7 +692,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: kyurem blanc, kyurem noir"
             title = "Kyurem";
             url = "https://pokepedia.fr/Kyurem";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem.gif");
             name = "Kyurem";
             number = 646;
@@ -745,7 +714,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: kyurem, kyurem noir"
             title = "Kyurem Blanc";
             url = "https://pokepedia.fr/Kyurem_Blanc";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem-white.gif");
             name = "Kyurem";
             number = 646;
@@ -768,7 +736,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: kyurem, kyurem blanc"
             title = "Kyurem Noir";
             url = "https://pokepedia.fr/Kyurem_Noir";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem-white.gif");
             name = "Kyurem";
             number = 646;
@@ -791,7 +758,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: meloetta danse"
             title = "Meloetta";
             url = "https://pokepedia.fr/Meloetta";
-            color = 0xADA594;
             sprite = gif_url.concat("meloetta.gif");
             name = "Meloetta";
             number = 648;
@@ -814,7 +780,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: meloetta"
             title = "Meloetta Danse";
             url = "https://pokepedia.fr/Meloetta";
-            color = 0xADA594;
             sprite = gif_url.concat("meloetta-pirouette.gif");
             name = "Meloetta";
             number = 648;
@@ -837,7 +802,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: amphinobi sacha"
             title = "Amphinobi";
             url = "https://pokepedia.fr/Amphinobi";
-            color = 0x399cff;
             sprite = gif_url.concat("greninja.gif");
             name = "Greninja";
             number = 658;
@@ -862,7 +826,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: amphinobi"
             title = "Amphinobi";
             url = "https://pokepedia.fr/Amphinobi";
-            color = 0x399cff;
             sprite = gif_url.concat("greninja-ash.gif");
             name = "Ash Greninja";
             number = 658;
@@ -888,7 +851,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = ""
             title = "Flabébé";
             url = "https://pokepedia.fr/Flabébé";
-            color = 0xE09AE3;
             sprite = gif_url.concat("flabebe.gif");
             name = "Flabébé";
             number = 669;
@@ -911,7 +873,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: exagide assault"
             title = "Exagide";
             url = "https://pokepedia.fr/Exagide";
-            color = 0xADADC6;
             sprite = gif_url.concat("aegislash.gif");
             name = "Aegislash";
             number = 681;
@@ -934,7 +895,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: exagide"
             title = "Exagide";
             url = "https://pokepedia.fr/Exagide";
-            color = 0xADADC6;
             sprite = gif_url.concat("aegislash-blade.gif");
             name = "Aegislash";
             number = 681;
@@ -958,7 +918,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: pitrouille mini, pitrouille maxi, pitrouille ultra";
             title = "Pitrouille";
             url = "https://pokepedia.fr/Pitrouille";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo.gif");
             name = "Pumpkaboo";
             number = 710;
@@ -983,7 +942,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: pitrouille, pitrouille maxi, pitrouille ultra";
             title = "Pitrouille Mini";
             url = "https://pokepedia.fr/Pitrouille";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-small.gif");
             name = "Pumpkaboo";
             number = 710;
@@ -1008,7 +966,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille ultra";
             title = "Pitrouille Maxi";
             url = "https://pokepedia.fr/Pitrouille";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-large.gif");
             name = "Pumpkaboo";
             number = 710;
@@ -1033,7 +990,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: pitrouille, pitrouille mini, pitrouille maxi";
             title = "Pitrouille Maxi";
             url = "https://pokepedia.fr/Pitrouille";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-super.gif");
             name = "Pumpkaboo";
             number = 710;
@@ -1059,7 +1015,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: banshitrouye mini, banshitrouye maxi, banshitrouye ultra";
             title = "Banshitrouye";
             url = "https://pokepedia.fr/Banshitrouye";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist.gif");
             name = "Gourgeist";
             number = 710;
@@ -1084,7 +1039,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: banshitrouye, banshitrouye maxi, banshitrouye ultra";
             title = "Banshitrouye Mini";
             url = "https://pokepedia.fr/Banshitrouye";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-small.gif");
             name = "Gourgeist";
             number = 710;
@@ -1109,7 +1063,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye ultra";
             title = "Banshitrouye Maxi";
             url = "https://pokepedia.fr/Banshitrouye";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-large.gif");
             name = "Gourgeist";
             number = 710;
@@ -1134,7 +1087,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: banshitrouye, banshitrouye mini, banshitrouye maxi";
             title = "Banshitrouye Ultra";
             url = "https://pokepedia.fr/Banshitrouye";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-super.gif");
             name = "Gourgeist";
             number = 710;
@@ -1159,7 +1111,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: hoopa déchainée";
             title = "Hoopa";
             url = "https://pokepedia.fr/Hoopa";
-            color = 0xFF73A5;
             sprite = gif_url.concat("hoopa.gif");
             name = "Hoopa";
             number = 720;
@@ -1182,7 +1133,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: hoopa";
             title = "Hoopa Forme Déchainée";
             url = "https://pokepedia.fr/Hoopa";
-            color = 0xFF73A5;
             sprite = gif_url.concat("hoopa-unbound.gif");
             name = "Hoopa";
             number = 720;
@@ -1205,7 +1155,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: amphinobi sacha";
             title = "Amphinobi";
             url = "https://pokepedia.fr/Amphinobi";
-            color = 0x339CCF;
             sprite = gif_url.concat("greninja.gif");
             name = "Greninja";
             number = 659;
@@ -1230,7 +1179,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: amphinobi";
             title = "Amphinobi Sacha";
             url = "https://pokepedia.fr/Amphinobi";
-            color = 0x339CCF;
             sprite = gif_url.concat("greninja-ash.gif");
             name = "Greninja";
             number = 659;
@@ -1256,7 +1204,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: zygarde 10, zygarde 100";
             title = "Zygarde";
             url = "https://pokepedia.fr/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde.gif");
             name = "Zygarde";
             number = 718;
@@ -1280,7 +1227,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: zygarde, zygarde 100";
             title = "Zygarde 10%";
             url = "https://pokepedia.fr/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde-10.gif");
             name = "Zygarde";
             number = 718;
@@ -1304,7 +1250,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: zygarde, zygarde 10";
             title = "Zygarde 100%";
             url = "https://pokepedia.fr/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde-complete.gif");
             name = "Zygarde";
             number = 718;
@@ -1328,7 +1273,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: plumeline buyo, plumeline pom-pom, plumeline hula";
             title = "Plumine Forme Flamenco";
             url = "https://pokepedia.fr/Plumeline";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio.gif");
             name = "Oricorio";
             number = 718;
@@ -1351,7 +1295,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: plumeline, plumeline pom-pom, plumeline hula";
             title = "Plumine Forme Buyo";
             url = "https://pokepedia.fr/Plumeline";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-sensu.gif");
             name = "Oricorio";
             number = 718;
@@ -1374,7 +1317,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: plumeline, plumeline buyo, plumeline hula";
             title = "Plumine Forme Pom-Pom";
             url = "https://pokepedia.fr/Plumeline";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-pompom.gif");
             name = "Oricorio";
             number = 718;
@@ -1397,7 +1339,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: plumeline, plumeline buyo, plumeline pom-pom";
             title = "Plumine Forme Hula";
             url = "https://pokepedia.fr/Plumeline";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-pau.gif");
             name = "Oricorio";
             number = 718;
@@ -1421,7 +1362,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: lougaroc nocturne, lougaroc crépusculaire";
             title = "Plumine Diurne";
             url = "https://pokepedia.fr/Lougaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lycanroc.gif");
             name = "Lycanroc";
             number = 745;
@@ -1445,7 +1385,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: lougaroc, lougaroc crépusculaire";
             title = "Plumine Nocturne";
             url = "https://pokepedia.fr/Lougaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lycanroc-dusk.gif");
             name = "Lycanroc";
             number = 745;
@@ -1469,7 +1408,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: lougaroc, lougaroc nocturne";
             title = "Plumine Crépusculaire";
             url = "https://pokepedia.fr/Lougaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lycanroc-midnight.gif");
             name = "Lycanroc";
             number = 745;
@@ -1492,7 +1430,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: froussardine banc";
             title = "Froussardine";
             url = "https://pokepedia.fr/Froussardine";
-            color = 0x399CCF;
             sprite = gif_url.concat("wishiwashi.gif");
             name = "Wishiwashi";
             number = 746;
@@ -1514,7 +1451,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: froussardine";
             title = "Froussardine Forme Banc";
             url = "https://pokepedia.fr/Froussardine";
-            color = 0x399CCF;
             sprite = gif_url.concat("wishiwashi-school.gif");
             name = "Wishiwashi";
             number = 746;
@@ -1536,7 +1472,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: météno défense";
             title = "Météno";
             url = "https://pokepedia.fr/Météno";
-            color = 0xBDA55A;
             sprite = gif_url.concat("minior.gif");
             name = "Minior";
             number = 774;
@@ -1559,7 +1494,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: météno défense";
             title = "Météno Forme Défensive";
             url = "https://pokepedia.fr/Météno";
-            color = 0xBDA55A;
             sprite = gif_url.concat("minior-meteor.gif");
             name = "Minior";
             number = 774;
@@ -1582,7 +1516,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: necrozma ailes de l\'aurore, necrozma crinière du couchant, ultra necrozma";
             title = "Necrozma";
             url = "https://pokepedia.fr/Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma.gif");
             name = "Necrozma";
             number = 800;
@@ -1604,7 +1537,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: necrozma, necrozma crinière du couchant, ultra necrozma";
             title = "Necrozma Ailes de l\'Aurore";
             url = "https://pokepedia.fr/Necrozma_Ailes_de_l%27Aurore";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-dawnwings.gif");
             name = "Necrozma Dawn Wings";
             number = 800;
@@ -1627,7 +1559,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: necrozma, necrozma ailes de l\'aurore, ultra necrozma";
             title = "Necrozma Crinière du Couchant";
             url = "https://pokepedia.fr/Necrozma_Crinière_du_Couchant";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-duskmane.gif");
             name = "Necrozma Dusk Mane";
             number = 800;
@@ -1650,7 +1581,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Autres formes: necrozma, necrozma ailes de l\'aurore, necrozma crinière du couchant";
             title = "Ultra Necrozma";
             url = "https://pokepedia.fr/Ultra-Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-ultra.gif");
             name = "Ultra Necrozma";
             number = 800;
@@ -1673,7 +1603,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Primo Kyogre";
             url = "https://pokepedia.fr/Primo-Kyogre";
-            color = 0x399CCF;
             sprite = gif_url.concat("kyogre-primal.gif");
             name = "Primal Kyogre";
             number = 382;
@@ -1695,7 +1624,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Primo Groudon";
             url = "https://pokepedia.fr/Primo-Groudon";
-            color = 0xD6B55A;
             sprite = gif_url.concat("groudon-primal.gif");
             name = "Primal Groudon";
             number = 383;
@@ -1713,6 +1641,189 @@ function specialCase(channel, content, shiny, type)
             spa = 150;
             spd = 90;
             spe = 90;
+            break;
+        case "darumacho galar":
+        case "darumacho de galar":
+            other_forms = "Autres formes: Darumacho de Galar mode trans";
+            title = "Darumacho de Galar";
+            url = "https://www.pokepedia.fr/Darumacho_de_Galar";
+            sprite = gif_url.concat("darmanitan-galar.gif");
+            name = "Galarian Darmanitan";
+            number = 368;
+            type1 = "Glace";
+            family = "Enflammé";
+            ability1 = "Entêtement";
+            ability2 = "Mode Transe";
+            egg1 = "NULL";
+            rate = 0;
+            height = "1,7 m, soit 5,7 pieds";
+            weight = "120,0 kg, soit 26,4 livres";
+            hp = 105;
+            atk = 140;
+            def = 66;
+            spa = 30;
+            spd = 55;
+            spe = 95;
+            break;
+        case "darumacho galar trans":
+        case "darumacho de galar trans":
+        case "darumacho galar mode trans":
+        case "darumacho de galar mode trans":
+            other_forms = "Darumacho de Galar";
+            title = "Autres formes: Darumacho de Galar mode trans";
+            url = "https://www.pokepedia.fr/Darumacho_de_Galar";
+            sprite = gif_url.concat("darmanitan-zen-galar.gif");
+            name = "Galarian Darmanitan";
+            number = 368;
+            type1 = "Glace";
+            type2 = "Fire";
+            family = "Enflammé";
+            ability1 = "Entêtement";
+            ability2 = "Mode Transe";
+            egg1 = "NULL";
+            rate = 0;
+            height = "1,7 m, soit 5,7 pieds";
+            weight = "120,0 kg, soit 26,4 livres";
+            hp = 105;
+            atk = 160;
+            def = 55;
+            spa = 30;
+            spd = 55;
+            spe = 135;
+            break;
+        case "bekaglacon":
+        case "bekaglaçon":
+            other_forms = "Autres formes: Bekaglaçon dégel";
+            title = "Bekaglaçon";
+            url = "https://www.pokepedia.fr/Bekaglaçonr";
+            sprite = gif_url.concat("eiscue.gif");
+            name = "Eiscue";
+            number = 875;
+            type1 = "Glace";
+            family = "Pingouin";
+            ability1 = "Tête de Gel";
+            egg1 = "NULL";
+            rate = 0;
+            height = "1,4 m, soit 4,07 pieds";
+            weight = "89,0 kg, soit 196,2 livres";
+            hp = 75;
+            atk = 80;
+            def = 110;
+            spa = 65;
+            spd = 90;
+            spe = 50;
+            break;
+        case "bekaglacon dégel":
+        case "bekaglaçon dégel":
+        case "bekaglacon degel":
+        case "bekaglaçon degel":
+            other_forms = "Autres formes: Bekaglaçon";
+            title = "Bekaglaçon Dégel";
+            url = "https://www.pokepedia.fr/Bekaglaçonr";
+            sprite = gif_url.concat("eiscue.gif");
+            name = "Eiscue";
+            number = 875;
+            type1 = "Glace";
+            family = "Pingouin";
+            ability1 = "Tête de Gel";
+            egg1 = "NULL";
+            rate = 0;
+            height = "1,4 m, soit 4,07 pieds";
+            weight = "89,0 kg, soit 196,2 livres";
+            hp = 75;
+            atk = 80;
+            def = 70;
+            spa = 65;
+            spd = 50;
+            spe = 130;
+            break;
+        case "zacian":
+            other_forms = "Autres formes: Zacian Épée Suprême";
+            title = "Zacian";
+            url = "https://www.pokepedia.fr/Zacian";
+            sprite = gif_url.concat("zacian.gif");
+            name = "Zacian";
+            number = 888;
+            type1 = "Fée";
+            family = "Valeureux";
+            ability1 = "Lame Indomptable";
+            egg1 = "Inconnu";
+            rate = 0;
+            height = "2,8 m, soit 9,2 pieds";
+            weight = "110,0 kg, soit 242,5 livres";
+            hp = 92;
+            atk = 130;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 138;
+            break;
+        case "zacian épée suprême":
+        case "zacian epee supreme":
+            other_forms = "Autres formes: Zacian";
+            title = "Zacian";
+            url = "https://www.pokepedia.fr/Zacian";
+            sprite = gif_url.concat("zacian.gif");
+            name = "Zacian Crowned Sword";
+            number = 888;
+            type1 = "Fée";
+            type2 = "Acier";
+            family = "Valeureux";
+            ability1 = "Lame Indomptable";
+            egg1 = "Inconnu";
+            rate = 0;
+            height = "2,8 m, soit 9,2 pieds";
+            weight = "355,0 kg, soit 782,6 livres";
+            hp = 92;
+            atk = 170;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 148;
+            break;
+        case "zamazenta":
+            other_forms = "Autres formes: Zamazenta Bouclier Suprême";
+            title = "Zamazenta";
+            url = "https://www.pokepedia.fr/Zacian";
+            sprite = gif_url.concat("zamazenta.gif");
+            name = "Zamazenta";
+            number = 889;
+            type1 = "Combat";
+            family = "Valeureux";
+            ability1 = "Égide Inflexible";
+            egg1 = "Inconnu";
+            rate = 0;
+            height = "2,9 m, soit 9,5 pieds";
+            weight = "210,0 kg, soit 463,0 livres";
+            hp = 92;
+            atk = 130;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 138;
+            break;
+        case "zamazenta bouclier suprême":
+        case "zamazenta bouclier supreme":
+            other_forms = "Autres formes: Zamazenta";
+            title = "Zamazenta";
+            url = "https://www.pokepedia.fr/Zacian";
+            sprite = gif_url.concat("zamazenta.gif");
+            name = "Zamazenta Crowned Sheild";
+            number = 889;
+            type1 = "Combat";
+            type2 = "Acier";
+            family = "Valeureux";
+            ability1 = "Égide Inflexible";
+            egg1 = "Inconnu";
+            rate = 0;
+            height = "2,9 m, soit 9,5 pieds";
+            weight = "785,0 kg, soit  1730,6 livres";
+            hp = 92;
+            atk = 130;
+            def = 145;
+            spa = 80;
+            spd = 145;
+            spe = 128;
             break;
         default:
             return false;
@@ -1756,7 +1867,7 @@ function specialCase(channel, content, shiny, type)
         else
             description += "Pv: ???\nAttaque: ???\nDéfense: ???\nAttaque Spéciale: ???\nDéfense Spéciale: ???\nVitesse: ???";
         channel.sendMessage(other_forms, false, {
-            color: color,
+            color: getColor(type1),
             title: title,
             description: description,
             image: {
@@ -1857,7 +1968,6 @@ module.exports = {
         var gif_url = "http://play.pokemonshowdown.com/sprites/xyani/";
         var sprite;
         var name;
-        var color = 0xffffff;
         var title;
         var number;
         var type1;
