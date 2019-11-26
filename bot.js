@@ -11,21 +11,26 @@ const fs = require('fs');
 var playing = 0;
 
 function changePlaying() {
-    if (playing == 0) {
+    if (playing == 8)
+        playing = 0;
+    else
+        playing++;
+    if (playing % 4 == 0)
+        client.User.setGame({name: "Gen 8 is in progress", type: 0});
+    if (playing == 1)
         client.User.setGame({name: "is available on GitHub", type: 0});
-        playing = 1;
-    } else if (playing == 1) {
+    else if (playing == 2)
         client.User.setGame({name: "Eevee > Pikachu", type: 0});
-        playing = 2;
-    } else if (playing == 2) {
+    else if (playing == 3) {
         rawData = fs.readFileSync('language.json');
         data = JSON.parse(rawData);
         client.User.setGame({name: 'on ' + data.servers.length + ' servers', type: 0});
-        playing = 3;
-    } else {
+    } else if (playing == 5)
         client.User.setGame({name: "pokedex help", type: 0});
-        playing = 0;
-    }
+    else if (playing == 6)
+        client.User.setGame({name: "Sobble > all", type: 0});
+    else if (playing == 7)
+        client.User.setGame({name: "7.8/10 Too much water", type: 0});
 }
 
 console.log("connect.js: connecting");
