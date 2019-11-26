@@ -1654,8 +1654,8 @@ function specialCase(channel, content, shiny, type)
             family = "Enflammé";
             ability1 = "Entêtement";
             ability2 = "Mode Transe";
-            egg1 = "NULL";
-            rate = 0;
+            egg1 = "Terrestre";
+            rate = 60;
             height = "1,7 m, soit 5,7 pieds";
             weight = "120,0 kg, soit 26,4 livres";
             hp = 105;
@@ -1680,8 +1680,8 @@ function specialCase(channel, content, shiny, type)
             family = "Enflammé";
             ability1 = "Entêtement";
             ability2 = "Mode Transe";
-            egg1 = "NULL";
-            rate = 0;
+            egg1 = "Terrestre";
+            rate = 60;
             height = "1,7 m, soit 5,7 pieds";
             weight = "120,0 kg, soit 26,4 livres";
             hp = 105;
@@ -1702,8 +1702,9 @@ function specialCase(channel, content, shiny, type)
             type1 = "Glace";
             family = "Pingouin";
             ability1 = "Tête de Gel";
-            egg1 = "NULL";
-            rate = 0;
+            egg1 = "Aquatique 1";
+            egg2 = "Terrestre";
+            rate = 60;
             height = "1,4 m, soit 4,07 pieds";
             weight = "89,0 kg, soit 196,2 livres";
             hp = 75;
@@ -1726,8 +1727,9 @@ function specialCase(channel, content, shiny, type)
             type1 = "Glace";
             family = "Pingouin";
             ability1 = "Tête de Gel";
-            egg1 = "NULL";
-            rate = 0;
+            egg1 = "Aquatique 1";
+            egg2 = "Terrestre";
+            rate = 60;
             height = "1,4 m, soit 4,07 pieds";
             weight = "89,0 kg, soit 196,2 livres";
             hp = 75;
@@ -1748,7 +1750,7 @@ function specialCase(channel, content, shiny, type)
             family = "Valeureux";
             ability1 = "Lame Indomptable";
             egg1 = "Inconnu";
-            rate = 0;
+            rate = 10;
             height = "2,8 m, soit 9,2 pieds";
             weight = "110,0 kg, soit 242,5 livres";
             hp = 92;
@@ -1771,7 +1773,7 @@ function specialCase(channel, content, shiny, type)
             family = "Valeureux";
             ability1 = "Lame Indomptable";
             egg1 = "Inconnu";
-            rate = 0;
+            rate = 10;
             height = "2,8 m, soit 9,2 pieds";
             weight = "355,0 kg, soit 782,6 livres";
             hp = 92;
@@ -1792,7 +1794,7 @@ function specialCase(channel, content, shiny, type)
             family = "Valeureux";
             ability1 = "Égide Inflexible";
             egg1 = "Inconnu";
-            rate = 0;
+            rate = 10;
             height = "2,9 m, soit 9,5 pieds";
             weight = "210,0 kg, soit 463,0 livres";
             hp = 92;
@@ -1815,7 +1817,7 @@ function specialCase(channel, content, shiny, type)
             family = "Valeureux";
             ability1 = "Égide Inflexible";
             egg1 = "Inconnu";
-            rate = 0;
+            rate = 10;
             height = "2,9 m, soit 9,5 pieds";
             weight = "785,0 kg, soit  1730,6 livres";
             hp = 92;
@@ -2199,7 +2201,7 @@ module.exports = {
                     },
                     url: search, 
                     footer : {
-                        text: "Informations de Poképedia"
+                        text: "Informations de Poképedia.\nImages de Pokémon Showdown."
                     }
                 });
                 console.log("pokemon/french.js: successfully gathered info about " + content);

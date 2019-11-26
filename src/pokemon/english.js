@@ -4,7 +4,6 @@ const types = require('../type/english.js');
 
 function specialCase(channel, content, shiny, type)
 {
-    var color = 0xffffff;
     var description;
     var url;
     var title;
@@ -38,7 +37,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: castform sunny, castform rainy, castform snowy"
             title = "Castform";
             url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
-            color = 0xADA594;
             sprite = gif_url.concat("castform.gif");
             number = 351;
             type1 = "Normal";
@@ -60,7 +58,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: castform, castform rainy, castform snowy"
             title = "Castform Sunny";
             url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
-            color = 0xF75231;
             sprite = gif_url.concat("castform-sunny.gif");
             number = 351;
             type1 = "Fire";
@@ -82,7 +79,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: castform, castform sunny, castform snowy"
             title = "Castform rainy";
             url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
-            color = 0x399CFF;
             sprite = gif_url.concat("castform-rainy.gif");
             number = 351;
             type1 = "Water";
@@ -104,7 +100,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: morphéo, morphéo soleil, morphéo pluie"
             title = "Morphéo Forme Neige";
             url = "https://bulbapedia.bulbagarden.net/wiki/Castform";
-            color = 0x5ACEE7;
             sprite = gif_url.concat("castform-snowy.gif");
             number = 351;
             type1 = "Ice";
@@ -126,7 +121,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: deoxys attack, deoxys defense, deoxys speed"
             title = "Deoxys";
             url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
-            color = 0xF85888;
             sprite = gif_url.concat("deoxys.gif");
             number = 386;
             type1 = "Psychic";
@@ -147,7 +141,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: deoxys, deoxys defense, deoxys speed"
             title = "Deoxys Attack";
             url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
-            color = 0xF85888;
             sprite = gif_url.concat("deoxys-attack.gif");
             number = 386;
             type1 = "Psychic";
@@ -168,7 +161,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: deoxys, deoxys attack, deoxys speed"
             title = "Deoxys Defense";
             url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
-            color = 0xF85888;
             sprite = gif_url.concat("deoxys-defense.gif");
             number = 386;
             type1 = "Psychic";
@@ -189,7 +181,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: deoxys, deoxys attack, deoxys defense"
             title = "Deoxys Speed";
             url = "https://bulbapedia.bulbagarden.net/wiki/Deoxys";
-            color = 0xF85888;
             sprite = gif_url.concat("deoxys-speed.gif");
             number = 386;
             type1 = "Psychic";
@@ -211,7 +202,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: wormadam sandy, wormadam trash"
             title = "Wormadam";
             url = "https://bulbapedia.bulbagarden.net/wiki/Wormadam";
-            color = 0xADBD21;
             sprite = gif_url.concat("wormadam.gif");
             number = 413;
             type1 = "Bug";
@@ -234,7 +224,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: wormadam, wormadam trash"
             title = "Wormadam Sandy";
             url = "https://bulbapedia.bulbagarden.net/wiki/Wormadam";
-            color = 0xADBD21;
             sprite = gif_url.concat("wormadam-sandy.gif");
             number = 413;
             type1 = "Bug";
@@ -280,7 +269,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom heat, rootm wash, rotom frost, rotom fan, rotom mow"
             title = "Rotom";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom.gif");
             number = 479;
             type1 = "Electric";
@@ -302,7 +290,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom, rootm wash, rotom frost, rotom fan, rotom mow"
             title = "Rotom Heat";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-heat.gif");
             number = 479;
             type1 = "Electric";
@@ -324,7 +311,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom, rootm heat, rotom frost, rotom fan, rotom mow"
             title = "Rotom Wash";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-wash.gif");
             number = 479;
             type1 = "Electric";
@@ -346,7 +332,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom fan, rotom mow"
             title = "Rotom Frost";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-frost.gif");
             number = 479;
             type1 = "Electric";
@@ -368,7 +353,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom frost, rotom mow"
             title = "Rotom Fan";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-fan.gif");
             number = 479;
             type1 = "Electric";
@@ -390,7 +374,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: rotom, rootm heat, rotom wash, rotom fan, rotom frost"
             title = "Rotom Frost";
             url = "https://bulbapedia.bulbagarden.net/wiki/Rotom";
-            color = 0xFFC631;
             sprite = gif_url.concat("rotom-mow.gif");
             number = 479;
             type1 = "Electric";
@@ -412,7 +395,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: giratina origin"
             title = "Giratina";
             url = "https://bulbapedia.bulbagarden.net/wiki/Giratina";
-            color = 0x6363B5;
             sprite = gif_url.concat("giratina.gif");
             number = 487;
             type1 = "Ghost";
@@ -435,7 +417,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: giratina"
             title = "Giratina Origin Forme";
             url = "https://bulbapedia.bulbagarden.net/wiki/Giratina";
-            color = 0x6363B5;
             sprite = gif_url.concat("giratina-origin.gif");
             number = 487;
             type1 = "Ghost";
@@ -457,7 +438,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: shaymin sky"
             title = "Shaymine";
             url = "https://bulbapedia.bulbagarden.net/wiki/Shaymin";
-            color = 0x7BCE52;
             sprite = gif_url.concat("shaymin.gif");
             number = 492;
             type1 = "Grass";
@@ -478,7 +458,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: shaymin"
             title = "Shaymin Sky Forme";
             url = "https://bulbapedia.bulbagarden.net/wiki/Shaymin";
-            color = 0x7BCE52;
             sprite = gif_url.concat("shaymin-sky.gif");
             number = 492;
             type1 = "Grass";
@@ -500,7 +479,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: darmanitan zen"
             title = "Darmanitan";
             url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
-            color = 0xF75231;
             sprite = gif_url.concat("darmanitan.gif");
             number = 555;
             type1 = "Fire";
@@ -522,7 +500,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: darmanitan"
             title = "Darmanitan Zen Mode";
             url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
-            color = 0xF75231;
             sprite = gif_url.concat("darmanitan-zen.gif");
             number = 555;
             type1 = "Fire";
@@ -545,7 +522,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: tornadus therian"
             title = "Tornadus";
             url = "https://bulbapedia.bulbagarden.net/wiki/Tornadus";
-            color = 0x9CADF7;
             sprite = gif_url.concat("tornadus.gif");
             number = 641;
             type1 = "Flying";
@@ -567,7 +543,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: tornadus"
             title = "Tornadus Therian";
             url = "https://bulbapedia.bulbagarden.net/wiki/Tornadus";
-            color = 0x9CADF7;
             sprite = gif_url.concat("tornadus-therian.gif");
             number = 641;
             type1 = "Flying";
@@ -588,7 +563,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: thundurus therian"
             title = "Thundurus";
             url = "https://bulbapedia.bulbagarden.net/wiki/Thundurus";
-            color = 0x9CADF7;
             sprite = gif_url.concat("thundurus.gif");
             number = 642;
             type1 = "Electric";
@@ -611,7 +585,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: thundurus"
             title = "Thundurus";
             url = "https://bulbapedia.bulbagarden.net/wiki/Thundurus";
-            color = 0xFFC631;
             sprite = gif_url.concat("thundurus-therian.gif");
             number = 642;
             type1 = "Electric";
@@ -633,7 +606,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: landorus therian"
             title = "Landorus";
             url = "https://bulbapedia.bulbagarden.net/wiki/Landorus";
-            color = 0xD6B55A;
             sprite = gif_url.concat("landorus.gif");
             number = 645;
             type1 = "Ground";
@@ -656,7 +628,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: landorus"
             title = "Landorus Therian";
             url = "https://bulbapedia.bulbagarden.net/wiki/Landorus";
-            color = 0xD6B55A;
             sprite = gif_url.concat("landorus-therian.gif");
             number = 645;
             type1 = "Ground";
@@ -678,7 +649,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: kyurem white, kyurem black"
             title = "Kyurem";
             url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem.gif");
             number = 646;
             type1 = "Dragon";
@@ -700,7 +670,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: kyurem, kyurem black"
             title = "Kyurem White";
             url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem-white.gif");
             number = 646;
             type1 = "Dragon";
@@ -722,7 +691,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: kyurem, kyurem white"
             title = "Kyurem Black";
             url = "https://bulbapedia.bulbagarden.net/wiki/Kyurem";
-            color = 0x8858F6;
             sprite = gif_url.concat("kyurem-black.gif");
             number = 646;
             type1 = "Dragon";
@@ -744,7 +712,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: meloetta pirouette"
             title = "Meloetta";
             url = "https://bulbapedia.bulbagarden.net/wiki/Meloetta";
-            color = 0xADA594;
             sprite = gif_url.concat("meloetta.gif");
             number = 647;
             type1 = "Normal";
@@ -766,7 +733,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: meloetta"
             title = "Meloetta Pirouette";
             url = "https://bulbapedia.bulbagarden.net/wiki/Meloetta";
-            color = 0xADA594;
             sprite = gif_url.concat("meloetta-pirouette.gif");
             number = 647;
             type1 = "Normal";
@@ -788,7 +754,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: greninja ash"
             title = "Greninja";
             url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
-            color = 0x399cff;
             sprite = gif_url.concat("greninja.gif");
             number = 658;
             type1 = "Water";
@@ -812,7 +777,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: greninja"
             title = "Ash Greninja";
             url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
-            color = 0x399cff;
             sprite = gif_url.concat("greninja-ash.gif");
             number = 658;
             type1 = "Water";
@@ -836,7 +800,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: greninja"
             title = "Ash Greninja";
             url = "https://bulbapedia.bulbagarden.net/wiki/Greninja";
-            color = 0x399cff;
             sprite = gif_url.concat("greninja-ash.gif");
             number = 658;
             type1 = "Water";
@@ -860,7 +823,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: aegislash blade"
             title = "Aegislash";
             url = "https://bulbapedia.bulbagarden.net/wiki/Aegislash";
-            color = 0xADADC6;
             sprite = gif_url.concat("aegislash.gif");
             number = 681;
             type1 = "Steel";
@@ -882,7 +844,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: aegislash"
             title = "Aegislash Blade";
             url = "https://bulbapedia.bulbagarden.net/wiki/Aegislash";
-            color = 0xADADC6;
             sprite = gif_url.concat("aegislash-blade.gif");
             number = 681;
             type1 = "Steel";
@@ -904,7 +865,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: pumpkaboo small, pumpkaboo large, pumpkaboo super"
             title = "Pumpkaboo";
             url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo.gif");
             number = 710;
             type1 = "Ghost";
@@ -928,7 +888,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: pumpkaboo, pumpkaboo large, pumpkaboo super"
             title = "Pumpkaboo Small";
             url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-small.gif");
             number = 710;
             type1 = "Ghost";
@@ -950,7 +909,6 @@ function specialCase(channel, content, shiny, type)
             break;
         case "pumpkaboo large":
             other_forms = "Other forms: pumpkaboo, pumpkaboo small, pumpkaboo super"
-            title = "Pumpkaboo Large";
             url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
             color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-large.gif");
@@ -976,7 +934,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: pumpkaboo, pumpkaboo small, pumpkaboo large"
             title = "Pumpkaboo Super";
             url = "https://bulbapedia.bulbagarden.net/wiki/Pumpkaboo";
-            color = 0x6363B5;
             sprite = gif_url.concat("pumpkaboo-super.gif");
             number = 710;
             type1 = "Ghost";
@@ -1000,7 +957,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: gourgeist small, gourgeist large, gourgeist super"
             title = "Gourgeist";
             url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist.gif");
             number = 711;
             type1 = "Ghost";
@@ -1024,7 +980,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: gourgeist, gourgeist large, gourgeist super"
             title = "Gourgeist Small";
             url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-small.gif");
             number = 711;
             type1 = "Ghost";
@@ -1048,7 +1003,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: gourgeist, gourgeist small, gourgeist super"
             title = "Gourgeist Large";
             url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-large.gif");
             number = 711;
             type1 = "Ghost";
@@ -1072,7 +1026,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: gourgeist, gourgeist small, gourgeist large"
             title = "Gourgeist Super";
             url = "https://bulbapedia.bulbagarden.net/wiki/Gourgeist";
-            color = 0x6363B5;
             sprite = gif_url.concat("gourgeist-super.gif");
             number = 711;
             type1 = "Ghost";
@@ -1097,7 +1050,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: zygarde 10, zygarde 100"
             title = "Zygarde 50%";
             url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde.gif");
             number = 718;
             type1 = "Dragon";
@@ -1120,7 +1072,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: zygarde, zygarde 100"
             title = "Zygarde 10%";
             url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde-10.gif");
             number = 718;
             type1 = "Dragon";
@@ -1143,7 +1094,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: zygarde, zygarde 10"
             title = "Zygarde 100%";
             url = "https://bulbapedia.bulbagarden.net/wiki/Zygarde";
-            color = 0x8858F6;
             sprite = gif_url.concat("zygarde-complete.gif");
             number = 718;
             type1 = "Dragon";
@@ -1165,7 +1115,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: hoopa unbound"
             title = "Hoopa";
             url = "https://bulbapedia.bulbagarden.net/wiki/Hoopa";
-            color = 0xFF73A5;
             sprite = gif_url.concat("hoopa.gif");
             number = 720;
             type1 = "Psychic";
@@ -1187,7 +1136,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: hoopa"
             title = "Hoopa Unbound";
             url = "https://bulbapedia.bulbagarden.net/wiki/Hoopa";
-            color = 0xFF73A5;
             sprite = gif_url.concat("hoopa-unbound.gif");
             number = 720;
             type1 = "Psychic";
@@ -1210,7 +1158,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: oricorio pom-pom, oricorio pa'u, oricorio sensu"
             title = "Oricorio Baile Style";
             url = "https://bulbapedia.bulbagarden.net/wiki/Oricorio";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio.gif");
             number = 741;
             type1 = "Fire";
@@ -1234,7 +1181,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: oricorio, oricorio pa'u, oricorio sensu"
             title = "Oricorio Pom-Pom Style";
             url = "https://bulbapedia.bulbagarden.net/wiki/Oricorio";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-pompom.gif");
             number = 741;
             type1 = "Fire";
@@ -1258,7 +1204,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: oricorio, oricorio pom-pom, oricorio sensu"
             title = "Oricorio Pa'u Style";
             url = "https://bulbapedia.bulbagarden.net/wiki/Oricorio";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-pau.gif");
             number = 741;
             type1 = "Fire";
@@ -1280,7 +1225,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: oricorio, oricorio pom-pom, oricorio pa'u"
             title = "Oricorio Sensu Style";
             url = "https://bulbapedia.bulbagarden.net/wiki/Oricorio";
-            color = 0x9CADF7;
             sprite = gif_url.concat("oricorio-sensu.gif");
             number = 741;
             type1 = "Fire";
@@ -1303,7 +1247,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: lynaroc midnight, lynaroc dusk";
             title = "Lynaroc";
             url = "https://bulbapedia.bulbagarden.net/wiki/Lynaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lynaroc.gif");
             number = 745;
             type1 = "Rock";
@@ -1326,7 +1269,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: lynaroc, lynaroc dusk";
             title = "Lynaroc Midnigth";
             url = "https://bulbapedia.bulbagarden.net/wiki/Lynaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lynaroc-midnight.gif");
             number = 745;
             type1 = "Rock";
@@ -1349,7 +1291,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: lynaroc, lynaroc midnight";
             title = "Lynaroc Dusk";
             url = "https://bulbapedia.bulbagarden.net/wiki/Lynaroc";
-            color = 0xDBA55A;
             sprite = gif_url.concat("lynaroc-dusk.gif");
             number = 745;
             type1 = "Rock";
@@ -1370,7 +1311,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: wishwashi school";
             title = "Wishwashi";
             url = "https://bulbapedia.bulbagarden.net/wiki/Wishwashi";
-            color = 0x399CCF;
             sprite = gif_url.concat("wishwashi.gif");
             number = 746;
             type1 = "Water";
@@ -1391,7 +1331,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: wishwashi";
             title = "Wishwashi School";
             url = "https://bulbapedia.bulbagarden.net/wiki/Wishwashi";
-            color = 0x399CCF;
             sprite = gif_url.concat("wishwashi-school.gif");
             number = 746;
             type1 = "Water";
@@ -1412,7 +1351,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: minior meteor";
             title = "Minior";
             url = "https://bulbapedia.bulbagarden.net/wiki/Minior";
-            color = 0xBDA55A;
             sprite = gif_url.concat("minior.gif");
             number = 774;
             type1 = "Rock";
@@ -1434,7 +1372,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: minior";
             title = "Minior Meteor";
             url = "https://bulbapedia.bulbagarden.net/wiki/Minior";
-            color = 0xBDA55A;
             sprite = gif_url.concat("minior-meteor.gif");
             number = 774;
             type1 = "Rock";
@@ -1456,7 +1393,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: necrozma dusk mane, necrozma dawn wings, ultra necrozma";
             title = "Necrozma";
             url = "https://bulbapedia.bulbagarden.net/wiki/Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma.gif");
             number = 800;
             type1 = "Psychic";
@@ -1477,7 +1413,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: necrozma, necrozma dawn wings, ultra necrozma";
             title = "Necrozma Dusk Mane";
             url = "https://bulbapedia.bulbagarden.net/wiki/Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-duskmane.gif");
             number = 800;
             type1 = "Psychic";
@@ -1499,7 +1434,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: necrozma, necrozma dusk mane, ultra necrozma";
             title = "Necrozma Dawn Wings";
             url = "https://bulbapedia.bulbagarden.net/wiki/Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-dawnwings.gif");
             number = 800;
             type1 = "Psychic";
@@ -1521,7 +1455,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "Other forms: necrozma, necrozma dusk mane, necrozma dawn wings";
             title = "Ultra Necrozma";
             url = "https://bulbapedia.bulbagarden.net/wiki/Necrozma";
-            color = 0xFF73A5;
             sprite = gif_url.concat("necrozma-ultra.gif");
             number = 800;
             type1 = "Psychic";
@@ -1543,7 +1476,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Kyogre";
             url = "https://bulbapedia.bulbagarden.net/wiki/Kyogre";
-            color = 0x399CCF;
             sprite = gif_url.concat("kyogre.gif");
             number = 382;
             type1 = "Water";
@@ -1564,7 +1496,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Primal Kyogre";
             url = "https://bulbapedia.bulbagarden.net/wiki/Kyogre";
-            color = 0x399CCF;
             sprite = gif_url.concat("kyogre-primal.gif");
             number = 382;
             type1 = "Water";
@@ -1585,7 +1516,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Groudon";
             url = "https://bulbapedia.bulbagarden.net/wiki/Groudon";
-            color = 0xD6B55A;
             sprite = gif_url.concat("groudon.gif");
             number = 383;
             type1 = "Ground";
@@ -1606,7 +1536,6 @@ function specialCase(channel, content, shiny, type)
             other_forms = "";
             title = "Primal Groudon";
             url = "https://bulbapedia.bulbagarden.net/wiki/Groudon";
-            color = 0xD6B55A;
             sprite = gif_url.concat("groudon-primal.gif");
             number = 383;
             type1 = "Ground";
@@ -1623,408 +1552,177 @@ function specialCase(channel, content, shiny, type)
             spd = 90;
             spe = 90;
             break;
-        //8th Generation pokemon, will be removed when Sword and Sheild will be released.
-        case "meltan":
-            other_forms = "";
-            title = "Meltan";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Meltan";
-            color = 0xADADC6;
-            sprite = "https://www.pokepedia.fr/images/thumb/5/57/Meltan-LGPE.png/57px-Meltan-LGPE.png";
-            number = 808;
-            type1 = "Steel";
-            family = "Nex Nut Pokémon";
-            ability1 = "Magnet Pull";
-            egg1 = "Undiscovered";
-            rate = -1;
-            height = "0'08\"/0.2 m";
-            weight = "17.6lbs./8.0 kg";
-            hp = 46;
-            atk = 65;
-            def = 65;
-            spa = 55;
-            spd = 35;
-            spe = 34;
+        case "galar darmanitan":
+        case "galarian darmanitan":
+            other_forms = "Other forms: galarian darmanitan zen mode";
+            title = "Galarian Darmanitan";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
+            sprite = gif_url.concat("darmanitan-galar.gif");
+            number = 555;
+            type1 = "Ice";
+            family = "Blazing Pokémon";
+            ability1 = "Gorilla Tactics";
+            ability2 = "Zen Mode";
+            egg1 = "Feild";
+            rate = "60";
+            height = "5'07\"/1.7 m";
+            weight = "264.6 lbs./120.0 kg";
+            hp = 105;
+            atk = 140;
+            def = 50;
+            spa = 30;
+            spd = 55;
+            spe = 95;
             break;
-        case "melmetal":
-            other_forms = "";
-            title = "Melmetal";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Melmetal";
-            color = 0xADADC6;
-            sprite = "https://www.pokepedia.fr/images/thumb/d/d6/Melmetal-LGPE.png/131px-Melmetal-LGPE.png";
-            number = 809;
-            type1 = "Steel";
-            family = "Nex Nut Pokémon";
-            ability1 = "Iron Fist";
-            egg1 = "Undiscovered";
-            rate = -1;
-            height = "8'02\"/2.5 m";
-            weight = "1763.7lbs./800.0 kg";
-            hp = 135;
-            atk = 143;
-            def = 143;
-            spa = 80;
-            spd = 65;
-            spe = 34;
+        case "galar darmanitan zen":
+        case "galarian darmanitan zen":
+        case "galar darmanitan zen mode":
+        case "galarian darmanitan zen mode":
+            other_forms = "Other forms: galarian darmanitan";
+            title = "Galarian Darmanitan zen mode";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Darmanitan";
+            sprite = gif_url.concat("darmanitan-galar-zen.gif");
+            number = 555;
+            type1 = "Ice";
+            type2 = "Fire";
+            family = "Blazing Pokémon";
+            ability1 = "Gorilla Tactics";
+            ability2 = "Zen Mode";
+            egg1 = "Feild";
+            rate = "60";
+            height = "5'07\"/1.7 m";
+            weight = "264.6 lbs./120.0 kg";
+            hp = 105;
+            atk = 160;
+            def = 55;
+            spa = 30;
+            spd = 55;
+            spe = 135;
             break;
-        case "grookey":
-            other_forms = "";
-            title = "Grookey";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Grookey";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/e1/Ouistempo-EB.png/182px-Ouistempo-EB.png";
-            number = 810;
-            type1 = "Grass";
-            family = "Chimp Pokémon";
-            ability1 = "Overgrow";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "11.0lbs./5.0 kg";
-            hp = 0;
+        case "eiscue":
+            other_forms = "Other forms: eiscue noice face";
+            title = "Eiscue";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Eiscue";
+            sprite = gif_url.concat("eiscue.gif");
+            number = 875;
+            type1 = "Ice";
+            family = "Penguin Pokémon";
+            ability1 = "Ice Face";
+            egg1 = "Water 1";
+            egg2 = "Feild";
+            rate = "60";
+            height = "4'07\"/1.4 m";
+            weight = "196.2 lbs./89.0 kg";
+            hp = 75;
+            atk = 80;
+            def = 110;
+            spa = 65;
+            spd = 90;
+            spe = 50;
             break;
-        case "scorbunny":
-            other_forms = "";
-            title = "Scorbunny";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Scorbunny";
-            color = 0xf75231;
-            sprite = "https://www.pokepedia.fr/images/thumb/c/c6/Flambino-EB.png/118px-Flambino-EB.png";
-            number = 813;
-            type1 = "Fire";
-            family = "Rabbit Pokémon";
-            ability1 = "Blaze";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "9.9lbs./4.5 kg";
-            hp = 0;
+        case "eiscue noice":
+        case "eiscue noice face":
+            other_forms = "Other forms: eiscue";
+            title = "Eiscue Noice Face";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Eiscue";
+            sprite = gif_url.concat("eiscue.gif");
+            number = 875;
+            type1 = "Ice";
+            family = "Penguin Pokémon";
+            ability1 = "Ice Face";
+            egg1 = "Water 1";
+            egg2 = "Feild";
+            rate = "60";
+            height = "4'07\"/1.4 m";
+            weight = "196.2 lbs./89.0 kg";
+            hp = 75;
+            atk = 80;
+            def = 70;
+            spa = 65;
+            spd = 50;
+            spe = 130;
             break;
-        case "sobble":
-            other_forms = "";
-            title = "Sobble";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Sobble";
-            color = 0x399cff;
-            sprite = "https://www.pokepedia.fr/images/thumb/2/2c/Larm%C3%A9l%C3%A9on-EB.png/160px-Larm%C3%A9l%C3%A9on-EB.png";
-            number = 816;
-            type1 = "Water";
-            family = "Water Lizard Pokémon";
-            ability1 = "Torrent";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "8.8lbs./4.0 kg";
-            hp = 0;
-            break;
-        case "gossifleur":
-            other_forms = "";
-            title = "Gossifleur";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Gossifleur";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/2/20/Tournicoton-EB.png/253px-Tournicoton-EB.png";
-            number = 0;
-            type1 = "Grass";
-            family = "Flowering Pokémon";
-            ability1 = "Cotton Down";
-            ability2 = "Regenerator";
-            egg1 = "???";
-            rate = 0;
-            height = "1'03\"/0.4 m";
-            weight = "4.9lbs./2.2 kg";
-            hp = 0;
-            break;
-        case "eldegoss":
-            other_forms = "";
-            title = "Eldegoss";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Eldegoss";
-            color = 0x7bce52;
-            sprite = "https://www.pokepedia.fr/images/thumb/f/f7/Blancoton-EB.png/204px-Blancoton-EB.png";
-            number = 0;
-            type1 = "Grass";
-            family = "Cotton Bloom Pokémon";
-            ability1 = "Cotton Down";
-            ability2 = "Regenerator";
-            egg1 = "???";
-            rate = 0;
-            height = "1'06\"/0.5 m";
-            weight = "5.5lbs./2.5 kg";
-            hp = 0;
-            break;
-        case "wooloo":
-            other_forms = "";
-            title = "Wooloo";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Wooloo";
-            color = 0xada594;
-            sprite = "https://www.pokepedia.fr/images/thumb/7/75/Moumouton-EB.png/267px-Moumouton-EB.png";
-            number = 0;
-            type1 = "Normal";
-            family = "Sheep Pokémon";
-            ability1 = "Fluffy";
-            ability2 = "Run Away";
-            egg1 = "???";
-            rate = 0;
-            height = "2'00\"/0.6 m";
-            weight = "13.2lbs./6.0 kg";
-            hp = 0;
-            break;
-         case "corviknight":
-            other_forms = "";
-            title = "Corviknight";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Corviknight";
-            color = 0x9cadf7;
-            sprite = "https://www.pokepedia.fr/images/thumb/3/38/Corvaillus-EB.png/193px-Corvaillus-EB.png";
-            number = 0;
-            type1 = "Flying";
-            type2 = "Steel"
-            family = "Raven Pokémon";
-            ability1 = "Pressure";
-            ability2 = "Unnerve";
-            ability3 = "Mirror Armor";
-            egg1 = "???";
-            rate = 0;
-            height = "7'02\"/2.2 m";
-            weight = "165.3lbs./75 kg";
-            hp = 0;
-            break;
-        case "alcremie":
-            other_forms = "";
-            title = "Alcremie";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Alcremie";
-            color = 0xe09ae3;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/ef/Charmilly-EB.png/183px-Charmilly-EB.png";
-            number = 0;
-            type1 = "Fairy";
-            family = "Cream Pokémon";
-            ability1 = "Sweet Veil";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "1.1lbs./0.5 kg";
-            hp = 0;
-            break;
-        case "yamper":
-            other_forms = "";
-            title = "Yamper";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Yamper";
-            color = 0xffc631;
-            sprite = "https://www.pokepedia.fr/images/thumb/e/eb/Voltoutou-EB.png/197px-Voltoutou-EB.png";
-            number = 0;
-            type1 = "Electric";
-            family = "Puppy Pokémon";
-            ability1 = "Ball Fetch";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "29.8lbs./13.5 kg";
-            hp = 0;
-            break;
-        case "rolycoly":
-            other_forms = "";
-            title = "Rolycoly";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Rolycoly";
-            color = 0xbda55a;
-            sprite = "https://www.pokepedia.fr/images/thumb/8/8d/Charbi-EB.png/286px-Charbi-EB.png";
-            number = 0;
-            type1 = "Rock";
-            family = "Coal Pokémon";
-            ability1 = "Steam Engine Fetch";
-            ability2 = "heatproof"
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "26.5lbs./12.0 kg";
-            hp = 0;
-            break;
-        case "duraludon":
-            other_forms = "";
-            title = "Duraludon";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Duraludon";
-            color = 0xadadc6;
-            sprite = "https://www.pokepedia.fr/images/thumb/6/6c/Duralugon-EB.png/199px-Duralugon-EB.png";
-            number = 0;
-            type1 = "Steel";
-            type2 = "Dragon"
-            family = "Alloy Pokémon";
-            ability1 = "Light Metal";
-            ability2 = "heavy Metal"
-            egg1 = "???";
-            rate = 0;
-            height = "5'09\"/1.8 m";
-            weight = "88.2lbs./40.0 kg";
-            hp = 0;
-            break;
-        /*case "zacian":
-            other_forms = "";
+        case "zacian":
+            other_forms = "Other forms: zacian crowned sword";
             title = "Zacian";
             url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
-            sprite = "https://www.pokepedia.fr/images/thumb/c/cc/Zacian-EB.png/249px-Zacian-EB.png";
-            number = 0;
-            type1 = "???";
-            family = "???";
-            ability1 = "???";
-            egg1 = "???";
-            rate = 0;
-            height = "???";
-            weight = "???";
-            hp = 0;
-            break;*/
+            sprite = gif_url.concat("zacian.gif");
+            number = 888;
+            type1 = "Fairy";
+            family = "Warrior Pokémon";
+            ability1 = "Intrepid Sword";
+            egg1 = "Undiscovered";
+            rate = 10;
+            height = "9'02\"/2.8 m";
+            weight = "242.5 lbs./110.0 kg";
+            hp = 92;
+            atk = 130;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 138;
+            break;
+        case "zacian crowned sword":
+            other_forms = "Other forms: zacian";
+            title = "Zacian Crowned Sword";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
+            sprite = gif_url.concat("zacian.gif");
+            number = 888;
+            type1 = "Fairy";
+            type2 = "Steel";
+            family = "Warrior Pokémon";
+            ability1 = "Intrepid Sword";
+            egg1 = "Undiscovered";
+            rate = 10;
+            height = "9'02\"/2.8 m";
+            weight = "782.6 lbs./355.0 kg";
+            hp = 92;
+            atk = 170;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 148;
+            break;
         case "zamazenta":
-            other_forms = "";
+            other_forms = "Other forms: zamazenta crowned sheild";
             title = "Zamazenta";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Zamazenta";
-            sprite = "https://www.pokepedia.fr/images/thumb/d/d7/Zamazenta-EB.png/209px-Zamazenta-EB.png";
-            name = "Zamazenta";
-            number = 0;
-            type1 = "???";
-            family = "???";
-            ability1 = "???";
-            ability2 = "???";
-            egg1 = "???";
-            rate = 0;
-            height = "???";
-            weight = "???";
-            hp = 0;
-            break;
-        case "galar weezing":
-        case "galarian weezing":
-            other_forms = "";
-            title = "Galarian Weezing";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Weezing";
-            color = 0xE09AE3;
-            sprite = "https://www.pokepedia.fr/images/thumb/1/15/Smogogo_de_Galar-EB.png/218px-Smogogo_de_Galar-EB.png";
-            number = 110;
-            type1 = "Poison";
-            type2 = "Fairy"
-            family = "Poison Gas Pokémon";
-            ability1 = "Levitate";
-            ability2 = "Neutralizing Gas"
-            egg1 = "Amorphous"
-            rate = 60;
-            height = "9'08\"/3.0 m";
-            weight = "35.3lbs./16.0 kg";
-            hp = 0;
-            break;
-        case "galar zigzagoon":
-        case "galarian zigzagoon":
-            other_forms = "";
-            title = "Galarian Zigzagoon";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Zigzagoon";
-            color = 0xADA594;
-            sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
-            number = 263;
-            type1 = "Dark";
-            type2 = "Normal"
-            family = "Tiny Raccoon Pokémon";
-            ability1 = "Pickup";
-            ability2 = "Gluttony"
-            egg1 = "Field"
-            rate = 255;
-            height = "1'04\"/0.4 m";
-            weight = "38.6lbs./17.5 kg";
-            hp = 0;
-            break;
-        case "galar linoone":
-        case "galarian linoone":
-            other_forms = "";
-            title = "Galarian Linoone";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Linoone";
-            color = 0xADA594;
-            sprite = "https://www.pokepedia.fr/images/thumb/1/1b/Zigzaton_de_Galar-EB.png/314px-Zigzaton_de_Galar-EB.png";
-            number = 264;
-            type1 = "Dark";
-            type2 = "Normal"
-            family = "Rushing Pokémon";
-            ability1 = "Pickup";
-            ability2 = "Gluttony";
-            egg1 = "Field"
-            rate = 90;
-            height = "1'08\"/0.5 m";
-            weight = "71.6lbs./32.5 kg";
-            hp = 0;
-            break;
-        case "obstagoon":
-            other_forms = "";
-            title = "Obstagoon";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Obstagoon";
-            color = 0xADA594;
-            sprite = "https://www.pokepedia.fr/images/thumb/8/82/Ixon-EB.png/171px-Ixon-EB.png";
-            number = 0;
-            type1 = "Dark";
-            type2 = "Normal"
-            family = "Blocking Pokémon";
-            ability1 = "Reckless";
-            ability2 = "Cuts";
-            egg1 = "Field";
-            rate = 0;
-            height = "5'03\"/1.6 m";
-            weight = "101.4lbs./46.0 kg";
-            hp = 0;
-            break;
-        case "morpeko":
-            other_forms = "";
-            title = "Morpeko";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Morpeko";
-            color = 0x735A4A;
-            sprite = "https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/179px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png";
-            number = 0;
-            type1 = "Electrik";
-            type2 = "Dark";
-            family = "Two-Sided Pokémon";
-            ability1 = "Hunger Switch";
-            egg1 = "???";
-            rate = 0;
-            height = "1'00\"/0.3 m";
-            weight = "6.6lbs./3.0 kg";
-            hp = 0;
-            break;
-        case "polteageist":
-            other_forms = "";
-            title = "Polteageist";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Polteageist";
-            color = 0x6363b5;
-            sprite = "https://www.pokepedia.fr/images/thumb/f/f6/Polth%C3%A9geist-EB.png/257px-Polth%C3%A9geist-EB.png";
-            number = 0;
-            type1 = "Ghost";
-            family = "Black Tea Pokémon";
-            ability1 = "Weak Armor";
-            egg1 = "???";
-            rate = 0;
-            height = "0'08\"/0.2 m";
-            weight = "0.9lbs./0.4 kg";
-            hp = 0;
-            break;
-        case "sirfetch'd":
-        case "sirfetch d":
-            other_forms = "";
-            title = "Sirfetch'd";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Sirfetch'd";
-            color = 0x399CFF;
-            sprite = "https://swordshield.pokemon.com/assets/img/articles/pokemon_sirfetchd.png";
-            number = 0;
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
+            sprite = gif_url.concat("zamazenta.gif");
+            number = 889;
             type1 = "Fighting";
-            family = "Wild Duck Pokémon";
-            ability1 = "Steadfast";
-            egg1 = "???";
-            rate = 0;
-            height = "2'70\"/0.8 m";
-            weight = "257.9lbs./117.0 kg";
-            hp = 0;
+            family = "Warrior Pokémon";
+            ability1 = "Dauntless Shield";
+            egg1 = "Undiscovered";
+            rate = 10;
+            height = "9'06\"/2.9 m";
+            weight = "463 lbs./210.0 kg";
+            hp = 92;
+            atk = 130;
+            def = 115;
+            spa = 80;
+            spd = 115;
+            spe = 148;
             break;
-        case "galarian ponyta":
-        case "galar ponyta":
-            other_forms = "";
-            title = "Galarian Ponyta";
-            url = "https://bulbapedia.bulbagarden.net/wiki/Ponyta";
-            color = 0xff73a5;
-            sprite = "https://www.pokepedia.fr/images/thumb/0/0c/Ponyta_de_Galar-EB.png/260px-Ponyta_de_Galar-EB.png";
-            number = 77;
-            type1 = "Psychic";
-            family = "Unique Horn";
-            ability1 = "Run away";
-            ability2 = "Pastel Veil";
-            egg1 = "???";
-            rate = 0;
-            height = "2'70\"/0.8 m";
-            weight = "25.9lbs./24.0 kg";
-            hp = 0;
+        case "zamazenta crowned sheild":
+            other_forms = "Other forms: zamazenta";
+            title = "Zamazenta Crowned Sheild";
+            url = "https://bulbapedia.bulbagarden.net/wiki/Zacian";
+            sprite = gif_url.concat("zamazenta.gif");
+            number = 889;
+            type1 = "Fighting";
+            type2 = "Steel";
+            family = "Warrior Pokémon";
+            ability1 = "Dauntless Shield";
+            egg1 = "Undiscovered";
+            rate = 10;
+            height = "9'06\"/2.9 m";
+            weight = "1730.6 lbs./785.0 kg";
+            hp = 92;
+            atk = 130;
+            def = 145;
+            spa = 80;
+            spd = 145;
+            spe = 128;
             break;
         default:
             return false;
@@ -2069,7 +1767,7 @@ function specialCase(channel, content, shiny, type)
         else
             description += "Hp: ???\nAttack: ???\nDefense: ???\nSpecial Attaque: ???\nSpecial Defense: ???\nSpeed: ???";
         channel.sendMessage(other_forms, false, {
-            color: color,
+            color: getColor(type1),
             title: title,
             description: description,
             image: {
@@ -2077,7 +1775,7 @@ function specialCase(channel, content, shiny, type)
             },
             url: url, 
             footer : {
-                text: "Informations from Bulbapedia"
+                text: "Informations from Bulbapedia.\nSprites from Pokémon Showdown."
             }
         });
     } else
