@@ -1950,7 +1950,7 @@ module.exports = {
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
-                channel.sendMessage("Can not reach the sever, please try again in 5 minutes.\nInformations about the error: " + err);
+                channel.sendMessage("Can not reach the sever, please try again in 5 minutes, if it's still doesn't work please contact Inklay#5226 on Discord and send him this:\nInformations about the error: " + err);
                 return;
             }
             $('ul > li > a', body).each(function() {
@@ -1988,7 +1988,7 @@ module.exports = {
                     channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have an alolan form.");
                     return;
                 } else if (galar) {
-                    channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have an galarian form.");
+                    channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have a galarian form.");
                     return;
                 } else if (is_mega) {
                     channel.sendMessage("\"" + search.substring(40).charAt(0).toUpperCase() + search.substring(40).slice(1) + "\" Does not have a mega evolution.");

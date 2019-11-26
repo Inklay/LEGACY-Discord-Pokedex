@@ -2041,7 +2041,7 @@ module.exports = {
             return;
         request(search, { json: true }, (err, res, body) => {
             if (err) {
-                channel.sendMessage("Impossible de communiquer avec le serveur, merci de réessayer dans 5 minutes.\nInformations sur l'erreur: " + err);
+                channel.sendMessage("Impossible de communiquer avec le serveur, merci de réessayer dans 5 minutes, si l'erreur persiste, merci de contacter Inklay#5226 sur Discord et de lui envoyer ceci:\nInformations sur l'erreur: " + err);
                 return;
             }
             $('.toctext', body).each(function(i) {
