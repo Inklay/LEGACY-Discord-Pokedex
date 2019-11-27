@@ -2068,7 +2068,7 @@ module.exports = {
             $('tr > th > a', body).each(function() {
                 if ($(this)[0].attribs.href == "/Type" && $(this).parent().next()[0].attribs.colspan == "3") {
                     type1 = $(this).parent().next()[0].children[0].attribs.title.replace(" (type)", "");
-                    if ($(this).parent().next()[0].children.length == 4)
+                    if ($(this).parent().next()[0].children.length == 3)
                         type2 = $(this).parent().next()[0].children[2].attribs.title.replace(" (type)", "");
                 }
                 if ($(this)[0].attribs.href == "/Famille" && $(this).parent().next()[0].attribs.colspan == "3" && $(this).parent().next()[0].children[1])
@@ -2126,7 +2126,7 @@ module.exports = {
             if (number == ".")
                 number = "???";
             if (rate == "\n" || rate == "—")
-                rate = "???\n";
+                rate = "???";
             if (height == null || height == "—")
                 height = "???";
             if (weight == null || weight == "—")
