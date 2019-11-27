@@ -2116,7 +2116,7 @@ module.exports = {
                     def = $(this).parent().next()[0].children[0].data;
                 if ($(this)[0].attribs.href == "/Statistique#Attaque_Sp.C3.A9ciale" && !spa)
                     spa = $(this).parent().next()[0].children[0].data;
-                if ($(this)[0].attribs.href == "/Statistique#D.C3.A9fense_sp.C3.A9ciale" && !spd)
+                if ($(this)[0].attribs.href == "/Statistique#D.C3.A9fense_Sp.C3.A9ciale" && !spd)
                     spd = $(this).parent().next()[0].children[0].data;
                 if ($(this)[0].attribs.href == "/Statistique#Vitesse" && !spe)
                     spe = $(this).parent().next()[0].children[0].data;
