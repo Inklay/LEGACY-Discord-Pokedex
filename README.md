@@ -1,12 +1,10 @@
+# This is an old version of the bot please do not use it. The new version is available [here](https://github.com/Inklay/Discord-Pokedex)
+
 # Discord-Pokedex
 
 ## English
 
 A Discord Pokedex bot powered by Node.js
-
-### Add it to your server
-
-[By clicking this link](https://discordapp.com/oauth2/authorize?client_id=583812640305053718&scope=bot&permissions=115712)
 
 ### Host the bot yourself
 
